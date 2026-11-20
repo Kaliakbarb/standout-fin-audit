@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4b2859">
+  <meta name="description" content="Синтетическая среда для обучения и проверки ИИ-аудиторов. Генератор компаний, расследование по документам и награда за доказательства.">
+  <title>Genesis — полигон ИИ-аудиторов</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%234b2859' width='32' height='32' rx='10'/%3E%3Cpath d='M22 10a9 9 0 1 0 0 12v-6h-7' fill='none' stroke='%23ffc7b3' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">К содержимому</a>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Genesis, главная"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M25 10a11 11 0 1 0 0 16V18H17"/><path d="M24 18h7M27.5 14.5v7"/></svg></span><span>genesis<small>AUDIT INTELLIGENCE LAB</small></span></a>
+    <nav aria-label="Главная навигация"><button data-command="arena-home">Проверить агента</button><button data-command="lab">Создать компанию <span aria-hidden="true">↗</span></button><button data-command="about">О проекте</button></nav>
+    <span class="local-badge"><span></span>Без интернета и API</span>
+  </header>
+  <main id="workspace" tabindex="-1">
+    <div id="loading" class="loading-panel"><span class="spinner"></span> Открываем учебную книгу…</div>
+    <div id="app-content" hidden></div>
+    <footer class="page-footer"><span class="footer-brand">genesis<span>Финансовые миры. Проверяемые выводы.</span></span><span>Все компании и документы вымышлены.<br>В демо — скриптовые политики. Веса модели не обучались.</span><button class="text-button" data-command="about">Об устройстве проекта <span aria-hidden="true">↗</span></button></footer>
+  </main>
+  <dialog id="case-dialog" class="case-dialog">
+    <div class="dialog-top"><div><div class="eyebrow">СЦЕНАРИИ ИСПЫТАНИЙ</div><h2>Что будем проверять?</h2><p>Начните с первого кейса — в нём есть пошаговые подсказки.</p></div><button class="icon-button" data-close="case-dialog" aria-label="Закрыть выбор кейса">×</button></div>
+    <div id="case-list" class="case-list"></div><p class="dialog-note">Каждый кейс открывает новую попытку. Текущий черновик будет сброшен.</p>
+  </dialog>
+  <dialog id="detail-dialog" class="detail-dialog"><div id="detail-content"></div></dialog>
+  <dialog id="finding-dialog" class="finding-dialog">
+    <div class="dialog-top"><div><div class="eyebrow">ВАШ ВЫВОД</div><h2 id="finding-title">Добавить ошибку</h2><p>Выберите операцию и укажите, на какую сумму она учтена неверно.</p></div><button class="icon-button" data-close="finding-dialog" aria-label="Закрыть форму находки">×</button></div>
+    <form id="finding-form">
+      <label>Что произошло?<select id="finding-type" required><option value="duplicate_invoice">Один счёт учтён несколько раз</option><option value="fx_conversion">Применён неверный курс валюты</option><option value="payment_allocation">Платёж распределён не полностью</option><option value="period_cutoff">Операция попала не в тот месяц</option></select></label>
+      <div class="form-row"><label>Какая операция?<select id="finding-source" required></select></label><label>Сумма ошибки, ₸<input id="finding-amount" type="text" inputmode="decimal" placeholder="Например, 50000" required maxlength="18"></label></div>
+      <p id="finding-rule" class="rule-note"></p>
+      <label>Объясните своими словами <span class="optional">необязательно</span><textarea id="finding-explanation" maxlength="1000" rows="2" placeholder="Что вы сравнили и где нашли разницу?"></textarea></label>
+      <details class="proof-details"><summary><span>Документы для подтверждения</span><span id="proof-count">0 / 10</span></summary><p class="field-help">Связанные документы выбраны по операции. Здесь можно проверить и изменить подборку.</p><div class="form-row evidence-columns"><fieldset><legend>Какие записи затронуты</legend><p id="affected-help" class="field-help"></p><div id="affected-options" class="checklist"></div></fieldset><fieldset><legend>На что опирается вывод</legend><p class="field-help">Не больше 10 доказательств на одну ошибку.</p><div id="evidence-options" class="checklist"></div></fieldset></div></details>
+      <p id="form-error" class="form-error" role="alert"></p><div class="dialog-actions"><button type="button" class="button secondary" data-close="finding-dialog">Отмена</button><button class="button primary" type="submit">Добавить в заключение</button></div>
+    </form>
+  </dialog>
+  <dialog id="help-dialog" class="help-dialog">
+    <div class="dialog-top"><div><div class="eyebrow">С ЧЕГО НАЧАТЬ</div><h2>Вы проверяете учёт компании</h2><p>Представьте, что вам передали папку со счетами и книгу, куда бухгалтер записал операции.</p></div><button class="icon-button" data-close="help-dialog" aria-label="Закрыть справку">×</button></div>
+    <div class="help-steps"><article><span>1</span><div><h3>Посмотрите исходный документ</h3><p>В счёте указаны сумма, валюта и дата. В платеже — сколько пришло денег и за какой счёт.</p></div></article><article><span>2</span><div><h3>Сравните с записями в книге</h3><p>Ту же операцию могли записать дважды, пересчитать по другому курсу, отнести к другому месяцу или не полностью распределить платёж.</p></div></article><article><span>3</span><div><h3>Добавьте доказанную ошибку</h3><p>Выберите операцию и сумму расхождения. Связанные документы подставятся в форму. Когда закончите, проверьте заключение.</p></div></article></div>
+    <div class="help-note"><strong>Впервые в аудите?</strong><p>В первом кейсе нажмите «Разобрать вместе». Мы пройдём каждый шаг и объясним расчёты на документах.</p></div>
+    <details class="technical-details"><summary>Как устроена оценка и запуск аудитора</summary><p>F1 учитывает найденные ошибки, пропуски и ложные обвинения. Награда = 2 × F1 − 1 − 0,002 × обращения к инструментам, в пределах от −1 до +1. На попытку — 30 минут и 100 действий. Подсказки включены только в учебном режиме.</p><p>«Показать работу аудитора» выполняет реальную скриптовую политику в отдельном процессе и завершает попытку. В подготовленном offline-образе агенты запускаются в secure-профиле; запуск из исходников на хосте использует cooperative. Полная контрольная проверка и обучение модели выполняются отдельно.</p></details>
+    <div class="dialog-actions"><button class="button primary" data-close="help-dialog">Понятно, начинаем</button></div>
+  </dialog>
+  <dialog id="submit-dialog" class="confirm-dialog"><div class="eyebrow">ЗАВЕРШАЕМ ПРОВЕРКУ</div><h2>Отправить заключение?</h2><p id="submit-description"></p><p>Затем вы увидите результат и объяснение каждой ошибки. Для изменения ответа можно начать новую попытку.</p><div class="dialog-actions"><button class="button secondary" data-close="submit-dialog">Продолжить проверять</button><button class="button primary" id="confirm-submit">Отправить и посмотреть результат</button></div></dialog>
+
+  <dialog id="lab-dialog" class="lab-dialog">
+    <div class="dialog-top"><div><div class="eyebrow">ЛАБОРАТОРИЯ GENESIS</div><h2>Новая компания.<br><em>Ваши правила игры.</em></h2><p>Соберите своё испытание из четырёх семейств ошибок. Мы создадим новые документы и суммы, а агенту передадим только публичную книгу.</p></div><button class="icon-button" data-close="lab-dialog" aria-label="Закрыть лабораторию">×</button></div>
+    <form id="lab-form"><div class="lab-options">
+      <label><input type="checkbox" name="family" value="duplicate_invoice" checked><span class="family-symbol" aria-hidden="true">▱</span><span><strong>Дубли счетов</strong><small>Один документ. Несколько признаний.</small></span></label>
+      <label><input type="checkbox" name="family" value="fx_conversion" checked><span class="family-symbol" aria-hidden="true">⇄</span><span><strong>Валютный курс</strong><small>Правильная валюта. Неверная оценка.</small></span></label>
+      <label><input type="checkbox" name="family" value="payment_allocation" checked><span class="family-symbol" aria-hidden="true">⑂</span><span><strong>Распределение платежа</strong><small>Деньги пришли. Но учтены не полностью.</small></span></label>
+      <label><input type="checkbox" name="family" value="period_cutoff" checked><span class="family-symbol" aria-hidden="true">◫</span><span><strong>Отчётный период</strong><small>Верная операция. Не тот месяц.</small></span></label>
+    </div><p class="lab-footnote">Уберите все галочки для чистой контрольной компании. Выбранные настройки известны оператору лаборатории, но не передаются агенту.</p><div class="dialog-actions"><button class="button primary" type="submit">Сгенерировать новую компанию</button></div></form>
+  </dialog>
+  <dialog id="about-dialog" class="about-dialog">
+    <div class="dialog-top"><div><div class="eyebrow">ЧТО МЫ СОЗДАЛИ</div><h2>Среда, в которой можно тренировать ИИ-аудитора.</h2><p>Как симулятор полёта создаёт ситуации для пилота, Genesis создаёт финансовые ситуации для агента.</p></div><button class="icon-button" data-close="about-dialog" aria-label="Закрыть описание проекта">×</button></div>
+    <div class="about-flow"><article><span>01</span><h3>Генератор создаёт компанию</h3><p>Согласованные счета, платежи, курсы и проводки. Все данные вымышлены.</p></article><article><span>02</span><h3>В книгу вносятся ошибки</h3><p>Дубли, неверные курсы, распределение и даты. Некоторые ошибки взаимодействуют или скрывают друг друга.</p></article><article><span>03</span><h3>Агент расследует</h3><p>Читает документы через ограниченные инструменты. Должен указать тип ошибки, сумму и доказательства.</p></article><article><span>04</span><h3>Независимый оценщик проверяет</h3><p>Сверяет вывод с проверенным эталоном, учитывает ложные обвинения и выдаёт награду. Это сигнал для будущего обучения.</p></article></div>
+    <div class="about-honesty"><strong>Что работает сейчас</strong><p>Генерация, среда, оценка, запись действий и проверки воспроизводимости. Демонстрация запускает скриптового аудитора. Веса языковой модели не обучались.</p></div><div class="dialog-actions"><button class="button primary" data-close="about-dialog">Посмотреть эксперимент</button></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

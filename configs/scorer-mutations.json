@@ -1,0 +1,119 @@
+{
+  "plan_version": "0.4.0",
+  "purpose": "Predeclared test-only seeded scorer faults; not exhaustive mutation coverage or official scoring.",
+  "source": "src/fin_audit/evaluation.py",
+  "baseline_tests": [
+    "tests/test_evaluation.py"
+  ],
+  "classification": "Only call-phase AssertionError failures count as semantic kills. Import, setup, runtime exception, crash, timeout, output limit and missing-test errors are invalid.",
+  "mutants": [
+    {
+      "id": "ignore_currency",
+      "operator": "ignore_currency",
+      "description": "Accept the wrong currency when all other fields match.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth"
+      ]
+    },
+    {
+      "id": "incomplete_evidence",
+      "operator": "evidence_overlap",
+      "description": "Accept any evidence overlap instead of one complete proof set.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection"
+      ]
+    },
+    {
+      "id": "reuse_truth",
+      "operator": "reuse_truth",
+      "description": "Allow several predictions to reuse one truth issue as TP.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth"
+      ]
+    },
+    {
+      "id": "omit_fp",
+      "operator": "omit_fp",
+      "description": "Remove FP from the F1 denominator.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth"
+      ]
+    },
+    {
+      "id": "omit_fn",
+      "operator": "omit_fn",
+      "description": "Remove FN from the F1 denominator.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1"
+      ]
+    },
+    {
+      "id": "wrong_clean_f1",
+      "operator": "wrong_clean_f1",
+      "description": "Assign F1=0 to a clean episode with an empty answer.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall"
+      ]
+    },
+    {
+      "id": "wrong_step_cost",
+      "operator": "wrong_step_cost",
+      "description": "Charge ten times the published inspection cost.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward"
+      ]
+    },
+    {
+      "id": "greedy_matching",
+      "operator": "greedy_matching",
+      "description": "Replace maximum matching with first-fit matching; generic ambiguity fixture.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss"
+      ]
+    },
+    {
+      "id": "ignore_amount",
+      "operator": "ignore_amount",
+      "description": "Accept an incorrect minor-unit amount.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_large_minor_units_are_compared_exactly_beyond_float_precision"
+      ]
+    },
+    {
+      "id": "exclusive_tolerance",
+      "operator": "exclusive_tolerance",
+      "description": "Reject a difference exactly at the declared tolerance boundary.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries"
+      ]
+    },
+    {
+      "id": "affected_superset",
+      "operator": "affected_superset",
+      "description": "Accept an affected-ID superset instead of the exact canonical set.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth"
+      ]
+    },
+    {
+      "id": "positive_invalid_reward",
+      "operator": "positive_invalid_reward",
+      "description": "Reward structurally invalid submissions with +1 instead of -1.",
+      "equivalent": false,
+      "detection_tests": [
+        "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth"
+      ]
+    }
+  ]
+}

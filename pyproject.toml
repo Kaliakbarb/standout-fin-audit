@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "genesis-fin-audit"
+version = "0.6.0"
+description = "Reproducible synthetic financial audit environment"
+requires-python = ">=3.11,<3.12"
+dependencies = []
+
+[project.scripts]
+fin-audit = "fin_audit.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fin_audit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[dependency-groups]
+dev = ["pytest>=8.3,<9", "hypothesis>=6.130,<7", "jsonschema>=4.23,<5"]

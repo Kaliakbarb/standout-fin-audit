@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+"""Build the pinned current image online; optional archive for offline use."""
+
+import argparse
+import subprocess
+import sys
+from pathlib import Path
+
+from docker_common import IMAGE, ROOT, SUPPORTED_PLATFORMS, daemon_platform, docker_command, inspect_image_platform
+
+def main(argv=None) -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--context")
+    parser.add_argument("--platform", choices=SUPPORTED_PLATFORMS,
+                        help="Explicit image target; defaults to the selected daemon's platform.")
+    parser.add_argument("--export-image", type=Path)
+    args = parser.parse_args(argv)
+    try:
+        archive = args.export_image.absolute() if args.export_image else None
+        if archive is not None and (archive.exists() or archive.is_symlink()):
+            raise RuntimeError("Image archive already exists; choose a new path.")
+        docker = docker_command(args.context)
+        platform = args.platform or daemon_platform(docker)
+        subprocess.run(docker + ["build", "--platform", platform, "-f", "docker/Dockerfile", "-t", IMAGE, "."], cwd=ROOT, check=True)
+        installed = inspect_image_platform(docker, IMAGE, platform)
+        print(f"Prepared image: {installed['Id']} ({platform})")
+        if archive is not None:
+            archive.parent.mkdir(parents=True, exist_ok=True)
+            subprocess.run(docker + ["image", "save", "-o", str(archive), IMAGE], check=True)
+            print(f"Offline image archive: {archive}")
+    except (ValueError, OSError, RuntimeError, subprocess.CalledProcessError) as error:
+        print(f"Preparation failed: {error}", file=sys.stderr)
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

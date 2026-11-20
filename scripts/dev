@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+"""Run a development command in the prepared, locked Python environment."""
+
+import subprocess
+import sys
+
+from dev_environment import ROOT, development_environment
+
+if len(sys.argv) == 1:
+    raise SystemExit("Usage: ./scripts/dev pytest -q | ./scripts/dev fin-audit demo")
+raise SystemExit(subprocess.run(
+    ["uv", "run", "--frozen", "--offline", *sys.argv[1:]], cwd=ROOT,
+    env=development_environment(),
+).returncode)

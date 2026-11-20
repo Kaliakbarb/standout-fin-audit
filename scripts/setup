@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+"""Prepare the Python 3.11 development environment from the lockfile."""
+
+import os
+import shutil
+import stat
+import subprocess
+import sys
+from pathlib import Path
+
+from dev_environment import ROOT, development_environment
+
+root = ROOT
+environment = development_environment()
+if shutil.which("uv") is None:
+    raise SystemExit("uv is required for development; secure verification uses the prepared Docker image.")
+subprocess.run(["uv", "python", "install", "3.11"], cwd=root, env=environment, check=True)
+subprocess.run(["uv", "sync", "--frozen"], cwd=root, env=environment, check=True)
+# Recent CPython deliberately skips hidden .pth files. On this Mac, the
+# generated editable file inherited UF_HIDDEN; repair only this project's file.
+if hasattr(os, "chflags"):
+    location = Path(environment.get("UV_PROJECT_ENVIRONMENT", str(root / ".venv"))).resolve()
+    os.chflags(location, location.stat().st_flags & ~stat.UF_HIDDEN)
+    for path in (location / "lib").glob("python*/site-packages/_editable_impl_genesis_fin_audit.pth"):
+        flags = path.stat().st_flags
+        if flags & stat.UF_HIDDEN:
+            os.chflags(path, flags & ~stat.UF_HIDDEN)
+subprocess.run(["uv", "run", "--frozen", "--offline", "python", "-c", "import fin_audit; print('Development environment ready:', fin_audit.__version__)"], cwd=root, env=environment, check=True)

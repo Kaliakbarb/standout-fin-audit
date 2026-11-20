@@ -1,0 +1,11 @@
+date,source_currency,target_currency,rate,record_id
+2026-11-30,JPY,KZT,521.75,"""fx_09494dc57c9cd0bd781ab4374381d37f"""
+2026-10-30,JPY,KZT,498.50,"""fx_dffe6ec8ff36bf1d253cdd4b4682bead"""
+2026-11-11,JPY,KZT,507.50,"""fx_1dfac48bc5c0aced5ca7de2fa7154c95"""
+2026-11-13,JPY,KZT,509.00,"""fx_9d539774611898734cebb53c287a646a"""
+2026-11-12,JPY,KZT,508.25,"""fx_ad4dab7abdd2fb2d38d4c300a0ef8146"""
+2026-10-31,JPY,KZT,499.25,"""fx_da079226c72ce8f74fce56a42a33426c"""
+2026-11-29,JPY,KZT,521.00,"""fx_db573c8928320d6ecc47a0dad8df8b7e"""
+2026-11-03,JPY,KZT,501.50,"""fx_f6565ab1f176cb31d44ca2e0dd4d2f4f"""
+2026-11-01,JPY,KZT,500.00,"""fx_2e5f2183a846baa8cfeff29f3f365ed7"""
+2026-11-02,JPY,KZT,500.75,"""fx_9702efd2e9530b65ea9b287b430c8ac8"""

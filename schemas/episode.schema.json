@@ -1,0 +1,1976 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:genesis:fin-audit:schema:0.2.0:episode",
+  "title": "Genesis FinTech native v1 and multi-currency v2 public episodes",
+  "$comment": "Supported branches: historical native schema0.1.0, native schema0.2.0, receivables_multi_v2 schema0.2.0. Four issue families, native signed credit notes/refunds and foreign-currency journals have explicit public metadata. Cross-record accounting, rate/date choice, references and complete truth belong to the independent checker. Standard JSON Schema integer accepts mathematically integral 1.0; the strict runtime type checker additionally rejects floats/bool.",
+  "type": "object",
+  "properties": {
+    "manifest": {
+      "$ref": "#/$defs/manifest"
+    },
+    "policy": {
+      "$ref": "#/$defs/policy"
+    },
+    "ledger": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2000,
+      "items": {
+        "$ref": "#/$defs/ledger_row"
+      }
+    },
+    "invoices": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 200,
+      "items": {
+        "$ref": "#/$defs/invoice_document"
+      }
+    },
+    "payments": {
+      "type": "array",
+      "maxItems": 200,
+      "items": {
+        "$ref": "#/$defs/payment_document"
+      }
+    },
+    "fx": {
+      "type": "array",
+      "maxItems": 200,
+      "items": {
+        "$ref": "#/$defs/fx_row"
+      }
+    }
+  },
+  "required": [
+    "manifest",
+    "policy",
+    "ledger",
+    "invoices",
+    "payments",
+    "fx"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "jsonValue": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        }
+      ]
+    },
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "0.1.0",
+            "0.2.0"
+          ]
+        },
+        "episode_id": {
+          "$ref": "#/$defs/id"
+        },
+        "base_currency": {
+          "const": "KZT"
+        },
+        "period_start": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "period_end": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "currency_exponents": {
+          "type": "object",
+          "properties": {
+            "KZT": {
+              "const": 2,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "KZT"
+          ],
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9
+          }
+        },
+        "rounding": {
+          "enum": [
+            "ROUND_HALF_EVEN",
+            "ROUND_HALF_UP",
+            "ROUND_DOWN"
+          ]
+        },
+        "ledger_rows": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2000
+        },
+        "document_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        },
+        "table_counts": {
+          "type": "object",
+          "properties": {
+            "ledger": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2000
+            },
+            "invoices": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "payments": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "fx": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 200
+            }
+          },
+          "required": [
+            "ledger",
+            "invoices",
+            "payments",
+            "fx"
+          ],
+          "additionalProperties": false
+        },
+        "company_name": {
+          "$ref": "#/$defs/synthetic_display_name"
+        },
+        "presentation_version": {
+          "const": "names-1.0"
+        }
+      },
+      "required": [
+        "schema_version",
+        "episode_id",
+        "base_currency",
+        "period_start",
+        "period_end",
+        "timezone",
+        "currency_exponents",
+        "rounding",
+        "ledger_rows",
+        "document_count",
+        "table_counts"
+      ],
+      "additionalProperties": false
+    },
+    "ledger_row": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/native_ledger_row"
+        },
+        {
+          "$ref": "#/$defs/multi_ledger_row"
+        }
+      ]
+    },
+    "invoice_line": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "unit_price_minor": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "total_minor": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "description",
+        "quantity",
+        "unit_price_minor",
+        "total_minor"
+      ],
+      "additionalProperties": false
+    },
+    "invoice_document": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/native_invoice_document"
+        },
+        {
+          "$ref": "#/$defs/multi_invoice_document"
+        }
+      ]
+    },
+    "payment_document": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/native_payment_document"
+        },
+        {
+          "$ref": "#/$defs/multi_payment_document"
+        }
+      ]
+    },
+    "fx_row": {
+      "$comment": "Four mandatory PDF fields plus the public record_id used by tools and evidence. FX arithmetic and lookup correctness are independently checked.",
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "source_currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "target_currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "rate": {
+          "$ref": "#/$defs/decimal_rate"
+        },
+        "record_id": {
+          "$ref": "#/$defs/id"
+        }
+      },
+      "required": [
+        "date",
+        "source_currency",
+        "target_currency",
+        "rate",
+        "record_id"
+      ],
+      "additionalProperties": false
+    },
+    "policy": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/native_policy"
+        },
+        {
+          "$ref": "#/$defs/multi_policy"
+        }
+      ]
+    },
+    "finding": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "affected_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "claimed_amount_minor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "currency": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 10
+        },
+        "explanation": {
+          "type": "string",
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "type",
+        "affected_ids",
+        "claimed_amount_minor",
+        "currency",
+        "evidence_ids",
+        "explanation"
+      ],
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "object",
+      "properties": {
+        "episode_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "findings": {
+          "type": "array",
+          "maxItems": 30,
+          "items": {
+            "$ref": "#/$defs/finding"
+          }
+        }
+      },
+      "required": [
+        "episode_id",
+        "findings"
+      ],
+      "additionalProperties": false
+    },
+    "truth_issue": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "$ref": "#/$defs/id"
+        },
+        "type": {
+          "enum": [
+            "duplicate_invoice",
+            "payment_allocation",
+            "fx_conversion",
+            "period_cutoff"
+          ]
+        },
+        "affected_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "expected_amount_minor": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "currency": {
+          "const": "KZT"
+        },
+        "evidence_sets": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 10,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/$defs/id"
+            }
+          }
+        }
+      },
+      "required": [
+        "issue_id",
+        "type",
+        "affected_ids",
+        "expected_amount_minor",
+        "currency",
+        "evidence_sets"
+      ],
+      "additionalProperties": false
+    },
+    "observation": {
+      "type": "object",
+      "properties": {
+        "remaining_steps": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "task": {
+          "type": "string"
+        },
+        "manifest": {
+          "$ref": "#/$defs/manifest"
+        },
+        "policy": {
+          "$ref": "#/$defs/policy"
+        },
+        "result": {
+          "$ref": "#/$defs/jsonValue"
+        },
+        "error": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "required": [
+            "code"
+          ],
+          "additionalProperties": false
+        },
+        "final_findings": {
+          "type": "array",
+          "maxItems": 0
+        }
+      },
+      "required": [
+        "remaining_steps"
+      ],
+      "additionalProperties": false
+    },
+    "action": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "list_records"
+            },
+            "args": {
+              "type": "object",
+              "properties": {
+                "table": {
+                  "enum": [
+                    "ledger",
+                    "invoices",
+                    "payments",
+                    "fx"
+                  ]
+                },
+                "cursor": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string",
+                      "maxLength": 256
+                    }
+                  ]
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 50
+                }
+              },
+              "required": [
+                "table"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "action",
+            "args"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "get_record"
+            },
+            "args": {
+              "type": "object",
+              "properties": {
+                "table": {
+                  "enum": [
+                    "ledger",
+                    "invoices",
+                    "payments",
+                    "fx"
+                  ]
+                },
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                }
+              },
+              "required": [
+                "table",
+                "id"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "action",
+            "args"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "get_document"
+            },
+            "args": {
+              "type": "object",
+              "properties": {
+                "doc_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                }
+              },
+              "required": [
+                "doc_id"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "action",
+            "args"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "calculator"
+            },
+            "args": {
+              "type": "object",
+              "properties": {
+                "expression": {
+                  "type": "string",
+                  "maxLength": 512
+                }
+              },
+              "required": [
+                "expression"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "action",
+            "args"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "submit"
+            },
+            "args": {
+              "type": "object",
+              "properties": {
+                "findings": {
+                  "$ref": "#/$defs/findings"
+                }
+              },
+              "required": [
+                "findings"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "action",
+            "args"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "trajectory": {
+      "type": "object",
+      "properties": {
+        "episode_id": {
+          "$ref": "#/$defs/id"
+        },
+        "step": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "action": {
+          "$ref": "#/$defs/jsonValue"
+        },
+        "observation": {
+          "$ref": "#/$defs/observation"
+        },
+        "reward": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "terminated": {
+          "type": "boolean"
+        },
+        "truncated": {
+          "type": "boolean"
+        },
+        "info": {
+          "type": "object",
+          "additionalProperties": false
+        },
+        "run_id": {
+          "$ref": "#/$defs/id"
+        },
+        "policy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "episode_id",
+        "step",
+        "action",
+        "observation",
+        "reward",
+        "terminated",
+        "truncated"
+      ],
+      "additionalProperties": false,
+      "$comment": "Actions are JSON values, not only valid action-schema instances: attack/error trajectories must also be recordable. Integer counters must additionally pass the strict runtime type checker.",
+      "not": {
+        "properties": {
+          "terminated": {
+            "const": true
+          },
+          "truncated": {
+            "const": true
+          }
+        },
+        "required": [
+          "terminated",
+          "truncated"
+        ]
+      },
+      "if": {
+        "properties": {
+          "terminated": {
+            "const": false
+          },
+          "truncated": {
+            "const": false
+          }
+        },
+        "required": [
+          "terminated",
+          "truncated"
+        ]
+      },
+      "then": {
+        "properties": {
+          "reward": {
+            "const": 0
+          }
+        }
+      }
+    },
+    "native_manifest": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "0.1.0",
+            "0.2.0"
+          ]
+        },
+        "episode_id": {
+          "$ref": "#/$defs/id"
+        },
+        "base_currency": {
+          "const": "KZT"
+        },
+        "period_start": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "period_end": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "currency_exponents": {
+          "type": "object",
+          "properties": {
+            "KZT": {
+              "const": 2,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "KZT"
+          ],
+          "additionalProperties": false
+        },
+        "rounding": {
+          "const": "ROUND_HALF_EVEN"
+        },
+        "ledger_rows": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2000
+        },
+        "document_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        },
+        "table_counts": {
+          "type": "object",
+          "properties": {
+            "ledger": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2000
+            },
+            "invoices": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "payments": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "fx": {
+              "const": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ledger",
+            "invoices",
+            "payments",
+            "fx"
+          ],
+          "additionalProperties": false
+        },
+        "company_name": {
+          "$ref": "#/$defs/synthetic_display_name"
+        },
+        "presentation_version": {
+          "const": "names-1.0"
+        }
+      },
+      "required": [
+        "schema_version",
+        "episode_id",
+        "base_currency",
+        "period_start",
+        "period_end",
+        "timezone",
+        "currency_exponents",
+        "rounding",
+        "ledger_rows",
+        "document_count",
+        "table_counts"
+      ],
+      "additionalProperties": false
+    },
+    "native_policy": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "enum": [
+            "0.1.0",
+            "0.2.0"
+          ]
+        },
+        "accounting_model": {
+          "const": "receivables_native_v1"
+        },
+        "accounts": {
+          "type": "object",
+          "properties": {
+            "receivable": {
+              "type": "string",
+              "minLength": 1
+            },
+            "revenue": {
+              "type": "string",
+              "minLength": 1
+            },
+            "cash": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unallocated": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "receivable",
+            "revenue",
+            "cash",
+            "unallocated"
+          ],
+          "additionalProperties": false
+        },
+        "allocation_rule": {
+          "const": "atomic_full_designation"
+        },
+        "invoice_recognition": {
+          "const": "issued_at"
+        },
+        "payment_recognition": {
+          "const": "timestamp"
+        },
+        "period_bounds": {
+          "const": "[start,end)"
+        },
+        "rounding": {
+          "const": "ROUND_HALF_EVEN"
+        },
+        "amount_currency": {
+          "const": "base_currency"
+        },
+        "amount_tolerance_minor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "canonical_rules": {
+          "type": "object",
+          "properties": {
+            "duplicate_invoice": {
+              "const": "all_receivable_debit_recognition_row_ids_including_original"
+            },
+            "payment_allocation": {
+              "const": "payment_id_and_invoice_id"
+            }
+          },
+          "required": [
+            "duplicate_invoice",
+            "payment_allocation"
+          ],
+          "additionalProperties": false
+        },
+        "amount_rules": {
+          "type": "object",
+          "properties": {
+            "duplicate_invoice": {
+              "const": "excess_gross_recognition_in_base_minor_units"
+            },
+            "payment_allocation": {
+              "const": "excess_unallocated_receipt_credit_in_observed_valuation"
+            }
+          },
+          "required": [
+            "duplicate_invoice",
+            "payment_allocation"
+          ],
+          "additionalProperties": false
+        },
+        "unknown_payment_designation": {
+          "const": "do_not_infer_an_invoice_from_entity_date_or_amount"
+        },
+        "receipt_lifecycle": {
+          "const": "one_atomic_journal_no_later_clearing"
+        },
+        "amount_tolerances_minor": {
+          "type": "object",
+          "properties": {
+            "duplicate_invoice": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "payment_allocation": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "accounting_model",
+        "accounts",
+        "allocation_rule",
+        "invoice_recognition",
+        "payment_recognition",
+        "period_bounds",
+        "rounding",
+        "amount_currency",
+        "amount_tolerance_minor",
+        "canonical_rules",
+        "amount_rules",
+        "unknown_payment_designation",
+        "receipt_lifecycle"
+      ],
+      "additionalProperties": false
+    },
+    "native_ledger_row": {
+      "type": "object",
+      "properties": {
+        "row_id": {
+          "$ref": "#/$defs/id"
+        },
+        "timestamp": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "account": {
+          "type": "string",
+          "minLength": 1
+        },
+        "debit_minor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "credit_minor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "currency": {
+          "const": "KZT"
+        },
+        "entity_id": {
+          "$ref": "#/$defs/id"
+        },
+        "invoice_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "payment_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "entity_name": {
+          "$ref": "#/$defs/synthetic_display_name"
+        }
+      },
+      "required": [
+        "row_id",
+        "timestamp",
+        "account",
+        "debit_minor",
+        "credit_minor",
+        "currency",
+        "entity_id",
+        "invoice_id",
+        "payment_id"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "properties": {
+            "debit_minor": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "credit_minor": {
+              "const": 0
+            }
+          }
+        },
+        {
+          "properties": {
+            "debit_minor": {
+              "const": 0
+            },
+            "credit_minor": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      ]
+    },
+    "native_invoice_document": {
+      "type": "object",
+      "properties": {
+        "doc_id": {
+          "$ref": "#/$defs/id"
+        },
+        "invoice_id": {
+          "$ref": "#/$defs/id"
+        },
+        "entity_id": {
+          "$ref": "#/$defs/id"
+        },
+        "issued_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "due_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "currency": {
+          "const": "KZT"
+        },
+        "total_minor": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "line_items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/invoice_line"
+          }
+        },
+        "entity_name": {
+          "$ref": "#/$defs/synthetic_display_name"
+        }
+      },
+      "required": [
+        "doc_id",
+        "invoice_id",
+        "entity_id",
+        "issued_at",
+        "due_at",
+        "currency",
+        "total_minor",
+        "line_items"
+      ],
+      "additionalProperties": false
+    },
+    "native_payment_document": {
+      "type": "object",
+      "properties": {
+        "doc_id": {
+          "$ref": "#/$defs/id"
+        },
+        "payment_id": {
+          "$ref": "#/$defs/id"
+        },
+        "timestamp": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "currency": {
+          "const": "KZT"
+        },
+        "amount_minor": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "invoice_refs": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "maxItems": 1,
+              "items": {
+                "$ref": "#/$defs/id"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "doc_id",
+        "payment_id",
+        "timestamp",
+        "currency",
+        "amount_minor",
+        "invoice_refs"
+      ],
+      "additionalProperties": false
+    },
+    "decimal_rate": {
+      "type": "string",
+      "maxLength": 100,
+      "pattern": "^\\+?(?:[0-9]+(?:\\.[0-9]*)?|\\.[0-9]+)$",
+      "not": {
+        "pattern": "^\\+?(?:0+(?:\\.0*)?|\\.0+)$"
+      }
+    },
+    "multi_manifest": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "0.2.0"
+        },
+        "episode_id": {
+          "$ref": "#/$defs/id"
+        },
+        "base_currency": {
+          "const": "KZT"
+        },
+        "period_start": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "period_end": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "currency_exponents": {
+          "type": "object",
+          "properties": {
+            "KZT": {
+              "const": 2,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "KZT"
+          ],
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9
+          }
+        },
+        "rounding": {
+          "enum": [
+            "ROUND_HALF_EVEN",
+            "ROUND_HALF_UP",
+            "ROUND_DOWN"
+          ]
+        },
+        "ledger_rows": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2000
+        },
+        "document_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        },
+        "table_counts": {
+          "type": "object",
+          "properties": {
+            "ledger": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2000
+            },
+            "invoices": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "payments": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "fx": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 200
+            }
+          },
+          "required": [
+            "ledger",
+            "invoices",
+            "payments",
+            "fx"
+          ],
+          "additionalProperties": false
+        },
+        "company_name": {
+          "$ref": "#/$defs/synthetic_display_name"
+        },
+        "presentation_version": {
+          "const": "names-1.0"
+        }
+      },
+      "required": [
+        "schema_version",
+        "episode_id",
+        "base_currency",
+        "period_start",
+        "period_end",
+        "timezone",
+        "currency_exponents",
+        "rounding",
+        "ledger_rows",
+        "document_count",
+        "table_counts"
+      ],
+      "additionalProperties": false
+    },
+    "multi_policy": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "0.2.0"
+        },
+        "accounting_model": {
+          "const": "receivables_multi_v2"
+        },
+        "accounts": {
+          "type": "object",
+          "properties": {
+            "receivable": {
+              "type": "string",
+              "minLength": 1
+            },
+            "revenue": {
+              "type": "string",
+              "minLength": 1
+            },
+            "cash": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unallocated": {
+              "type": "string",
+              "minLength": 1
+            },
+            "fx_gain": {
+              "type": "string",
+              "minLength": 1
+            },
+            "fx_loss": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "receivable",
+            "revenue",
+            "cash",
+            "unallocated",
+            "fx_gain",
+            "fx_loss"
+          ],
+          "additionalProperties": false
+        },
+        "allocation_rule": {
+          "const": "atomic_full_designation"
+        },
+        "invoice_recognition": {
+          "const": "issued_at"
+        },
+        "payment_recognition": {
+          "const": "timestamp"
+        },
+        "period_bounds": {
+          "const": "[start,end)"
+        },
+        "rounding": {
+          "enum": [
+            "ROUND_HALF_EVEN",
+            "ROUND_HALF_UP",
+            "ROUND_DOWN"
+          ]
+        },
+        "amount_currency": {
+          "const": "base_currency"
+        },
+        "amount_tolerance_minor": {
+          "const": 0,
+          "type": "integer"
+        },
+        "canonical_rules": {
+          "type": "object",
+          "properties": {
+            "duplicate_invoice": {
+              "const": "all_receivable_debit_recognition_row_ids_including_original"
+            },
+            "payment_allocation": {
+              "const": "payment_id_and_invoice_id"
+            },
+            "fx_conversion": {
+              "const": "primary_ledger_row_id"
+            },
+            "period_cutoff": {
+              "const": "primary_ledger_row_id"
+            }
+          },
+          "required": [
+            "duplicate_invoice",
+            "payment_allocation",
+            "fx_conversion",
+            "period_cutoff"
+          ],
+          "additionalProperties": false
+        },
+        "amount_rules": {
+          "type": "object",
+          "properties": {
+            "duplicate_invoice": {
+              "const": "excess_gross_recognition_in_base_minor_units"
+            },
+            "payment_allocation": {
+              "const": "excess_unallocated_receipt_credit_in_observed_valuation"
+            },
+            "fx_conversion": {
+              "const": "absolute_primary_valuation_difference_in_base_minor_units"
+            },
+            "period_cutoff": {
+              "const": "absolute_primary_amount_in_base_minor_units"
+            }
+          },
+          "required": [
+            "duplicate_invoice",
+            "payment_allocation",
+            "fx_conversion",
+            "period_cutoff"
+          ],
+          "additionalProperties": false
+        },
+        "unknown_payment_designation": {
+          "const": "do_not_infer_an_invoice_from_entity_date_or_amount"
+        },
+        "receipt_lifecycle": {
+          "const": "one_atomic_journal_no_later_clearing"
+        },
+        "amount_tolerances_minor": {
+          "type": "object",
+          "properties": {
+            "duplicate_invoice": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "payment_allocation": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "fx_conversion": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "period_cutoff": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "fx_date_rule": {
+          "const": "source_document_date_in_company_timezone"
+        },
+        "fx_rate_convention": {
+          "const": "target_major_per_source_major"
+        },
+        "carrying_rule": {
+          "const": "correct_invoice_source_date_rate"
+        },
+        "fx_balance_rule": {
+          "const": "cash_minus_carrying_minus_unallocated"
+        },
+        "refund_rule": {
+          "const": "native_credit_note_full_designation"
+        },
+        "source_amount_rule": {
+          "const": "whole_document_amount_per_journal"
+        }
+      },
+      "required": [
+        "schema_version",
+        "accounting_model",
+        "accounts",
+        "allocation_rule",
+        "invoice_recognition",
+        "payment_recognition",
+        "period_bounds",
+        "rounding",
+        "amount_currency",
+        "amount_tolerance_minor",
+        "canonical_rules",
+        "amount_rules",
+        "unknown_payment_designation",
+        "receipt_lifecycle",
+        "fx_date_rule",
+        "fx_rate_convention",
+        "carrying_rule",
+        "fx_balance_rule",
+        "refund_rule",
+        "source_amount_rule"
+      ],
+      "additionalProperties": false
+    },
+    "multi_ledger_row": {
+      "type": "object",
+      "properties": {
+        "row_id": {
+          "$ref": "#/$defs/id"
+        },
+        "timestamp": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "account": {
+          "type": "string",
+          "minLength": 1
+        },
+        "debit_minor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "credit_minor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "currency": {
+          "const": "KZT"
+        },
+        "entity_id": {
+          "$ref": "#/$defs/id"
+        },
+        "invoice_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "payment_id": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "journal_id": {
+          "$ref": "#/$defs/id"
+        },
+        "source_currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "source_amount_minor": {
+          "type": "integer",
+          "not": {
+            "const": 0
+          }
+        },
+        "applied_fx_date": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "applied_fx_rate": {
+          "$ref": "#/$defs/decimal_rate"
+        },
+        "allocated_minor": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "entity_name": {
+          "$ref": "#/$defs/synthetic_display_name"
+        }
+      },
+      "required": [
+        "row_id",
+        "timestamp",
+        "account",
+        "debit_minor",
+        "credit_minor",
+        "currency",
+        "entity_id",
+        "invoice_id",
+        "payment_id",
+        "journal_id",
+        "source_currency",
+        "source_amount_minor",
+        "applied_fx_date",
+        "applied_fx_rate",
+        "allocated_minor"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "properties": {
+            "debit_minor": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "credit_minor": {
+              "const": 0
+            }
+          }
+        },
+        {
+          "properties": {
+            "debit_minor": {
+              "const": 0
+            },
+            "credit_minor": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "payment_id": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "payment_id"
+            ]
+          },
+          "then": {
+            "properties": {
+              "allocated_minor": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "allocated_minor": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "signed_invoice_line": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "unit_price_minor": {
+          "type": "integer",
+          "not": {
+            "const": 0
+          }
+        },
+        "total_minor": {
+          "type": "integer",
+          "not": {
+            "const": 0
+          }
+        }
+      },
+      "required": [
+        "description",
+        "quantity",
+        "unit_price_minor",
+        "total_minor"
+      ],
+      "additionalProperties": false
+    },
+    "multi_invoice_document": {
+      "type": "object",
+      "properties": {
+        "doc_id": {
+          "$ref": "#/$defs/id"
+        },
+        "invoice_id": {
+          "$ref": "#/$defs/id"
+        },
+        "entity_id": {
+          "$ref": "#/$defs/id"
+        },
+        "issued_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "due_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "total_minor": {
+          "type": "integer",
+          "not": {
+            "const": 0
+          }
+        },
+        "line_items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/signed_invoice_line"
+          }
+        },
+        "original_invoice_id": {
+          "$ref": "#/$defs/id"
+        },
+        "entity_name": {
+          "$ref": "#/$defs/synthetic_display_name"
+        }
+      },
+      "required": [
+        "doc_id",
+        "invoice_id",
+        "entity_id",
+        "issued_at",
+        "due_at",
+        "currency",
+        "total_minor",
+        "line_items"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "total_minor": {
+                "maximum": -1
+              }
+            },
+            "required": [
+              "total_minor"
+            ]
+          },
+          "then": {
+            "required": [
+              "original_invoice_id"
+            ],
+            "properties": {
+              "currency": {
+                "const": "KZT"
+              },
+              "line_items": {
+                "maxItems": 1,
+                "items": {
+                  "properties": {
+                    "unit_price_minor": {
+                      "type": "integer",
+                      "maximum": -1
+                    },
+                    "total_minor": {
+                      "type": "integer",
+                      "maximum": -1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "not": {
+              "required": [
+                "original_invoice_id"
+              ]
+            },
+            "properties": {
+              "line_items": {
+                "items": {
+                  "properties": {
+                    "unit_price_minor": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "total_minor": {
+                      "type": "integer",
+                      "minimum": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "currency": {
+                "const": "KZT"
+              }
+            },
+            "required": [
+              "currency"
+            ]
+          },
+          "else": {
+            "properties": {
+              "line_items": {
+                "maxItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "multi_payment_document": {
+      "type": "object",
+      "properties": {
+        "doc_id": {
+          "$ref": "#/$defs/id"
+        },
+        "payment_id": {
+          "$ref": "#/$defs/id"
+        },
+        "timestamp": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "amount_minor": {
+          "type": "integer",
+          "not": {
+            "const": 0
+          }
+        },
+        "invoice_refs": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "maxItems": 1,
+              "items": {
+                "$ref": "#/$defs/id"
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "doc_id",
+        "payment_id",
+        "timestamp",
+        "currency",
+        "amount_minor",
+        "invoice_refs"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "amount_minor": {
+                "maximum": -1
+              }
+            },
+            "required": [
+              "amount_minor"
+            ]
+          },
+          "then": {
+            "properties": {
+              "currency": {
+                "const": "KZT"
+              },
+              "invoice_refs": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 1,
+                "items": {
+                  "$ref": "#/$defs/id"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "synthetic_display_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "manifest": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/native_manifest"
+            },
+            {
+              "properties": {
+                "schema_version": {
+                  "const": "0.1.0"
+                }
+              }
+            }
+          ]
+        },
+        "policy": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/native_policy"
+            },
+            {
+              "properties": {
+                "schema_version": {
+                  "const": "0.1.0"
+                }
+              }
+            }
+          ]
+        },
+        "ledger": {
+          "items": {
+            "$ref": "#/$defs/native_ledger_row"
+          }
+        },
+        "invoices": {
+          "items": {
+            "$ref": "#/$defs/native_invoice_document"
+          }
+        },
+        "payments": {
+          "items": {
+            "$ref": "#/$defs/native_payment_document"
+          }
+        },
+        "fx": {
+          "maxItems": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "manifest": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/native_manifest"
+            },
+            {
+              "properties": {
+                "schema_version": {
+                  "const": "0.2.0"
+                }
+              }
+            }
+          ]
+        },
+        "policy": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/native_policy"
+            },
+            {
+              "properties": {
+                "schema_version": {
+                  "const": "0.2.0"
+                }
+              }
+            }
+          ]
+        },
+        "ledger": {
+          "items": {
+            "$ref": "#/$defs/native_ledger_row"
+          }
+        },
+        "invoices": {
+          "items": {
+            "$ref": "#/$defs/native_invoice_document"
+          }
+        },
+        "payments": {
+          "items": {
+            "$ref": "#/$defs/native_payment_document"
+          }
+        },
+        "fx": {
+          "maxItems": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "manifest": {
+          "$ref": "#/$defs/multi_manifest"
+        },
+        "policy": {
+          "$ref": "#/$defs/multi_policy"
+        },
+        "ledger": {
+          "items": {
+            "$ref": "#/$defs/multi_ledger_row"
+          }
+        },
+        "invoices": {
+          "items": {
+            "$ref": "#/$defs/multi_invoice_document"
+          }
+        },
+        "payments": {
+          "items": {
+            "$ref": "#/$defs/multi_payment_document"
+          }
+        }
+      }
+    }
+  ]
+}

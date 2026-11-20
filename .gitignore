@@ -1,0 +1,21 @@
+.venv/
+.venv
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+artifacts/
+.DS_Store
+
+# Local browser sessions, generated captures and credentials.
+.playwright-cli/
+output/
+.env
+.env.*
+!.env.example

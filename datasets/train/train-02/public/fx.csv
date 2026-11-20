@@ -1,0 +1,9 @@
+date,source_currency,target_currency,rate,record_id
+2026-11-12,USD,KZT,508.25,"""fx_69fc5525946ae7713172586fb4bd49f3"""
+2026-10-30,USD,KZT,498.50,"""fx_e427c5806ea48b0787bbd1ad18622fad"""
+2026-10-31,USD,KZT,499.25,"""fx_191ef4f0ed863b5e8b9a12067b93c747"""
+2026-11-30,USD,KZT,521.75,"""fx_10dc3b66d2cf42f2793ef58918e0f9a8"""
+2026-11-01,USD,KZT,500.00,"""fx_6d7343bd9bcd23f92bcae5a5f1c2e4de"""
+2026-11-29,USD,KZT,521.00,"""fx_caabdc96b94f79626bc0a15b14ccdab2"""
+2026-11-02,USD,KZT,500.75,"""fx_c743a58b0abb08d9b1be989839a200db"""
+2026-11-11,USD,KZT,507.50,"""fx_83237bbe9b5acfcd7c4ee04165b7966a"""
