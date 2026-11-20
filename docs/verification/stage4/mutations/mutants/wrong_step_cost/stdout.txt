@@ -1,0 +1,22 @@
+.FFF                                                                     [100%]
+=================================== FAILURES ===================================
+________ test_correct_proven_answer_receives_published_reward[30-0.94] _________
+tests/test_evaluation.py:77: in test_correct_proven_answer_receives_published_reward
+    assert result.reward == expected_reward
+E   AssertionError: assert 0.4 == 0.94
+E    +  where 0.4 = EvaluationResult(tp=1, fp=0, fn=0, precision=1.0, recall=1.0, f1=1.0, reward=0.4, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).reward
+________ test_correct_proven_answer_receives_published_reward[80-0.84] _________
+tests/test_evaluation.py:77: in test_correct_proven_answer_receives_published_reward
+    assert result.reward == expected_reward
+E   AssertionError: assert -0.6 == 0.84
+E    +  where -0.6 = EvaluationResult(tp=1, fp=0, fn=0, precision=1.0, recall=1.0, f1=1.0, reward=-0.6, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).reward
+________ test_correct_proven_answer_receives_published_reward[99-0.802] ________
+tests/test_evaluation.py:77: in test_correct_proven_answer_receives_published_reward
+    assert result.reward == expected_reward
+E   AssertionError: assert -0.98 == 0.802
+E    +  where -0.98 = EvaluationResult(tp=1, fp=0, fn=0, precision=1.0, recall=1.0, f1=1.0, reward=-0.98, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).reward
+=========================== short test summary info ============================
+FAILED tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[30-0.94]
+FAILED tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[80-0.84]
+FAILED tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[99-0.802]
+3 failed, 1 passed in 0.13s

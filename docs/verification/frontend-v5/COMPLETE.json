@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "completed_utc": "2026-11-20T19:13:16.183222+00:00",
+  "preview_url": "http://127.0.0.1:8767/",
+  "preview_exec_session": 97154,
+  "preview_script": "artifacts/frontend-v5/preview.py",
+  "backend_exec_session": 66110,
+  "backend_container": "e540185c88c44d12dbb65d0c78360e709e382e204ed9023834d9c9be70227c42",
+  "backend_context": "colima-genesis-fin-audit-amd64",
+  "features": [
+    "Plain-language masking experiment and reward comparison",
+    "Post-run causal repair lab: four independently reconciled copies, actual changed rows and immutable original attempt"
+  ],
+  "python_tests": {
+    "passed": 89,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "javascript_tests": {
+    "passed": 11,
+    "failures": 0,
+    "skipped": 0
+  },
+  "actual_http_proof": "artifacts/frontend-v5/real-http.json",
+  "browser_proof": "artifacts/frontend-v5/browser-checks.json",
+  "source_sha256": {
+    "scripts/demo.py": "6dc9e62d648ca4bf6046b14978f1bc03214b778be7f968f546e348a765c605d2",
+    "src/fin_audit/web.py": "710f92dd570f5ade501dd7ef825731c549f48bc33d3eae1b4fac4138d03cf2c5",
+    "src/fin_audit/web_assets/app.js": "1c3ec889a976240274c5d5422a3ef8ca6f8869975821da3996578c8ccb6a4dd9",
+    "src/fin_audit/web_assets/index.html": "962a68ae36f2eb71b4a831e6545e9dd99b9da7931fc6f1aa0ba748c2b1c14e11",
+    "src/fin_audit/web_assets/style.css": "b11ec01daafdd1d4634ec9f54ee66001514a253445286ad35f8d5dd477781101",
+    "tests/test_demo.py": "fe4499a34772d9615ac62f5d14160dea5a7bd4444ea5a0900ebdab31bf6e6de7",
+    "tests/test_web.py": "472137fb18a3dfabbc82681cb24d57d8df2f2057c02d2950ef8ad9babcd8ec7e",
+    "src/fin_audit/repair_lab.py": "4df3edee14c44a1a53622d75324f370320e394dcd2cd417e61997e105ae761bc",
+    "tests/test_repair_lab.py": "a9e22f0cce79c4f858ba661325bd9d5e5ee04d5968b49bb8dbcd14de0375b2a5"
+  },
+  "scorer_generator_checker_and_worker_core_unchanged": true,
+  "preview_left_running": true,
+  "viewport_override_reset": true,
+  "submission_zip_updated": false,
+  "submission_zip_sha256": "a2ec5f1302751d182c636482999950547162108a031b5151c0c825cfc22a435d",
+  "verification_scope": "Targeted development regressions and actual secure backend HTTP/browser checks; sealed0.6.0 ZIP and994-test release receipt remain unchanged. The preview repair endpoint applies current source repair logic to the completed sealed-backend session public book."
+}

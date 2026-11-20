@@ -1,0 +1,10 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+________ test_repeating_a_correct_finding_adds_fp_without_reusing_truth ________
+tests/test_evaluation.py:122: in test_repeating_a_correct_finding_adds_fp_without_reusing_truth
+    assert result.f1 == 0.8
+E   AssertionError: assert 1.0 == 0.8
+E    +  where 1.0 = EvaluationResult(tp=2, fp=1, fn=0, precision=0.6666666666666666, recall=1.0, f1=1.0, reward=0.94, status='scored', matched_pairs=((0, 'private-issue-a'), (1, 'private-issue-b')), error=None).f1
+=========================== short test summary info ============================
+FAILED tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth
+1 failed in 0.09s

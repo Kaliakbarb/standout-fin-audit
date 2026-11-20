@@ -1,0 +1,44 @@
+--- original/evaluation.py
++++ mutants/reuse_truth/evaluation.py
+@@ -210,39 +210,8 @@
+     return sorted(issues, key=lambda item: item.issue_id)
+ 
+ 
+-def _maximum_matching(
+-    adjacency: list[list[int]], truth_count: int
+-) -> tuple[tuple[int, int], ...]:
+-    """Deterministic maximum-cardinality bipartite matching by augmenting paths.
+-
+-    Iterate findings in their original order and candidate truth in sorted
+-    issue-ID order. Every accepted truth node has exactly one owner. A new
+-    finding may move a previous owner to another candidate instead of losing
+-    a TP as a greedy first-fit algorithm would.
+-    """
+-
+-    owners = [-1] * truth_count
+-
+-    def augment(finding_index: int, seen: set[int]) -> bool:
+-        for truth_index in adjacency[finding_index]:
+-            if truth_index in seen:
+-                continue
+-            seen.add(truth_index)
+-            owner = owners[truth_index]
+-            if owner == -1 or augment(owner, seen):
+-                owners[truth_index] = finding_index
+-                return True
+-        return False
+-
+-    for finding_index in range(len(adjacency)):
+-        augment(finding_index, set())
+-    return tuple(
+-        sorted(
+-            (owner, truth_index)
+-            for truth_index, owner in enumerate(owners)
+-            if owner != -1
+-        )
+-    )
++def _maximum_matching(adjacency: list[list[int]], truth_count: int) -> tuple[tuple[int, int], ...]:
++    return tuple(((index, candidates[0]) for index, candidates in enumerate(adjacency) if candidates))
+ 
+ 
+ def evaluate(

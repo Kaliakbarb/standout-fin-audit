@@ -1,0 +1,122 @@
+{
+  "containers": [
+    {
+      "HostConfig": {
+        "AutoRemove": true,
+        "Binds": null,
+        "BlkioDeviceReadBps": [],
+        "BlkioDeviceReadIOps": [],
+        "BlkioDeviceWriteBps": [],
+        "BlkioDeviceWriteIOps": [],
+        "BlkioWeight": 0,
+        "BlkioWeightDevice": [],
+        "CapAdd": [
+          "CAP_KILL",
+          "CAP_SETGID",
+          "CAP_SETUID",
+          "CAP_SYS_CHROOT"
+        ],
+        "CapDrop": [
+          "ALL"
+        ],
+        "Cgroup": "",
+        "CgroupParent": "",
+        "CgroupnsMode": "private",
+        "ConsoleSize": [
+          0,
+          0
+        ],
+        "ContainerIDFile": "",
+        "CpuCount": 0,
+        "CpuPercent": 0,
+        "CpuPeriod": 0,
+        "CpuQuota": 0,
+        "CpuRealtimePeriod": 0,
+        "CpuRealtimeRuntime": 0,
+        "CpuShares": 0,
+        "CpusetCpus": "",
+        "CpusetMems": "",
+        "DeviceCgroupRules": null,
+        "DeviceRequests": null,
+        "Devices": [],
+        "Dns": null,
+        "DnsOptions": [],
+        "DnsSearch": [],
+        "ExtraHosts": null,
+        "GroupAdd": null,
+        "IOMaximumBandwidth": 0,
+        "IOMaximumIOps": 0,
+        "IpcMode": "private",
+        "Isolation": "",
+        "Links": null,
+        "LogConfig": {
+          "Config": {},
+          "Type": "json-file"
+        },
+        "MaskedPaths": [
+          "/proc/acpi",
+          "/proc/asound",
+          "/proc/interrupts",
+          "/proc/kcore",
+          "/proc/keys",
+          "/proc/latency_stats",
+          "/proc/sched_debug",
+          "/proc/scsi",
+          "/proc/timer_list",
+          "/proc/timer_stats",
+          "/sys/devices/virtual/powercap",
+          "/sys/firmware"
+        ],
+        "Memory": 4294967296,
+        "MemoryReservation": 0,
+        "MemorySwap": 4294967296,
+        "MemorySwappiness": null,
+        "Mounts": [
+          {
+            "Source": "/Users/kaliakbar/Documents/ChatGPT/genesis_hackaton/artifacts/.clean-rehearsal-y0715e69/verification",
+            "Target": "/output",
+            "Type": "bind"
+          }
+        ],
+        "NanoCpus": 2000000000,
+        "NetworkMode": "none",
+        "OomKillDisable": null,
+        "OomScoreAdj": 0,
+        "PidMode": "",
+        "PidsLimit": 64,
+        "PortBindings": {},
+        "Privileged": false,
+        "PublishAllPorts": false,
+        "ReadonlyPaths": [
+          "/proc/bus",
+          "/proc/fs",
+          "/proc/irq",
+          "/proc/sys",
+          "/proc/sysrq-trigger"
+        ],
+        "ReadonlyRootfs": true,
+        "RestartPolicy": {
+          "MaximumRetryCount": 0,
+          "Name": "no"
+        },
+        "Runtime": "runc",
+        "SecurityOpt": [
+          "no-new-privileges=true"
+        ],
+        "ShmSize": 67108864,
+        "Tmpfs": {
+          "/tmp": "rw,noexec,nosuid,size=256m"
+        },
+        "UTSMode": "",
+        "Ulimits": null,
+        "UsernsMode": "",
+        "VolumeDriver": "",
+        "VolumesFrom": null
+      },
+      "Id": "ed825e2aa4a792996de0f4e51cfe3f414099a08b32e1e70a292d9021cf412751",
+      "Image": "sha256:1afc8c6dd5f3e211b79b90b19be40f29546c5deda2809bdad6458dbd25b6bba0"
+    }
+  ],
+  "raw_receipt_sha256": "2a952427dd85bb29409440005c3668baa94cfc31e50f8375494e93358c496a46",
+  "scope": "Derived resource evidence; raw Config.Cmd is omitted because it contains the private control seed."
+}

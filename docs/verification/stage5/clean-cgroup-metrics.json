@@ -1,0 +1,43 @@
+{
+  "application_exitcode": 0,
+  "cgroup_v2": true,
+  "elapsed_seconds": 106.30135755500123,
+  "passed": true,
+  "pytest_exitcode": 0,
+  "scope": "Current container cgroup, all test/acceptance child processes included; daemon/VM excluded.",
+  "source": "/sys/fs/cgroup",
+  "stage": 5,
+  "unavailable": [],
+  "values": {
+    "cpu.max": "200000 100000",
+    "cpu.stat": {
+      "burst_usec": 0,
+      "core_sched.force_idle_usec": 0,
+      "nr_bursts": 0,
+      "nr_periods": 1058,
+      "nr_throttled": 0,
+      "system_usec": 4062095,
+      "throttled_usec": 0,
+      "usage_usec": 102635082,
+      "user_usec": 98572987
+    },
+    "memory.current": 138436608,
+    "memory.events": {
+      "high": 0,
+      "low": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_group_kill": 0,
+      "oom_kill": 0
+    },
+    "memory.max": 4294967296,
+    "memory.peak": 283070464,
+    "memory.swap.max": 0,
+    "pids.current": 2,
+    "pids.events": {
+      "max": 0
+    },
+    "pids.max": 64,
+    "pids.peak": 11
+  }
+}

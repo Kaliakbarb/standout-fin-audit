@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "scope": "actual HTTP through local source preview and sealed secure auditor backend; source checker applies and independently verifies post-run record edits",
+  "before_terminal_status": 409,
+  "profile": "secure",
+  "baseline_reward": 0.992,
+  "original_attempt_unchanged": true,
+  "states": [
+    {
+      "duplicate_fixed": false,
+      "fx_fixed": false,
+      "revenue_minor": 55000000,
+      "errors": 2,
+      "changed_rows": 0
+    },
+    {
+      "duplicate_fixed": true,
+      "fx_fixed": false,
+      "revenue_minor": 50000000,
+      "errors": 1,
+      "changed_rows": 2
+    },
+    {
+      "duplicate_fixed": false,
+      "fx_fixed": true,
+      "revenue_minor": 60000000,
+      "errors": 1,
+      "changed_rows": 2
+    },
+    {
+      "duplicate_fixed": true,
+      "fx_fixed": true,
+      "revenue_minor": 55000000,
+      "errors": 0,
+      "changed_rows": 4
+    }
+  ],
+  "invalid_flags_status": 400
+}

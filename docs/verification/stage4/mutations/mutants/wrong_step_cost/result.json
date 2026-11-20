@@ -1,0 +1,160 @@
+{
+  "artifacts": {
+    "patch": "mutants/wrong_step_cost/patch.diff",
+    "result": "mutants/wrong_step_cost/result.json",
+    "source": "mutants/wrong_step_cost/evaluation.py"
+  },
+  "ast_after_sha256": "544365db65cba59a523a26127830e48d592844478e3b8cc20c2f718d1d9ea525",
+  "ast_before_sha256": "99ba8a68f53d18781f53185d3a9e19bac4f74ee1cc560dd2be9399698d272ca1",
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-2dzx_0fm/detect.py",
+    "/tmp/fin-audit-mutation-2dzx_0fm/src",
+    "/tmp/fin-audit-mutation-2dzx_0fm/events.json",
+    "bdd2a07b744cb3d822bf869f7a8940b8f380424ab0faeafd87a1a3c5f4c1f206",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "description": "Charge ten times the published inspection cost.",
+  "detected": true,
+  "detection_tests": [
+    "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward"
+  ],
+  "elapsed_seconds": 0.7387698260008619,
+  "equivalent": false,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-2dzx_0fm/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-2dzx_0fm/src/fin_audit/evaluation.py",
+        "sha256": "bdd2a07b744cb3d822bf869f7a8940b8f380424ab0faeafd87a1a3c5f4c1f206"
+      }
+    },
+    "pytest_exitcode": 1,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[0-1.0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[0-1.0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[0-1.0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[30-0.94]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[30-0.94]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[30-0.94]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[80-0.84]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[80-0.84]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[80-0.84]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[99-0.802]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[99-0.802]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[99-0.802]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 1,
+  "id": "wrong_step_cost",
+  "killed_by": [
+    "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[30-0.94]",
+    "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[80-0.84]",
+    "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[99-0.802]"
+  ],
+  "mutated_source_sha256": "bdd2a07b744cb3d822bf869f7a8940b8f380424ab0faeafd87a1a3c5f4c1f206",
+  "operator": "wrong_step_cost",
+  "original_source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "output_limit": false,
+  "passed": false,
+  "patch_sha256": "d063e7022a3e76e5ead0e27a9884a5c6213a761fac6db137bb9453f300a35033",
+  "read_stream_sha256": "fa0fcc5cb2454bbd2a8f091b57ecc90ecf5e4d8c58f2a5a58a699acaea1e03b3",
+  "reason": "assertion_failure",
+  "source_sha256": "bdd2a07b744cb3d822bf869f7a8940b8f380424ab0faeafd87a1a3c5f4c1f206",
+  "status": "killed",
+  "stdout": ".FFF                                                                     [100%]\n=================================== FAILURES ===================================\n________ test_correct_proven_answer_receives_published_reward[30-0.94] _________\ntests/test_evaluation.py:77: in test_correct_proven_answer_receives_published_reward\n    assert result.reward == expected_reward\nE   AssertionError: assert 0.4 == 0.94\nE    +  where 0.4 = EvaluationResult(tp=1, fp=0, fn=0, precision=1.0, recall=1.0, f1=1.0, reward=0.4, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).reward\n________ test_correct_proven_answer_receives_published_reward[80-0.84] _________\ntests/test_evaluation.py:77: in test_correct_proven_answer_receives_published_reward\n    assert result.reward == expected_reward\nE   AssertionError: assert -0.6 == 0.84\nE    +  where -0.6 = EvaluationResult(tp=1, fp=0, fn=0, precision=1.0, recall=1.0, f1=1.0, reward=-0.6, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).reward\n________ test_correct_proven_answer_receives_published_reward[99-0.802] ________\ntests/test_evaluation.py:77: in test_correct_proven_answer_receives_published_reward\n    assert result.reward == expected_reward\nE   AssertionError: assert -0.98 == 0.802\nE    +  where -0.98 = EvaluationResult(tp=1, fp=0, fn=0, precision=1.0, recall=1.0, f1=1.0, reward=-0.98, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).reward\n=========================== short test summary info ============================\nFAILED tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[30-0.94]\nFAILED tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[80-0.84]\nFAILED tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[99-0.802]\n3 failed, 1 passed in 0.13s\n",
+  "stdout_bytes_read": 1850,
+  "stdout_truncated": false,
+  "target_end_line": 333,
+  "target_line": 333,
+  "target_matches": 1,
+  "test_counts": {
+    "failed": 3,
+    "passed": 1
+  },
+  "tests": [
+    "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward"
+  ],
+  "timed_out": false
+}

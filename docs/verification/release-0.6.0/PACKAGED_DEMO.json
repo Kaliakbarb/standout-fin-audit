@@ -1,0 +1,137 @@
+{
+  "assets": {
+    "/": {
+      "bytes": 13376,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "627bd5aedd2db84635e4c49d88cb213e032ea67bc34ca1b7bcb1a31469090cd8"
+    },
+    "/app.js": {
+      "bytes": 69000,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha256": "3118b0e32e423795a1d97dc6a4c426f40d2c7bd01b04b6c4facc8efa733b6f9a"
+    },
+    "/lesson.mjs": {
+      "bytes": 5336,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha256": "0f71da60180b3f1a4909f20c8ffcaeb949640873259f62080e858933bf00b03e"
+    },
+    "/replay.mjs": {
+      "bytes": 1719,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha256": "1daf297b81b290bd69524408e54182e4d6346ff8147ed1b7de49789e2d170249"
+    },
+    "/style.css": {
+      "bytes": 61878,
+      "content_type": "text/css; charset=utf-8",
+      "sha256": "4c52c136d43fc9693f357e1c0f29103c0901c277eef1f6051c5707eb6f4c770f"
+    }
+  },
+  "bundle_manifest_sha256": "f799a5e1d3eb108352dd0308168b996c2424d85bb372fd250353612ec55c31fa",
+  "checks": {
+    "actual_fresh_clean_run": true,
+    "actual_fresh_four_family_run": true,
+    "actual_masked_two_policy_run": true,
+    "all_five_shipped_assets_match_sealed_manifest": true,
+    "all_six_policy_processes_secure": true,
+    "foreign_host_rejected": true,
+    "foreign_origin_rejected": true,
+    "generated_episodes_distinct": true,
+    "lab_settings_validated": true,
+    "neutral_closed_feedback": true,
+    "no_answers_before_terminal": true,
+    "terminal_results_immutable": true,
+    "workspace_paths_not_served": true
+  },
+  "container": {
+    "architecture": "amd64",
+    "container_id_sha256": "6097d8c087f911b7a797c8298ac21cc2886d3edff9bd368c0b68c5a1d2925705",
+    "image_id": "sha256:ad7b8f69f7e2d272d5ae1e2b2ed21f4f715a4f920934761876cc57df55c700e0",
+    "memory_bytes": 4294967296,
+    "memory_swap_bytes": 4294967296,
+    "nano_cpus": 2000000000,
+    "network_mode": "none",
+    "os": "linux",
+    "pids_limit": 64,
+    "published_ports": 0,
+    "readonly_rootfs": true,
+    "secure_workers_required": true
+  },
+  "elapsed_seconds": 56.021476624999195,
+  "ordinary_worker_executions": 6,
+  "passed": true,
+  "runs": [
+    {
+      "case": "masked_both",
+      "closed_trajectory_rows": 8,
+      "expected_issues": 2,
+      "immutable_terminal_state": true,
+      "neutral_closed_feedback": true,
+      "profile": "secure",
+      "public_sha256": "d680069ff02b7c7b5891505d0c934fb1c0f1d026e3b120023d2165a0d309db86",
+      "silent": {
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "termination_reason": "submitted",
+        "tp": 0
+      },
+      "simple": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "termination_reason": "submitted",
+        "tp": 2
+      }
+    },
+    {
+      "case": "generated",
+      "closed_trajectory_rows": 8,
+      "expected_issues": 0,
+      "immutable_terminal_state": true,
+      "neutral_closed_feedback": true,
+      "profile": "secure",
+      "public_sha256": "57ff098b3bfe0c13825bc8fcbe8573474ccc9c925e6c34ef1b5ea5fe5cd3e0d5",
+      "silent": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "termination_reason": "submitted",
+        "tp": 0
+      },
+      "simple": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "termination_reason": "submitted",
+        "tp": 0
+      }
+    },
+    {
+      "case": "generated",
+      "closed_trajectory_rows": 8,
+      "expected_issues": 4,
+      "immutable_terminal_state": true,
+      "neutral_closed_feedback": true,
+      "profile": "secure",
+      "public_sha256": "d51fdf1cdb50e661344f5e54dda69328a1c4f1cf77239a9c0823384abe92292a",
+      "silent": {
+        "f1": 0.0,
+        "fn": 4,
+        "fp": 0,
+        "termination_reason": "submitted",
+        "tp": 0
+      },
+      "simple": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "termination_reason": "submitted",
+        "tp": 4
+      }
+    }
+  ],
+  "scope": "actual packaged host proxy HTTP and Docker read-only inspect; browser visual QA is separate",
+  "software_version": "0.6.0",
+  "target_platform": "linux/amd64",
+  "url": "http://127.0.0.1:8766/"
+}

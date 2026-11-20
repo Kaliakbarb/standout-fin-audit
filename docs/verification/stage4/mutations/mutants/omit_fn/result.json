@@ -1,0 +1,94 @@
+{
+  "artifacts": {
+    "patch": "mutants/omit_fn/patch.diff",
+    "result": "mutants/omit_fn/result.json",
+    "source": "mutants/omit_fn/evaluation.py"
+  },
+  "ast_after_sha256": "93a839a49f4cafef7b83293f5321d1ed5d9d5ac291ad65d4c15cd6b62df66fbf",
+  "ast_before_sha256": "99ba8a68f53d18781f53185d3a9e19bac4f74ee1cc560dd2be9399698d272ca1",
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-lphdpyhk/detect.py",
+    "/tmp/fin-audit-mutation-lphdpyhk/src",
+    "/tmp/fin-audit-mutation-lphdpyhk/events.json",
+    "3b9590ff42b838afaad364d92bf67917e13fdb464f277b1869b3959033602a0c",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "description": "Remove FN from the F1 denominator.",
+  "detected": true,
+  "detection_tests": [
+    "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1"
+  ],
+  "elapsed_seconds": 0.8362615050009481,
+  "equivalent": false,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-lphdpyhk/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-lphdpyhk/src/fin_audit/evaluation.py",
+        "sha256": "3b9590ff42b838afaad364d92bf67917e13fdb464f277b1869b3959033602a0c"
+      }
+    },
+    "pytest_exitcode": 1,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 1,
+  "id": "omit_fn",
+  "killed_by": [
+    "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1"
+  ],
+  "mutated_source_sha256": "3b9590ff42b838afaad364d92bf67917e13fdb464f277b1869b3959033602a0c",
+  "operator": "omit_fn",
+  "original_source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "output_limit": false,
+  "passed": false,
+  "patch_sha256": "2f9fccc2ef0f123674e2399c62495a1cb82c8e0a7b01a6a147af68cd3e76c798",
+  "read_stream_sha256": "a67e136afd278a2e6b3aa528ad9f9cd1a0371eb56df9c85f1a0487dbccbe44a2",
+  "reason": "assertion_failure",
+  "source_sha256": "3b9590ff42b838afaad364d92bf67917e13fdb464f277b1869b3959033602a0c",
+  "status": "killed",
+  "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n______ test_exact_fraction_reward_is_not_computed_from_rounded_display_f1 ______\ntests/test_evaluation.py:434: in test_exact_fraction_reward_is_not_computed_from_rounded_display_f1\n    assert result.f1 == float(Fraction(2, 3))\nE   AssertionError: assert 1.0 == 0.6666666666666666\nE    +  where 1.0 = EvaluationResult(tp=1, fp=0, fn=1, precision=1.0, recall=0.5, f1=1.0, reward=0.998, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).f1\nE    +  and   0.6666666666666666 = float(Fraction(2, 3))\nE    +    where Fraction(2, 3) = Fraction(2, 3)\n=========================== short test summary info ============================\nFAILED tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1\n1 failed in 0.07s\n",
+  "stdout_bytes_read": 922,
+  "stdout_truncated": false,
+  "target_end_line": 332,
+  "target_line": 332,
+  "target_matches": 1,
+  "test_counts": {
+    "failed": 1
+  },
+  "tests": [
+    "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1"
+  ],
+  "timed_out": false
+}

@@ -1,0 +1,369 @@
+{
+  "artifacts": {
+    "patch": "mutants/ignore_currency/patch.diff",
+    "result": "mutants/ignore_currency/result.json",
+    "source": "mutants/ignore_currency/evaluation.py"
+  },
+  "ast_after_sha256": "8df8f8812ea257b84c0f1c91e519fad8d705cc1d7566024dcdc8deb687ea4145",
+  "ast_before_sha256": "99ba8a68f53d18781f53185d3a9e19bac4f74ee1cc560dd2be9399698d272ca1",
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-yf4_0dy5/detect.py",
+    "/tmp/fin-audit-mutation-yf4_0dy5/src",
+    "/tmp/fin-audit-mutation-yf4_0dy5/events.json",
+    "a1c315fef4d82edc1e301d2add2e4a595fb6446013843a149e3ada5cc74999ca",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "description": "Accept the wrong currency when all other fields match.",
+  "detected": true,
+  "detection_tests": [
+    "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth"
+  ],
+  "elapsed_seconds": 1.3810810300001322,
+  "equivalent": false,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-yf4_0dy5/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-yf4_0dy5/src/fin_audit/evaluation.py",
+        "sha256": "a1c315fef4d82edc1e301d2add2e4a595fb6446013843a149e3ada5cc74999ca"
+      }
+    },
+    "pytest_exitcode": 1,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes2]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes2]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes2]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes3]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes3]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes3]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes4]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes4]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes4]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes5]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes5]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes5]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes6]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes6]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes6]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes7]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes7]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes7]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes8]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes8]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes8]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes9]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes9]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes9]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes10]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes10]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes10]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes11]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes11]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes11]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes12]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes12]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes12]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes13]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes13]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes13]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 1,
+  "id": "ignore_currency",
+  "killed_by": [
+    "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes2]",
+    "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes3]"
+  ],
+  "mutated_source_sha256": "a1c315fef4d82edc1e301d2add2e4a595fb6446013843a149e3ada5cc74999ca",
+  "operator": "ignore_currency",
+  "original_source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "output_limit": false,
+  "passed": false,
+  "patch_sha256": "8bd3ed07a57fd8e6d93d4239a991208156f9166fd37f95f45a9b019b021d6eed",
+  "read_stream_sha256": "5b0c329efe306d70e97852d2e0b6da926b03d57337c997427a9a91ce8c017387",
+  "reason": "assertion_failure",
+  "source_sha256": "a1c315fef4d82edc1e301d2add2e4a595fb6446013843a149e3ada5cc74999ca",
+  "status": "killed",
+  "stdout": "..FF..........                                                           [100%]\n=================================== FAILURES ===================================\n________ test_semantically_wrong_claim_is_fp_and_missed_truth[changes2] ________\ntests/test_evaluation.py:158: in test_semantically_wrong_claim_is_fp_and_missed_truth\n    assert (result.tp, result.fp, result.fn) == (0, 1, 1)\nE   assert (1, 0, 0) == (0, 1, 1)\nE     \nE     At index 0 diff: 1 != 0\nE     Use -v to get more diff\n________ test_semantically_wrong_claim_is_fp_and_missed_truth[changes3] ________\ntests/test_evaluation.py:158: in test_semantically_wrong_claim_is_fp_and_missed_truth\n    assert (result.tp, result.fp, result.fn) == (0, 1, 1)\nE   assert (1, 0, 0) == (0, 1, 1)\nE     \nE     At index 0 diff: 1 != 0\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes2]\nFAILED tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes3]\n2 failed, 12 passed in 0.17s\n",
+  "stdout_bytes_read": 1115,
+  "stdout_truncated": false,
+  "target_end_line": 316,
+  "target_line": 316,
+  "target_matches": 1,
+  "test_counts": {
+    "failed": 2,
+    "passed": 12
+  },
+  "tests": [
+    "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth"
+  ],
+  "timed_out": false
+}

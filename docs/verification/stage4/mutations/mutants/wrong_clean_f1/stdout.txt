@@ -1,0 +1,12 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______ test_clean_silence_is_correct_despite_zero_precision_and_recall ________
+tests/test_evaluation.py:86: in test_clean_silence_is_correct_despite_zero_precision_and_recall
+    assert (result.precision, result.recall, result.f1) == (0.0, 0.0, 1.0)
+E   assert (0.0, 0.0, 0.0) == (0.0, 0.0, 1.0)
+E     
+E     At index 2 diff: 0.0 != 1.0
+E     Use -v to get more diff
+=========================== short test summary info ============================
+FAILED tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall
+1 failed in 0.08s

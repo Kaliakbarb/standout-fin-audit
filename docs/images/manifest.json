@@ -1,0 +1,83 @@
+{
+  "format_version": 1,
+  "scope": "Working source UI v5; not screenshots of the older sealed0.6.0 ZIP. No image synthesis or pixel edits.",
+  "images": [
+    {
+      "file": "hero-desktop.png",
+      "source": "output/playwright/standout/hero-desktop.png",
+      "bytes": 205454,
+      "sha256": "75936662096eee7f651eee215221104166b36440813b9773378e6240533741c0",
+      "kind": "actual browser capture, unedited"
+    },
+    {
+      "file": "audit-result-desktop.png",
+      "source": "output/playwright/standout/audit-result-desktop.png",
+      "bytes": 127122,
+      "sha256": "1c7c431286855220d3885c643d94ec70097c7f86c5316529253bdc4630c866cc",
+      "kind": "actual browser capture, unedited"
+    },
+    {
+      "file": "reward-desktop.png",
+      "source": "output/playwright/standout/reward-desktop.png",
+      "bytes": 53273,
+      "sha256": "69fea6558fc0c903b9abaa2a56e04679c1112ffc8b9766bed2a7da8d1b3d9f38",
+      "kind": "actual browser capture, unedited"
+    },
+    {
+      "file": "company-lab-desktop.png",
+      "source": "output/playwright/standout/company-lab-desktop.png",
+      "bytes": 227175,
+      "sha256": "30111cc180375627dcebc0d1ad3cda1a1d3089da8e6d0e4cb2d6e1991fa2f948",
+      "kind": "actual browser capture, unedited"
+    },
+    {
+      "file": "repair-initial-desktop.png",
+      "source": "output/playwright/standout/repair-initial-desktop.png",
+      "bytes": 65281,
+      "sha256": "0d60d1eafd3b1239610e3edbc98ec6c11c5e208355cbbad9d6ce13b50fed783e",
+      "kind": "actual browser capture, unedited"
+    },
+    {
+      "file": "repair-duplicate-desktop.png",
+      "source": "output/playwright/standout/repair-duplicate-desktop.png",
+      "bytes": 70274,
+      "sha256": "3841568efa862fd93229f3b9fe49292219bf7dcf27e1e53ed8f3459814f943a4",
+      "kind": "actual browser capture, unedited"
+    },
+    {
+      "file": "repair-changed-rows.jpg",
+      "source": "artifacts/frontend-v5/repair-changed-rows.jpg",
+      "bytes": 43019,
+      "sha256": "d8c094898bf0ca867a5b7d7e566fe7dcbf6623a3783b6f0843fae3f6d5a17648",
+      "kind": "actual browser capture, unedited"
+    },
+    {
+      "file": "repair-fx-only.jpg",
+      "source": "artifacts/frontend-v5/repair-fx-only.jpg",
+      "bytes": 57156,
+      "sha256": "f0a7671e86eb1621e453ca903bcc233dc76f866239291c90123e0a2da8d41484",
+      "kind": "actual browser capture, unedited"
+    },
+    {
+      "file": "repair-both.jpg",
+      "source": "artifacts/frontend-v5/repair-both.jpg",
+      "bytes": 57213,
+      "sha256": "f1d7acd70b758ed2ecb333ef418e0b8c4ac021b06098bc8fcab5f11e82f9aacf",
+      "kind": "actual browser capture, unedited"
+    },
+    {
+      "file": "repair-mobile.jpg",
+      "source": "artifacts/frontend-v5/repair-mobile.jpg",
+      "bytes": 34045,
+      "sha256": "be5327fd7c9afeb1ec9ce703abbae007d319684897ab1388880eab9e08a52cec",
+      "kind": "actual browser capture, unedited"
+    },
+    {
+      "file": "repair-mobile-clean.jpg",
+      "source": "artifacts/frontend-v5/repair-mobile-clean.jpg",
+      "bytes": 31681,
+      "sha256": "cb1e73bf1fc8797a91ffca7791af02743853c417570906facc04ec77842eb213",
+      "kind": "actual browser capture, unedited"
+    }
+  ]
+}

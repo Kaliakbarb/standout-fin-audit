@@ -1,0 +1,29 @@
+{
+  "application": {
+    "architecture": "x86_64",
+    "platform": "Linux",
+    "python": "3.11.15",
+    "software_version": "0.6.0"
+  },
+  "client": {
+    "machine": "arm64",
+    "system": "Darwin"
+  },
+  "cross_architecture_client_to_vm": true,
+  "cross_architecture_vm_to_application": false,
+  "daemon": {
+    "architecture": "x86_64",
+    "os": "linux"
+  },
+  "scope": "Observed client, in-VM kernel/daemon and application architecture; cross-architecture execution is not native bare-metal evidence.",
+  "target_platform": "linux/amd64",
+  "vm": {
+    "kernel": {
+      "machine": "x86_64",
+      "release": "6.8.0-117-generic",
+      "system": "Linux"
+    },
+    "machine": "x86_64",
+    "system": "Linux"
+  }
+}

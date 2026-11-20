@@ -1,0 +1,35 @@
+{
+  "source_title": "Genesis Hackathon — кейс FINTech",
+  "captured_on": "2026-11-19",
+  "source_page_count": 6,
+  "capture": "PNG pages rendered from the original PDF with pdftoppm, -scale-to 1400",
+  "original_path_at_capture": "/Users/kaliakbar/Desktop/Unknown.pdf",
+  "original_pdf_present": false,
+  "note": "The original path was subsequently replaced by the ArtTech PDF. These are the saved FinTech pages, not a copy of the current file. Hashes authenticate this saved snapshot only.",
+  "pages": [
+    {
+      "file": "page-1.png",
+      "sha256": "8aa48178ac626952bff0e5a1b3d4880df3407bcf709af181c02b5433eaba9000"
+    },
+    {
+      "file": "page-2.png",
+      "sha256": "6d994e132ace32029aa4c3f835ed87fd32299128492ecc373978cad2e9e6e145"
+    },
+    {
+      "file": "page-3.png",
+      "sha256": "f77da40537b0e98a4e76628a65d9d35e9cfdbe6ffea8e54c36c8c310a4c61bd5"
+    },
+    {
+      "file": "page-4.png",
+      "sha256": "a1a6e953d4326dc74e5e784ac17ede6b34d74e9f7167aa6d0ece1c8b321ef268"
+    },
+    {
+      "file": "page-5.png",
+      "sha256": "60b7e5d72012ad684530169e12e63c86e7e2d5415753b2751633da973e13c58d"
+    },
+    {
+      "file": "page-6.png",
+      "sha256": "e418fd8e16cc653fbc13fab372df4f1004c246f195ceb1b005de5d87878b161e"
+    }
+  ]
+}

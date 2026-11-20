@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "final_desktop": {
+    "after": "500 000 ₸",
+    "before": "550 000 ₸",
+    "originalRevenue": "550 000 ₸",
+    "originalReward": "+0,992",
+    "pageWidth": 622,
+    "remaining": "1 ошибка осталась",
+    "width": 622
+  },
+  "mobile": {
+    "after": "550 000 ₸",
+    "pageWidth": 390,
+    "remaining": "0 ошибок осталось",
+    "width": 390
+  },
+  "console": [],
+  "observed_states": [
+    {
+      "duplicate_fixed": true,
+      "fx_fixed": false,
+      "total_minor": 50000000,
+      "remaining_errors": 1
+    },
+    {
+      "duplicate_fixed": true,
+      "fx_fixed": true,
+      "total_minor": 55000000,
+      "remaining_errors": 0
+    },
+    {
+      "duplicate_fixed": false,
+      "fx_fixed": true,
+      "total_minor": 60000000,
+      "remaining_errors": 1
+    },
+    {
+      "duplicate_fixed": false,
+      "fx_fixed": false,
+      "total_minor": 55000000,
+      "remaining_errors": 2
+    }
+  ],
+  "actual_changed_rows_view_verified": true,
+  "expanded_change_details_survive_reset": true,
+  "mobile_entry_button_verified": true,
+  "viewport_override_reset": true
+}

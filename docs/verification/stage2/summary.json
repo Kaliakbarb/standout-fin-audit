@@ -1,0 +1,1355 @@
+{
+  "architecture": "aarch64",
+  "checks": {
+    "all_episode_shapes_and_family_counts": true,
+    "all_evidence_sets_within_ten": true,
+    "all_four_proved_together": true,
+    "all_simple_answers_exact": true,
+    "allocation_amount_depends_on_fx_rate": true,
+    "clean_foreign_refund_has_no_accusations": true,
+    "clean_has_documented_refund": true,
+    "clean_has_foreign_documents": true,
+    "closed_feedback_masked": true,
+    "cutoff_interaction_is_same_payment": true,
+    "each_family_independently_proved": true,
+    "full_scan_within_fifty_inspections": true,
+    "fx_interaction_is_same_payment": true,
+    "mark_all_penalized": true,
+    "no_private_observation_fields": true,
+    "oracle_upper_bound": true,
+    "probe_worker_submitted": true,
+    "public_private_roundtrips_exact": true,
+    "repeat_actions_observations_exact": true,
+    "secure_isolation_probes": true,
+    "truth_blind_reconciliation_complete": true,
+    "workers_exit_cleanly": true,
+    "wrong_date_fx_is_proved": true
+  },
+  "isolation_probes": {
+    "capabilities_empty": true,
+    "network_socket_denied": true,
+    "no_new_privileges": true,
+    "no_supplementary_groups": true,
+    "only_stdio_descriptors": true,
+    "parent_fd_unavailable": true,
+    "private_environment_absent": true,
+    "private_file_unreadable": true,
+    "private_write_denied": true,
+    "proc_unavailable": true,
+    "process_creation_denied": true,
+    "root_cwd": true,
+    "root_directory_readonly": true,
+    "shell_unavailable": true,
+    "supervisor_source_unreadable": true,
+    "uid_escalation_denied": true,
+    "unprivileged_gid": true,
+    "unprivileged_uid": true,
+    "worker_code_readonly": true
+  },
+  "passed": true,
+  "platform": "Linux",
+  "profile": "secure",
+  "python": "3.11.15",
+  "remaining_competition_work": [
+    "10 train + 10 dev exports",
+    "20-episode and 20-pair evaluation",
+    "scorer mutation report and final release rehearsal"
+  ],
+  "runs": [
+    {
+      "agent_exitcode": 0,
+      "case": "clean_multicurrency",
+      "elapsed_seconds": 0.10096737200001371,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 7,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.986,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 8,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "clean_multicurrency",
+      "elapsed_seconds": 0.09379690300011134,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "silent",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "clean_multicurrency",
+      "elapsed_seconds": 0.09328183700017689,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 0,
+        "fp": 30,
+        "inspection_steps": 7,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 8,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "clean_multicurrency",
+      "elapsed_seconds": 0.10026505799987717,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.976,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "clean_multicurrency",
+      "elapsed_seconds": 0.0031990569996196427,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "duplicate_only",
+      "elapsed_seconds": 0.09292018699989057,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 8,
+        "matched_pairs": [
+          [
+            0,
+            "issue_91ba2d5ef9a46ba800003259"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.984,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 9,
+        "tp": 1,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "duplicate_only",
+      "elapsed_seconds": 0.0909045960002004,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "silent",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "duplicate_only",
+      "elapsed_seconds": 0.09379508199981501,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 30,
+        "inspection_steps": 8,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 9,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "duplicate_only",
+      "elapsed_seconds": 0.09897025200007192,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "duplicate_only",
+      "elapsed_seconds": 0.00334913200003939,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_91ba2d5ef9a46ba800003259"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 1,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_only",
+      "elapsed_seconds": 0.09156092400007765,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 8,
+        "matched_pairs": [
+          [
+            0,
+            "issue_cc56093f67ceb8c5f15e0f49"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.984,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 9,
+        "tp": 1,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_only",
+      "elapsed_seconds": 0.08806267599993589,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "silent",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_only",
+      "elapsed_seconds": 0.09173659499992937,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 30,
+        "inspection_steps": 8,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 9,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_only",
+      "elapsed_seconds": 0.09262319900017246,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "allocation_only",
+      "elapsed_seconds": 0.0033298379998996097,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_cc56093f67ceb8c5f15e0f49"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 1,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "fx_only",
+      "elapsed_seconds": 0.09445878499991522,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 7,
+        "matched_pairs": [
+          [
+            0,
+            "issue_7d3121991f2d3fd89847b059"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.986,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 8,
+        "tp": 1,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "fx_only",
+      "elapsed_seconds": 0.09036380800034749,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "silent",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "fx_only",
+      "elapsed_seconds": 0.09401353899966125,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 30,
+        "inspection_steps": 7,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 8,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "fx_only",
+      "elapsed_seconds": 0.09322896300000139,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "fx_only",
+      "elapsed_seconds": 0.0032733760003793577,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_7d3121991f2d3fd89847b059"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 1,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "cutoff_only",
+      "elapsed_seconds": 0.0937324759997864,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 7,
+        "matched_pairs": [
+          [
+            0,
+            "issue_50398a4a353f9f2932656624"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.986,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 8,
+        "tp": 1,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "cutoff_only",
+      "elapsed_seconds": 0.09074571000019205,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "silent",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "cutoff_only",
+      "elapsed_seconds": 0.09604505200013591,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 30,
+        "inspection_steps": 7,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 8,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "cutoff_only",
+      "elapsed_seconds": 0.09501691099967502,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "cutoff_only",
+      "elapsed_seconds": 0.00327234300038981,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_50398a4a353f9f2932656624"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 1,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "all_four",
+      "elapsed_seconds": 0.09512089099962395,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 8,
+        "matched_pairs": [
+          [
+            0,
+            "issue_6efa4d661bee846d58e29703"
+          ],
+          [
+            1,
+            "issue_7d3121991f2d3fd89847b059"
+          ],
+          [
+            2,
+            "issue_7df16ff6c2c0f609f3073939"
+          ],
+          [
+            3,
+            "issue_c8e287b553216c4f7896a081"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.984,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 9,
+        "tp": 4,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "all_four",
+      "elapsed_seconds": 0.09072709099973508,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 4,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "silent",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "all_four",
+      "elapsed_seconds": 0.09361110899999403,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 4,
+        "fp": 30,
+        "inspection_steps": 8,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 9,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "all_four",
+      "elapsed_seconds": 0.09248463400035689,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 4,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "all_four",
+      "elapsed_seconds": 0.0033523249999234395,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_6efa4d661bee846d58e29703"
+          ],
+          [
+            1,
+            "issue_7d3121991f2d3fd89847b059"
+          ],
+          [
+            2,
+            "issue_7df16ff6c2c0f609f3073939"
+          ],
+          [
+            3,
+            "issue_c8e287b553216c4f7896a081"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 4,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_fx",
+      "elapsed_seconds": 0.09395268900016163,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 7,
+        "matched_pairs": [
+          [
+            0,
+            "issue_629fdb5ba9e74cb67b52f33e"
+          ],
+          [
+            1,
+            "issue_32c1d8dba5a88d09f1b9e934"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.986,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 8,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_fx",
+      "elapsed_seconds": 0.0898794889999408,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "silent",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_fx",
+      "elapsed_seconds": 0.09384769400003279,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 30,
+        "inspection_steps": 7,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 8,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_fx",
+      "elapsed_seconds": 0.09341314599987527,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "allocation_fx",
+      "elapsed_seconds": 0.0033882660000017495,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_629fdb5ba9e74cb67b52f33e"
+          ],
+          [
+            1,
+            "issue_32c1d8dba5a88d09f1b9e934"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_cutoff",
+      "elapsed_seconds": 0.09635551199971815,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 8,
+        "matched_pairs": [
+          [
+            0,
+            "issue_eb98b2c28a856f2d0b4ecf4f"
+          ],
+          [
+            1,
+            "issue_8122f5a23e66f9c1b9a0aad8"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.984,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 9,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_cutoff",
+      "elapsed_seconds": 0.09217423000018243,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "silent",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_cutoff",
+      "elapsed_seconds": 0.09937125900023602,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 30,
+        "inspection_steps": 8,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 9,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "allocation_cutoff",
+      "elapsed_seconds": 0.10707784400028686,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "allocation_cutoff",
+      "elapsed_seconds": 0.0033930640001926804,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_eb98b2c28a856f2d0b4ecf4f"
+          ],
+          [
+            1,
+            "issue_8122f5a23e66f9c1b9a0aad8"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "fx_wrong_date",
+      "elapsed_seconds": 0.1018698879997828,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 7,
+        "matched_pairs": [
+          [
+            0,
+            "issue_f42f29e70b4b1401fdafffc1"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.986,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 8,
+        "tp": 1,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "fx_wrong_date",
+      "elapsed_seconds": 0.0910168620002878,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "silent",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "fx_wrong_date",
+      "elapsed_seconds": 0.09613669899999877,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 30,
+        "inspection_steps": 7,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 8,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "fx_wrong_date",
+      "elapsed_seconds": 0.09302327300019897,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "fx_wrong_date",
+      "elapsed_seconds": 0.003264477999891824,
+      "episode_id": "episode_5f5472e43bf61a9a58faec5593d6b2df",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_f42f29e70b4b1401fdafffc1"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 1,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    }
+  ],
+  "schema_version": "0.2.0",
+  "scope": "G2: four families, dependent allocation+FX and allocation+cutoff, clean foreign/refund controls",
+  "secure_isolation_verified": true,
+  "stage": 2,
+  "version": "0.2.0"
+}

@@ -1,0 +1,223 @@
+{
+  "info": {
+    "Architecture": "aarch64",
+    "CDISpecDirs": [
+      "/etc/cdi",
+      "/var/run/cdi"
+    ],
+    "CPUSet": true,
+    "CPUShares": true,
+    "CgroupDriver": "systemd",
+    "CgroupVersion": "2",
+    "ClientInfo": {
+      "Arch": "arm64",
+      "BuildTime": "Fri Nov 13 13:30:47 2026",
+      "Context": "default",
+      "Debug": false,
+      "DefaultAPIVersion": "1.57",
+      "GitCommit": "fdd4b8e5da",
+      "GoVersion": "go1.27.4",
+      "Os": "darwin",
+      "Platform": {
+        "Name": "Docker Engine - Community"
+      },
+      "Plugins": [],
+      "Version": "29.10.0",
+      "Warnings": null
+    },
+    "Containerd": {
+      "Address": "/run/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/containerd.sock",
+      "Namespaces": {
+        "Containers": "moby",
+        "Plugins": "plugins.moby"
+      }
+    },
+    "ContainerdCommit": {
+      "ID": "193637f7ee8ae5f5aa5248f49e7baa3e6164966e"
+    },
+    "Containers": 0,
+    "ContainersPaused": 0,
+    "ContainersRunning": 0,
+    "ContainersStopped": 0,
+    "CpuCfsPeriod": true,
+    "CpuCfsQuota": true,
+    "Debug": false,
+    "DefaultRuntime": "runc",
+    "DockerRootDir": "/var/lib/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/data",
+    "Driver": "vfs",
+    "DriverStatus": null,
+    "ExperimentalBuild": false,
+    "FirewallBackend": {
+      "Driver": "iptables"
+    },
+    "GenericResources": null,
+    "HttpProxy": "",
+    "HttpsProxy": "",
+    "ID": "4d83e1c7-e87d-4278-b7db-63c546ed740f",
+    "IPv4Forwarding": true,
+    "Images": 0,
+    "IndexServerAddress": "https://index.docker.io/v1/",
+    "InitBinary": "docker-init",
+    "InitCommit": {
+      "ID": "de40ad0"
+    },
+    "Isolation": "",
+    "KernelVersion": "6.8.0-117-generic",
+    "Labels": [],
+    "LiveRestoreEnabled": false,
+    "LoggingDriver": "json-file",
+    "MemTotal": 4094447616,
+    "MemoryLimit": true,
+    "NCPU": 2,
+    "NEventsListener": 0,
+    "NFd": 24,
+    "NGoroutines": 43,
+    "Name": "colima-genesis-fin-audit",
+    "NoProxy": "",
+    "OSType": "linux",
+    "OSVersion": "24.04",
+    "OomKillDisable": false,
+    "OperatingSystem": "Ubuntu 24.04.4 LTS",
+    "PidsLimit": true,
+    "Plugins": {
+      "Authorization": null,
+      "Log": [
+        "awslogs",
+        "fluentd",
+        "gcplogs",
+        "gelf",
+        "journald",
+        "json-file",
+        "local",
+        "splunk",
+        "syslog"
+      ],
+      "Network": [
+        "bridge",
+        "host",
+        "ipvlan",
+        "macvlan",
+        "null",
+        "overlay"
+      ],
+      "Volume": [
+        "local"
+      ]
+    },
+    "RegistryConfig": {
+      "IndexConfigs": {
+        "docker.io": {
+          "Mirrors": [],
+          "Name": "docker.io",
+          "Official": true,
+          "Secure": true
+        }
+      },
+      "InsecureRegistryCIDRs": [
+        "::1/128",
+        "127.0.0.0/8"
+      ],
+      "Mirrors": []
+    },
+    "RuncCommit": {
+      "ID": "v1.3.5-0-g488fc13e"
+    },
+    "Runtimes": {
+      "io.containerd.runc.v2": {
+        "path": "runc",
+        "status": {
+          "org.opencontainers.runtime-spec.features": "{\"ociVersionMin\":\"1.0.0\",\"ociVersionMax\":\"1.2.1\",\"hooks\":[\"prestart\",\"createRuntime\",\"createContainer\",\"startContainer\",\"poststart\",\"poststop\"],\"mountOptions\":[\"async\",\"atime\",\"bind\",\"defaults\",\"dev\",\"diratime\",\"dirsync\",\"exec\",\"iversion\",\"lazytime\",\"loud\",\"mand\",\"noatime\",\"nodev\",\"nodiratime\",\"noexec\",\"noiversion\",\"nolazytime\",\"nomand\",\"norelatime\",\"nostrictatime\",\"nosuid\",\"nosymfollow\",\"private\",\"ratime\",\"rbind\",\"rdev\",\"rdiratime\",\"relatime\",\"remount\",\"rexec\",\"rnoatime\",\"rnodev\",\"rnodiratime\",\"rnoexec\",\"rnorelatime\",\"rnostrictatime\",\"rnosuid\",\"rnosymfollow\",\"ro\",\"rprivate\",\"rrelatime\",\"rro\",\"rrw\",\"rshared\",\"rslave\",\"rstrictatime\",\"rsuid\",\"rsymfollow\",\"runbindable\",\"rw\",\"shared\",\"silent\",\"slave\",\"strictatime\",\"suid\",\"symfollow\",\"sync\",\"tmpcopyup\",\"unbindable\"],\"linux\":{\"namespaces\":[\"cgroup\",\"ipc\",\"mount\",\"network\",\"pid\",\"time\",\"user\",\"uts\"],\"capabilities\":[\"CAP_CHOWN\",\"CAP_DAC_OVERRIDE\",\"CAP_DAC_READ_SEARCH\",\"CAP_FOWNER\",\"CAP_FSETID\",\"CAP_KILL\",\"CAP_SETGID\",\"CAP_SETUID\",\"CAP_SETPCAP\",\"CAP_LINUX_IMMUTABLE\",\"CAP_NET_BIND_SERVICE\",\"CAP_NET_BROADCAST\",\"CAP_NET_ADMIN\",\"CAP_NET_RAW\",\"CAP_IPC_LOCK\",\"CAP_IPC_OWNER\",\"CAP_SYS_MODULE\",\"CAP_SYS_RAWIO\",\"CAP_SYS_CHROOT\",\"CAP_SYS_PTRACE\",\"CAP_SYS_PACCT\",\"CAP_SYS_ADMIN\",\"CAP_SYS_BOOT\",\"CAP_SYS_NICE\",\"CAP_SYS_RESOURCE\",\"CAP_SYS_TIME\",\"CAP_SYS_TTY_CONFIG\",\"CAP_MKNOD\",\"CAP_LEASE\",\"CAP_AUDIT_WRITE\",\"CAP_AUDIT_CONTROL\",\"CAP_SETFCAP\",\"CAP_MAC_OVERRIDE\",\"CAP_MAC_ADMIN\",\"CAP_SYSLOG\",\"CAP_WAKE_ALARM\",\"CAP_BLOCK_SUSPEND\",\"CAP_AUDIT_READ\",\"CAP_PERFMON\",\"CAP_BPF\",\"CAP_CHECKPOINT_RESTORE\"],\"cgroup\":{\"v1\":true,\"v2\":true,\"systemd\":true,\"systemdUser\":true,\"rdma\":true},\"seccomp\":{\"enabled\":true,\"actions\":[\"SCMP_ACT_ALLOW\",\"SCMP_ACT_ERRNO\",\"SCMP_ACT_KILL\",\"SCMP_ACT_KILL_PROCESS\",\"SCMP_ACT_KILL_THREAD\",\"SCMP_ACT_LOG\",\"SCMP_ACT_NOTIFY\",\"SCMP_ACT_TRACE\",\"SCMP_ACT_TRAP\"],\"operators\":[\"SCMP_CMP_EQ\",\"SCMP_CMP_GE\",\"SCMP_CMP_GT\",\"SCMP_CMP_LE\",\"SCMP_CMP_LT\",\"SCMP_CMP_MASKED_EQ\",\"SCMP_CMP_NE\"],\"archs\":[\"SCMP_ARCH_AARCH64\",\"SCMP_ARCH_ARM\",\"SCMP_ARCH_MIPS\",\"SCMP_ARCH_MIPS64\",\"SCMP_ARCH_MIPS64N32\",\"SCMP_ARCH_MIPSEL\",\"SCMP_ARCH_MIPSEL64\",\"SCMP_ARCH_MIPSEL64N32\",\"SCMP_ARCH_PPC\",\"SCMP_ARCH_PPC64\",\"SCMP_ARCH_PPC64LE\",\"SCMP_ARCH_RISCV64\",\"SCMP_ARCH_S390\",\"SCMP_ARCH_S390X\",\"SCMP_ARCH_X32\",\"SCMP_ARCH_X86\",\"SCMP_ARCH_X86_64\"],\"knownFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\"],\"supportedFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\"]},\"apparmor\":{\"enabled\":true},\"selinux\":{\"enabled\":true},\"intelRdt\":{\"enabled\":true},\"mountExtensions\":{\"idmap\":{\"enabled\":true}}},\"annotations\":{\"io.github.seccomp.libseccomp.version\":\"2.5.5\",\"org.opencontainers.runc.checkpoint.enabled\":\"true\",\"org.opencontainers.runc.commit\":\"v1.3.5-0-g488fc13e\",\"org.opencontainers.runc.version\":\"1.3.5\\n\"},\"potentiallyUnsafeConfigAnnotations\":[\"bundle\",\"org.systemd.property.\",\"org.criu.config\"]}"
+        }
+      },
+      "runc": {
+        "path": "runc",
+        "status": {
+          "org.opencontainers.runtime-spec.features": "{\"ociVersionMin\":\"1.0.0\",\"ociVersionMax\":\"1.2.1\",\"hooks\":[\"prestart\",\"createRuntime\",\"createContainer\",\"startContainer\",\"poststart\",\"poststop\"],\"mountOptions\":[\"async\",\"atime\",\"bind\",\"defaults\",\"dev\",\"diratime\",\"dirsync\",\"exec\",\"iversion\",\"lazytime\",\"loud\",\"mand\",\"noatime\",\"nodev\",\"nodiratime\",\"noexec\",\"noiversion\",\"nolazytime\",\"nomand\",\"norelatime\",\"nostrictatime\",\"nosuid\",\"nosymfollow\",\"private\",\"ratime\",\"rbind\",\"rdev\",\"rdiratime\",\"relatime\",\"remount\",\"rexec\",\"rnoatime\",\"rnodev\",\"rnodiratime\",\"rnoexec\",\"rnorelatime\",\"rnostrictatime\",\"rnosuid\",\"rnosymfollow\",\"ro\",\"rprivate\",\"rrelatime\",\"rro\",\"rrw\",\"rshared\",\"rslave\",\"rstrictatime\",\"rsuid\",\"rsymfollow\",\"runbindable\",\"rw\",\"shared\",\"silent\",\"slave\",\"strictatime\",\"suid\",\"symfollow\",\"sync\",\"tmpcopyup\",\"unbindable\"],\"linux\":{\"namespaces\":[\"cgroup\",\"ipc\",\"mount\",\"network\",\"pid\",\"time\",\"user\",\"uts\"],\"capabilities\":[\"CAP_CHOWN\",\"CAP_DAC_OVERRIDE\",\"CAP_DAC_READ_SEARCH\",\"CAP_FOWNER\",\"CAP_FSETID\",\"CAP_KILL\",\"CAP_SETGID\",\"CAP_SETUID\",\"CAP_SETPCAP\",\"CAP_LINUX_IMMUTABLE\",\"CAP_NET_BIND_SERVICE\",\"CAP_NET_BROADCAST\",\"CAP_NET_ADMIN\",\"CAP_NET_RAW\",\"CAP_IPC_LOCK\",\"CAP_IPC_OWNER\",\"CAP_SYS_MODULE\",\"CAP_SYS_RAWIO\",\"CAP_SYS_CHROOT\",\"CAP_SYS_PTRACE\",\"CAP_SYS_PACCT\",\"CAP_SYS_ADMIN\",\"CAP_SYS_BOOT\",\"CAP_SYS_NICE\",\"CAP_SYS_RESOURCE\",\"CAP_SYS_TIME\",\"CAP_SYS_TTY_CONFIG\",\"CAP_MKNOD\",\"CAP_LEASE\",\"CAP_AUDIT_WRITE\",\"CAP_AUDIT_CONTROL\",\"CAP_SETFCAP\",\"CAP_MAC_OVERRIDE\",\"CAP_MAC_ADMIN\",\"CAP_SYSLOG\",\"CAP_WAKE_ALARM\",\"CAP_BLOCK_SUSPEND\",\"CAP_AUDIT_READ\",\"CAP_PERFMON\",\"CAP_BPF\",\"CAP_CHECKPOINT_RESTORE\"],\"cgroup\":{\"v1\":true,\"v2\":true,\"systemd\":true,\"systemdUser\":true,\"rdma\":true},\"seccomp\":{\"enabled\":true,\"actions\":[\"SCMP_ACT_ALLOW\",\"SCMP_ACT_ERRNO\",\"SCMP_ACT_KILL\",\"SCMP_ACT_KILL_PROCESS\",\"SCMP_ACT_KILL_THREAD\",\"SCMP_ACT_LOG\",\"SCMP_ACT_NOTIFY\",\"SCMP_ACT_TRACE\",\"SCMP_ACT_TRAP\"],\"operators\":[\"SCMP_CMP_EQ\",\"SCMP_CMP_GE\",\"SCMP_CMP_GT\",\"SCMP_CMP_LE\",\"SCMP_CMP_LT\",\"SCMP_CMP_MASKED_EQ\",\"SCMP_CMP_NE\"],\"archs\":[\"SCMP_ARCH_AARCH64\",\"SCMP_ARCH_ARM\",\"SCMP_ARCH_MIPS\",\"SCMP_ARCH_MIPS64\",\"SCMP_ARCH_MIPS64N32\",\"SCMP_ARCH_MIPSEL\",\"SCMP_ARCH_MIPSEL64\",\"SCMP_ARCH_MIPSEL64N32\",\"SCMP_ARCH_PPC\",\"SCMP_ARCH_PPC64\",\"SCMP_ARCH_PPC64LE\",\"SCMP_ARCH_RISCV64\",\"SCMP_ARCH_S390\",\"SCMP_ARCH_S390X\",\"SCMP_ARCH_X32\",\"SCMP_ARCH_X86\",\"SCMP_ARCH_X86_64\"],\"knownFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\"],\"supportedFlags\":[\"SECCOMP_FILTER_FLAG_TSYNC\",\"SECCOMP_FILTER_FLAG_SPEC_ALLOW\",\"SECCOMP_FILTER_FLAG_LOG\"]},\"apparmor\":{\"enabled\":true},\"selinux\":{\"enabled\":true},\"intelRdt\":{\"enabled\":true},\"mountExtensions\":{\"idmap\":{\"enabled\":true}}},\"annotations\":{\"io.github.seccomp.libseccomp.version\":\"2.5.5\",\"org.opencontainers.runc.checkpoint.enabled\":\"true\",\"org.opencontainers.runc.commit\":\"v1.3.5-0-g488fc13e\",\"org.opencontainers.runc.version\":\"1.3.5\\n\"},\"potentiallyUnsafeConfigAnnotations\":[\"bundle\",\"org.systemd.property.\",\"org.criu.config\"]}"
+        }
+      }
+    },
+    "SecurityOptions": [
+      "name=apparmor",
+      "name=seccomp,profile=builtin",
+      "name=cgroupns"
+    ],
+    "ServerVersion": "29.5.2",
+    "SwapLimit": true,
+    "Swarm": {
+      "ControlAvailable": false,
+      "Error": "",
+      "LocalNodeState": "inactive",
+      "NodeAddr": "",
+      "NodeID": "",
+      "RemoteManagers": null
+    },
+    "SystemTime": "2026-11-19T22:37:41.401134293+05:00",
+    "Warnings": null
+  },
+  "isolation": {
+    "addresses": [
+      {
+        "addr_info": [],
+        "address": "00:00:00:00:00:00",
+        "broadcast": "00:00:00:00:00:00",
+        "flags": [
+          "LOOPBACK"
+        ],
+        "group": "default",
+        "ifindex": 1,
+        "ifname": "lo",
+        "link_type": "loopback",
+        "mtu": 65536,
+        "operstate": "DOWN",
+        "qdisc": "noop",
+        "txqlen": 1000
+      }
+    ],
+    "argv": [
+      "/usr/bin/dockerd",
+      "--config-file",
+      "/var/lib/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/daemon.json"
+    ],
+    "containerd": [
+      {
+        "argv": [
+          "/usr/bin/containerd",
+          "--config",
+          "/var/lib/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/containerd.toml"
+        ],
+        "config_path": "/var/lib/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/containerd.toml",
+        "grpc_address": "/run/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/containerd.sock",
+        "netns": "net:[4026532377]",
+        "pid": 15579,
+        "root": "/var/lib/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/containerd",
+        "state": "/run/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/containerd"
+      }
+    ],
+    "daemon_config": {
+      "bridge": "none",
+      "containerd": "/run/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/containerd.sock",
+      "data-root": "/var/lib/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/data",
+      "exec-root": "/run/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/exec",
+      "features": {
+        "containerd-snapshotter": false
+      },
+      "group": "docker",
+      "hosts": [
+        "unix:///run/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/docker.sock"
+      ],
+      "ip-forward": false,
+      "ip-masq": false,
+      "ip6tables": false,
+      "iptables": false,
+      "pidfile": "/run/fin-audit-clean-7ab8cef3229f4e79bf2db25848424b66/dockerd.pid",
+      "shutdown-timeout": 5,
+      "storage-driver": "vfs",
+      "userland-proxy": false
+    },
+    "host_netns": "net:[4026531840]",
+    "netns": "net:[4026532377]",
+    "pid": 15578,
+    "routes": []
+  },
+  "raw_receipt_sha256": "9eda0a3558fd4ead25efe1dd8dd451128514a0af358cbe64f2fdd1704de61f9b"
+}

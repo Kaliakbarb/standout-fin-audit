@@ -1,0 +1,10 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____ test_one_complete_alternative_proof_is_required_not_any_intersection _____
+tests/test_evaluation.py:178: in test_one_complete_alternative_proof_is_required_not_any_intersection
+    assert partial.tp == 0
+E   AssertionError: assert 1 == 0
+E    +  where 1 = EvaluationResult(tp=1, fp=0, fn=0, precision=1.0, recall=1.0, f1=1.0, reward=1.0, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).tp
+=========================== short test summary info ============================
+FAILED tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection
+1 failed in 0.10s

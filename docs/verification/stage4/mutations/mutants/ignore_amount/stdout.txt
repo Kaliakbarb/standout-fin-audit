@@ -1,0 +1,11 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______ test_large_minor_units_are_compared_exactly_beyond_float_precision ______
+tests/test_evaluation.py:215: in test_large_minor_units_are_compared_exactly_beyond_float_precision
+    assert score(near, truth=[issue]).tp == 0
+E   AssertionError: assert 1 == 0
+E    +  where 1 = EvaluationResult(tp=1, fp=0, fn=0, precision=1.0, recall=1.0, f1=1.0, reward=1.0, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).tp
+E    +    where EvaluationResult(tp=1, fp=0, fn=0, precision=1.0, recall=1.0, f1=1.0, reward=1.0, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None) = score({'episode_id': 'public-episode', 'findings': [{'affected_ids': ['ledger-a', 'ledger-b'], 'claimed_amount_minor': 100000000000000000000, 'currency': 'KZT', 'evidence_ids': ['ledger-a', 'ledger-b', 'invoice-doc', 'policy'], ...}]}, truth=[{'affected_ids': ['ledger-a', 'ledger-b'], 'currency': 'KZT', 'evidence_sets': [['ledger-a', 'ledger-b', 'invoice-doc', 'policy']], 'expected_amount_minor': 100000000000000000001, ...}])
+=========================== short test summary info ============================
+FAILED tests/test_evaluation.py::test_large_minor_units_are_compared_exactly_beyond_float_precision
+1 failed in 0.07s

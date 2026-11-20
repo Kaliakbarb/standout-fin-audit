@@ -1,0 +1,38 @@
+{
+  "application_checks": 47,
+  "application_network": "none",
+  "archive": {
+    "bytes": 72274203,
+    "filename": "genesis-fin-audit-0.5.0-linux-arm64.tar.gz",
+    "sha256": "a541d647fe04aea7f350183a2b7a9bef3b70cbff15d639c99a69b379ff2963e3"
+  },
+  "bundle_inventory_sha256": "8eb68140f98b6572e47a611fe46a4c1fd0b8c1bf231ecdffa8d8dd5275ad53bc",
+  "clean_seconds": 146.34984137500578,
+  "completed": true,
+  "daemon_network_no_routes": true,
+  "empty_store_before_load": true,
+  "existing_engine_preserved": true,
+  "full_private_artifacts": "artifacts/release-clean-0.5.0",
+  "isolation_probes": 19,
+  "loaded_image_id": "sha256:1afc8c6dd5f3e211b79b90b19be40f29546c5deda2809bdad6458dbd25b6bba0",
+  "mutations": {
+    "declared": 12,
+    "invalid": 0,
+    "killed": 12,
+    "not_run": 0,
+    "survived": 0,
+    "timeouts": 0
+  },
+  "no_official_submission_performed": true,
+  "passed": true,
+  "platform": "Linux ARM64; Python3.11.15 inside image",
+  "raw_clean_receipt_sha256": "21987c3b0decfbe93358cd864817558c039a573d0203f9092ad3f7b72438c7c8",
+  "software_version": "0.5.0",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 826
+  },
+  "whole_container_peak_bytes": 283070464
+}

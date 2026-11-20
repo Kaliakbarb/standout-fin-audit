@@ -1,0 +1,11 @@
+--- original/evaluation.py
++++ mutants/evidence_overlap/evaluation.py
+@@ -318,7 +318,7 @@
+                         finding["claimed_amount_minor"] - issue.expected_amount_minor
+                     )
+                     <= configured_tolerances.get(issue.type, 0)
+-                    and any(proof.issubset(evidence) for proof in issue.evidence_sets)
++                    and any((bool(proof & evidence) for proof in issue.evidence_sets))
+                 ):
+                     candidates.append(index)
+         adjacency.append(candidates)

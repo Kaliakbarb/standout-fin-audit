@@ -1,0 +1,10 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______________ test_augmenting_path_avoids_greedy_first_fit_loss _______________
+tests/test_evaluation.py:351: in test_augmenting_path_avoids_greedy_first_fit_loss
+    assert result.tp == 2
+E   AssertionError: assert 1 == 2
+E    +  where 1 = EvaluationResult(tp=1, fp=1, fn=1, precision=0.5, recall=0.5, f1=0.5, reward=0.0, status='scored', matched_pairs=((0, 'issue-0'),), error=None).tp
+=========================== short test summary info ============================
+FAILED tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss
+1 failed in 0.07s

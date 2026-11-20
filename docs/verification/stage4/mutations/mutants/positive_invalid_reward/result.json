@@ -1,0 +1,468 @@
+{
+  "artifacts": {
+    "patch": "mutants/positive_invalid_reward/patch.diff",
+    "result": "mutants/positive_invalid_reward/result.json",
+    "source": "mutants/positive_invalid_reward/evaluation.py"
+  },
+  "ast_after_sha256": "efd5c5b5d56ff58727902142c2f269d4dc9032229ccccb4dbc07948440d081ae",
+  "ast_before_sha256": "99ba8a68f53d18781f53185d3a9e19bac4f74ee1cc560dd2be9399698d272ca1",
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-13vvr2lk/detect.py",
+    "/tmp/fin-audit-mutation-13vvr2lk/src",
+    "/tmp/fin-audit-mutation-13vvr2lk/events.json",
+    "bc8c0c45e695699d8b445c42c5b8f6f97202be4fa99e552ba5ddd9d70eaca067",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "description": "Reward structurally invalid submissions with +1 instead of -1.",
+  "detected": true,
+  "detection_tests": [
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth"
+  ],
+  "elapsed_seconds": 1.4073465719993692,
+  "equivalent": false,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-13vvr2lk/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-13vvr2lk/src/fin_audit/evaluation.py",
+        "sha256": "bc8c0c45e695699d8b445c42c5b8f6f97202be4fa99e552ba5ddd9d70eaca067"
+      }
+    },
+    "pytest_exitcode": 1,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 1,
+  "id": "positive_invalid_reward",
+  "killed_by": [
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids]",
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation]"
+  ],
+  "mutated_source_sha256": "bc8c0c45e695699d8b445c42c5b8f6f97202be4fa99e552ba5ddd9d70eaca067",
+  "operator": "positive_invalid_reward",
+  "original_source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "output_limit": false,
+  "passed": false,
+  "patch_sha256": "58ff4eaf0caeb6fa46f9a5eadd17d8db905109e18c5094580f2a9c2e957c0f60",
+  "read_stream_sha256": "3c0f559c06912a92152c16e229eb6a3ec52f5337af226ac7027f718e347177db",
+  "reason": "assertion_failure",
+  "source_sha256": "bc8c0c45e695699d8b445c42c5b8f6f97202be4fa99e552ba5ddd9d70eaca067",
+  "status": "killed",
+  "stdout": "FFFFFFFFFFFFFFFFFF                                                       [100%]\n=================================== FAILURES ===================================\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_submission_fields').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_submission_fields').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_submission_fields').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_episode_id_type').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='episode_id_mismatch').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_findings_array').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_finding_fields').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_finding_fields').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_finding_type').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_affected_ids').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_affected_ids').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_claimed_amount_minor').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_claimed_amount_minor').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_claimed_amount_minor').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_currency').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_evidence_ids').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_evidence_ids').reward\n_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation] _\ntests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth\n    assert result.reward == -1.0\nE   AssertionError: assert 1.0 == -1.0\nE    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_explanation').reward\n=========================== short test summary info ============================\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids]\nFAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation]\n18 failed in 0.35s\n",
+  "stdout_bytes_read": 10745,
+  "stdout_truncated": false,
+  "target_end_line": 300,
+  "target_line": 300,
+  "target_matches": 1,
+  "test_counts": {
+    "failed": 18
+  },
+  "tests": [
+    "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth"
+  ],
+  "timed_out": false
+}

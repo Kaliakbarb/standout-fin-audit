@@ -1,0 +1,16 @@
+.F.F.                                                                    [100%]
+=================================== FAILURES ===================================
+_______ test_published_absolute_tolerance_has_inclusive_boundaries[-1-1] _______
+tests/test_evaluation.py:208: in test_published_absolute_tolerance_has_inclusive_boundaries
+    assert result.tp == expected_tp
+E   AssertionError: assert 0 == 1
+E    +  where 0 = EvaluationResult(tp=0, fp=1, fn=1, precision=0.0, recall=0.0, f1=0.0, reward=-1.0, status='scored', matched_pairs=(), error=None).tp
+_______ test_published_absolute_tolerance_has_inclusive_boundaries[1-1] ________
+tests/test_evaluation.py:208: in test_published_absolute_tolerance_has_inclusive_boundaries
+    assert result.tp == expected_tp
+E   AssertionError: assert 0 == 1
+E    +  where 0 = EvaluationResult(tp=0, fp=1, fn=1, precision=0.0, recall=0.0, f1=0.0, reward=-1.0, status='scored', matched_pairs=(), error=None).tp
+=========================== short test summary info ============================
+FAILED tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-1-1]
+FAILED tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[1-1]
+2 failed, 3 passed in 0.08s

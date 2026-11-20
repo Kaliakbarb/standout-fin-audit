@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'none'; img-src 'none'; base-uri 'none'; form-action 'none'"><title>Две ошибки за правильным итогом · Genesis</title><style>
+:root{--paper:#EEF2F6;--ink:#14243A;--link:#245B8A;--error:#B14E3F;--fixed:#296C61;--line:#D1DCE5;--display:Georgia,'Times New Roman',serif;--body:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html{scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6}main{max-width:1160px;margin:0 auto;padding:34px 28px 0}a{color:var(--link);text-underline-offset:3px}a:hover{color:var(--ink)}a:focus-visible,summary:focus-visible{outline:3px solid var(--link);outline-offset:4px}h1,h2,h3,p{margin-top:0}h1,h2{font-family:var(--display);font-weight:400;line-height:1.13}h1{font-size:clamp(2.3rem,5.6vw,4.3rem);letter-spacing:-.045em;margin-bottom:20px}h2{font-size:1.7rem;margin-bottom:16px}h3{font-size:1rem;line-height:1.35}code,pre,td,strong[data-testid],.sum-grid strong,.effect strong,.net strong,.calculation-result strong{font-family:var(--mono);font-variant-numeric:tabular-nums}.masthead{display:flex;justify-content:space-between;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:14px;font:11px/1.4 var(--mono);letter-spacing:.09em}.hero{display:grid;grid-template-columns:minmax(0,1fr)260px;gap:60px;padding:46px 0 28px}.eyebrow{font:11px/1.5 var(--mono);letter-spacing:.065em;text-transform:uppercase;color:var(--link);margin-bottom:14px}.lead{font-size:17px;max-width:640px;margin:0;line-height:1.6}.completion{align-self:center;border-left:2px solid var(--line);padding:14px 0 14px 24px;font-size:12px;line-height:1.65}.completion-mark{display:block;color:var(--fixed);font:28px var(--mono);margin-bottom:12px}.completion strong{display:block;font-size:15px}.completion p{margin:8px 0 0}.masking-panel{border:1px solid var(--line);background:#fff;border-top:5px solid var(--ink);padding:28px 30px 18px;margin-bottom:30px;box-shadow:0 7px 0 -3px var(--line)}.sum-grid{display:grid;grid-template-columns:minmax(0,1fr)40px minmax(0,1fr);align-items:center;gap:18px}.sum-grid span{display:block;font-size:12px;margin-bottom:5px}.sum-grid strong{display:block;font-size:clamp(1.2rem,2.6vw,2.1rem);font-weight:500;letter-spacing:-.035em}.sum-grid .equals{font:30px var(--mono);text-align:center;margin:0}.effects{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.effect,.net{padding:18px 16px;border-right:1px solid var(--line);min-width:0}.effect{color:var(--error);text-decoration:none;position:relative}.effect::before{content:'';position:absolute;left:0;top:18px;bottom:18px;width:3px;background:var(--error)}.effect span,.net span{display:block;font-size:11px;margin-bottom:8px}.effect strong,.net strong{font-size:1.22rem;font-weight:500}.net{border-right:0}.panel-note{margin:16px 0 0;font-size:12px;color:#42566D}.repairs{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:44px 0}.repairs article{border-top:2px solid var(--link);padding-top:20px;min-width:0}.repairs h2{font-size:1.55rem;max-width:440px}.repairs p:not(.eyebrow){font-size:13px}.repairs dl{margin:20px 0;font-size:12px}.repairs dt{color:#42566D;margin-top:10px}.repairs dd{margin:0;font:13px/1.8 var(--mono);font-variant-numeric:tabular-nums}.repairs a{font-size:12px}.fixed{color:var(--fixed);font-weight:700}.case-nav{display:flex;flex-wrap:wrap;gap:8px 18px;padding:16px 0;margin:12px 0 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px}.case-card{background:#fff;border:1px solid var(--line);border-radius:4px;margin-bottom:24px;padding:28px 30px;min-width:0}.case-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}.case-heading .eyebrow{margin-bottom:6px}.case-heading h2{font-size:1.8rem;margin-bottom:12px}.status{font:11px var(--mono);padding:8px 10px;white-space:nowrap;border:1px solid currentColor;border-radius:2px}.good{color:var(--fixed)}.bad{color:var(--error)}.case-total{font-size:12px;color:#42566D;margin:0 0 24px}.case-total strong{display:inline-block;margin-left:8px;font:13px var(--mono);color:var(--ink)}.issues{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:20px}.issue{border-left:3px solid var(--error);background:var(--paper);padding:18px 18px 16px;min-width:0}.issue h3{margin-bottom:12px}.issue p{font-size:13px;overflow-wrap:anywhere}.calculation-result{border-top:1px solid var(--line);padding-top:12px;margin-top:16px}.calculation-result span{display:block;font-size:11px;margin-bottom:4px}.calculation-result strong{font-size:1.3rem;font-weight:500}.formula{font-size:11px;margin:10px 0}.formula summary{cursor:pointer;color:var(--link)}.formula code{display:block;padding:8px 0;overflow-wrap:anywhere;white-space:pre-wrap}.evidence{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}.evidence>span{width:100%;font-size:10px;color:#42566D;margin-bottom:3px}.evidence-link{font:9px/1.5 var(--mono);border-bottom:1px solid var(--line);text-decoration:none;overflow-wrap:anywhere;max-width:100%}.table-scroll{overflow-x:auto;margin-top:25px}table{width:100%;border-collapse:collapse;font-size:12px;text-align:right;font-variant-numeric:tabular-nums}caption{text-align:left;font-size:12px;font-weight:600;margin-bottom:10px}th,td{padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}th:first-child{text-align:left;padding-left:0}thead th{font-size:10px;font-weight:500;color:#42566D}tbody th{font-size:11px;font-weight:500}.policy-oracle{color:#52667D}.fineprint{font-size:11px;line-height:1.6;color:#52667D;margin:12px 0 20px}.clean-note{background:var(--paper);border-left:3px solid var(--fixed);padding:18px;font-size:13px}.source-heading{border-top:1px solid var(--line);padding-top:20px;margin-top:22px}.source-heading h3{margin-bottom:4px}.source-heading p{font-size:11px;color:#52667D}.sources{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}.source-card{border:1px solid var(--line);min-width:0;font-size:11px;align-self:start}.source-card summary{cursor:pointer;padding:12px;list-style-position:inside}.source-card summary span{font-size:12px;font-weight:600}.source-card summary code{display:block;padding-top:4px;color:#52667D;font-size:9px;overflow-wrap:anywhere}.source-card pre{font-size:10px;padding:12px;line-height:1.65;margin:0;background:var(--paper);white-space:pre-wrap;overflow-wrap:anywhere;border-top:1px solid var(--line)}.source-card:target,.issue:target{outline:3px solid var(--link);outline-offset:3px}.renaming{padding:24px 0 10px;margin-top:42px;border-top:2px solid var(--ink)}.renaming>p{font-size:13px;max-width:740px}footer{margin:30px -28px 0;padding:24px 28px 30px;border-top:1px solid var(--line);font-size:11px;color:#52667D}footer strong{color:var(--ink)}footer p{max-width:800px;margin:8px 0 0}
+@media(max-width:760px){main{padding:20px 16px 0}.masthead{font-size:9px;flex-wrap:wrap;gap:8px}.hero{grid-template-columns:1fr;gap:22px;padding:30px 0 24px}.completion{border-left:0;border-top:1px solid var(--line);padding:15px 0 0}.completion-mark{display:inline-block;font-size:18px;margin:0 8px 0 0}.completion strong{display:inline}.completion p{max-width:500px}.hero h1 br{display:none}.masking-panel{padding:20px 18px 16px}.sum-grid{grid-template-columns:1fr;gap:8px}.sum-grid .equals{text-align:left;font-size:22px}.sum-grid strong{font-size:1.6rem}.effects{grid-template-columns:1fr}.effect,.net{padding:13px 12px;border-right:0;border-bottom:1px solid var(--line)}.net{border-bottom:0}.effect span,.net span{margin-bottom:3px}.effect strong,.net strong{font-size:1.1rem}.repairs{grid-template-columns:1fr;gap:26px;margin:32px 0}.case-card{padding:21px 17px}.case-heading{flex-direction:column;gap:0;margin-bottom:15px}.case-heading h2{font-size:1.6rem}.sources{grid-template-columns:1fr}.case-total strong{display:block;margin:4px 0 0}footer{margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}.lead{font-size:15px}}
+@media print{body{background:#fff;font-size:10pt}main{max-width:none;padding:0}.masthead{font-size:8pt}.hero{padding:20px 0;gap:20px}.hero h1{font-size:30pt}.completion{font-size:8pt}.masking-panel{box-shadow:none;break-inside:avoid}.repairs{break-inside:avoid;margin:25px 0}.case-nav{display:none}.case-card{break-before:auto;border-radius:0;padding:18px;margin-bottom:18px}.case-heading h2{font-size:19pt}.issue,.source-card,tr{break-inside:avoid}.evidence-link{font-size:7pt}.source-card pre{font-size:7pt}.source-card::details-content{content-visibility:visible;height:auto}.source-card:not([open])>pre{display:block!important}.formula{display:none}a{color:var(--ink);text-decoration:none}footer{margin:15px 0 0;padding:15px 0}.fineprint{font-size:8pt}}
+</style></head>
+<body><main><header class="masthead"><span>GENESIS / ФИНАНСОВЫЙ АУДИТ</span><span>ЗАВЕРШЁННОЕ ДОСЬЕ</span></header>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">Все данные вымышлены · Изолированный запуск</p><h1>Две ошибки<br>за правильным итогом</h1><p class="lead">Сумма признанных счетов совпала с правильной. Документы показывают две отдельные ошибки, которые скрыли друг друга.</p></div><div class="completion"><span class="completion-mark">✓</span><strong>Проверка завершена</strong><p>9 вариантов · 27 запусков</p><p>Этот отчёт открыт после завершения всех запусков. Он не передаёт ответы работающему агенту.</p></div></section>
+<section class="masking-panel" aria-label="Ошибки, скрывшие друг друга"><div class="sum-grid"><div><span>Корректный учёт</span><strong data-testid="clean-total">550 000,00 ₸</strong></div><span class="equals" aria-label="равно">=</span><div><span>Учёт с двумя ошибками</span><strong data-testid="masked-total">550 000,00 ₸</strong></div></div><div class="effects"><a class="effect" href="#issue-masked_both-0"><span>Повторное отражение счёта</span><strong>+50 000,00 ₸</strong></a><a class="effect" href="#issue-masked_both-1"><span>Неверный валютный пересчёт</span><strong>−50 000,00 ₸</strong></a><div class="net"><span>Изменение общего итога</span><strong data-testid="net-effect">0,00 ₸</strong></div></div><p class="panel-note">Одинаковый итог не подтверждает правильность каждой операции. Нажмите на расхождение, чтобы увидеть расчёт и документы.</p></section>
+<section class="repairs" aria-label="Исправление причин"><article><p class="eyebrow">Исправляем курс</p><h2>Меняется и сумма распределения</h2><dl><dt>Валютная ошибка</dt><dd>450,00 ₸ → <span class="fixed">0,00 ₸</span></dd><dt>Нераспределённая часть</dt><dd>49 925,00 ₸ → 50 000,00 ₸</dd></dl><p>После исправления курса оставшаяся ошибка распределения пересчитывается.</p><a href="#case-allocation_fx_repaired">Посмотреть результат исправления →</a></article><article><p class="eyebrow">Исправляем период</p><h2>Каждая причина проверяется отдельно</h2><dl><dt>Ошибка периода</dt><dd>313 050,00 ₸ → <span class="fixed">0,00 ₸</span></dd><dt>Нераспределённая часть</dt><dd>52 175,00 ₸ → 52 175,00 ₸</dd></dl><p>Верная дата устраняет ошибку периода. Распределение платежа проверяется самостоятельно.</p><a href="#case-allocation_cutoff_repaired">Посмотреть результат исправления →</a></article></section>
+<nav class="case-nav" aria-label="Варианты проверки"><a href="#case-clean">Корректный учёт двух счетов</a><a href="#case-duplicate_only">Один счёт признан дважды</a><a href="#case-fx_only">Применён курс другой даты</a><a href="#case-masked_both">Две ошибки скрылись в общем итоге</a><a href="#case-allocation_fx">Распределение платежа и неправильный курс</a><a href="#case-allocation_fx_repaired">Курс исправлен; распределение ещё неверно</a><a href="#case-allocation_cutoff">Распределение и неправильный отчётный период</a><a href="#case-allocation_cutoff_repaired">Период исправлен; распределение ещё неверно</a></nav><section class="case-card" id="case-clean" data-case="clean"><header class="case-heading"><div><p class="eyebrow">Проверенный вариант</p><h2>Корректный учёт двух счетов</h2></div><span class="status good">Ошибок нет</span></header><p class="case-total">Сумма признания счетов в учёте <strong>550 000,00 ₸</strong></p><div class="issues"><div class="clean-note">Расхождений не обнаружено. Документы и проводки согласованы с правилами этого вымышленного эпизода.</div></div><div class="table-scroll"><table class="policy-results" data-testid="policy-results"><caption>Результаты завершённых запусков</caption><thead><tr><th>Политика</th><th><abbr title="Верные находки">TP</abbr></th><th><abbr title="Ложные обвинения">FP</abbr></th><th><abbr title="Пропущенные ошибки">FN</abbr></th><th>F1</th><th>Награда</th><th>Шаги</th></tr></thead><tbody><tr class="policy-simple"><th scope="row">Алгоритм сверки</th><td>0</td><td>0</td><td>0</td><td>1,00</td><td>+0,992</td><td>5</td></tr><tr class="policy-silent"><th scope="row">Молчание · контроль</th><td>0</td><td>0</td><td>0</td><td>1,00</td><td>+1,000</td><td>1</td></tr><tr class="policy-oracle"><th scope="row">Oracle · готовые ответы</th><td>0</td><td>0</td><td>0</td><td>1,00</td><td>+1,000</td><td>1</td></tr></tbody></table></div><p class="fineprint">Oracle получает готовый правильный ответ. Его результат проверяет оценщик; он не показывает способность ИИ расследовать документы.</p><div class="source-heading"><h3>Открыть источники</h3><p>Карточки содержат исходные поля документов. Нажмите на строку, чтобы развернуть её.</p></div><div class="sources"><details class="source-card" id="document-0-0"><summary><span>Счёт · 50 000,00 ₸</span><code>opaque_dd4daa96938e44e390e87c6f0ed1f341</code></summary><pre>{
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;doc_id&quot;: &quot;opaque_dd4daa96938e44e390e87c6f0ed1f341&quot;,
+  &quot;due_at&quot;: &quot;2026-11-30T12:00:00+05:00&quot;,
+  &quot;entity_id&quot;: &quot;opaque_f0cc5bcb92f94759418a3c5708b61cd9&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_ac4d042278308b5d3869a1859c9d2994&quot;,
+  &quot;issued_at&quot;: &quot;2026-11-05T12:00:00+05:00&quot;,
+  &quot;line_items&quot;: [
+    {
+      &quot;description&quot;: &quot;Документированная поставка&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;total_minor&quot;: 5000000,
+      &quot;unit_price_minor&quot;: 5000000
+    }
+  ],
+  &quot;total_minor&quot;: 5000000
+}</pre></details><details class="source-card" id="document-0-1"><summary><span>Счёт · 1 000,00 USD</span><code>opaque_46901d4db13fa99744c98650840ca2cb</code></summary><pre>{
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;opaque_46901d4db13fa99744c98650840ca2cb&quot;,
+  &quot;due_at&quot;: &quot;2026-11-30T12:00:00+05:00&quot;,
+  &quot;entity_id&quot;: &quot;opaque_8994ba992416d9324f8e27b2b232fd81&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_c9c57569b156816c64ffcbb679789ba4&quot;,
+  &quot;issued_at&quot;: &quot;2026-11-05T12:00:00+05:00&quot;,
+  &quot;line_items&quot;: [
+    {
+      &quot;description&quot;: &quot;Документированная поставка&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;total_minor&quot;: 100000,
+      &quot;unit_price_minor&quot;: 100000
+    }
+  ],
+  &quot;total_minor&quot;: 100000
+}</pre></details><details class="source-card" id="document-0-2"><summary><span>Правила учёта компании</span><code>policy</code></summary><pre>{
+  &quot;accounting_model&quot;: &quot;receivables_multi_v2&quot;,
+  &quot;accounts&quot;: {
+    &quot;cash&quot;: &quot;CASH&quot;,
+    &quot;fx_gain&quot;: &quot;FX_GAIN&quot;,
+    &quot;fx_loss&quot;: &quot;FX_LOSS&quot;,
+    &quot;receivable&quot;: &quot;AR&quot;,
+    &quot;revenue&quot;: &quot;REVENUE&quot;,
+    &quot;unallocated&quot;: &quot;UNALLOCATED&quot;
+  },
+  &quot;allocation_rule&quot;: &quot;atomic_full_designation&quot;,
+  &quot;amount_currency&quot;: &quot;base_currency&quot;,
+  &quot;amount_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;excess_gross_recognition_in_base_minor_units&quot;,
+    &quot;fx_conversion&quot;: &quot;absolute_primary_valuation_difference_in_base_minor_units&quot;,
+    &quot;payment_allocation&quot;: &quot;excess_unallocated_receipt_credit_in_observed_valuation&quot;,
+    &quot;period_cutoff&quot;: &quot;absolute_primary_amount_in_base_minor_units&quot;
+  },
+  &quot;amount_tolerance_minor&quot;: 0,
+  &quot;canonical_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;all_receivable_debit_recognition_row_ids_including_original&quot;,
+    &quot;fx_conversion&quot;: &quot;primary_ledger_row_id&quot;,
+    &quot;payment_allocation&quot;: &quot;payment_id_and_invoice_id&quot;,
+    &quot;period_cutoff&quot;: &quot;primary_ledger_row_id&quot;
+  },
+  &quot;carrying_rule&quot;: &quot;correct_invoice_source_date_rate&quot;,
+  &quot;fx_balance_rule&quot;: &quot;cash_minus_carrying_minus_unallocated&quot;,
+  &quot;fx_date_rule&quot;: &quot;source_document_date_in_company_timezone&quot;,
+  &quot;fx_rate_convention&quot;: &quot;target_major_per_source_major&quot;,
+  &quot;invoice_recognition&quot;: &quot;issued_at&quot;,
+  &quot;payment_recognition&quot;: &quot;timestamp&quot;,
+  &quot;period_bounds&quot;: &quot;[start,end)&quot;,
+  &quot;receipt_lifecycle&quot;: &quot;one_atomic_journal_no_later_clearing&quot;,
+  &quot;refund_rule&quot;: &quot;native_credit_note_full_designation&quot;,
+  &quot;rounding&quot;: &quot;ROUND_HALF_EVEN&quot;,
+  &quot;schema_version&quot;: &quot;0.2.0&quot;,
+  &quot;source_amount_rule&quot;: &quot;whole_document_amount_per_journal&quot;,
+  &quot;unknown_payment_designation&quot;: &quot;do_not_infer_an_invoice_from_entity_date_or_amount&quot;
+}</pre></details></div></section><section class="case-card" id="case-duplicate_only" data-case="duplicate_only"><header class="case-heading"><div><p class="eyebrow">Проверенный вариант</p><h2>Один счёт признан дважды</h2></div><span class="status bad">Расхождений: 1</span></header><p class="case-total">Сумма признания счетов в учёте <strong>600 000,00 ₸</strong></p><div class="issues"><article class="issue" id="issue-duplicate_only-0"><h3>Повторное отражение счёта</h3><p>Счёт на <strong>50 000,00 ₸</strong> отражён <strong>2 раза</strong>. В учёте 100 000,00 ₸ вместо 50 000,00 ₸.</p><div class="calculation-result"><span>Доказанное расхождение</span><strong>50 000,00 ₸</strong></div><details class="formula"><summary>Правило расчёта</summary><code>Σ recognition − one documented recognition</code></details><div class="evidence"><span>Документы и записи</span><a href="#document-1-0" class="evidence-link">opaque_6f7240ebbf336a9d381bfb2b29166911</a><a href="#document-1-1" class="evidence-link">opaque_dd4daa96938e44e390e87c6f0ed1f341</a><a href="#document-1-2" class="evidence-link">opaque_ed7e77dc72701d79248d180c05b05e1c</a><a href="#document-1-3" class="evidence-link">policy</a></div></article></div><div class="table-scroll"><table class="policy-results" data-testid="policy-results"><caption>Результаты завершённых запусков</caption><thead><tr><th>Политика</th><th><abbr title="Верные находки">TP</abbr></th><th><abbr title="Ложные обвинения">FP</abbr></th><th><abbr title="Пропущенные ошибки">FN</abbr></th><th>F1</th><th>Награда</th><th>Шаги</th></tr></thead><tbody><tr class="policy-simple"><th scope="row">Алгоритм сверки</th><td>1</td><td>0</td><td>0</td><td>1,00</td><td>+0,992</td><td>5</td></tr><tr class="policy-silent"><th scope="row">Молчание · контроль</th><td>0</td><td>0</td><td>1</td><td>0,00</td><td>−1,000</td><td>1</td></tr><tr class="policy-oracle"><th scope="row">Oracle · готовые ответы</th><td>1</td><td>0</td><td>0</td><td>1,00</td><td>+1,000</td><td>1</td></tr></tbody></table></div><p class="fineprint">Oracle получает готовый правильный ответ. Его результат проверяет оценщик; он не показывает способность ИИ расследовать документы.</p><div class="source-heading"><h3>Открыть источники</h3><p>Карточки содержат исходные поля документов. Нажмите на строку, чтобы развернуть её.</p></div><div class="sources"><details class="source-card" id="document-1-0"><summary><span>Проводка AR · +50 000,00 ₸</span><code>opaque_6f7240ebbf336a9d381bfb2b29166911</code></summary><pre>{
+  &quot;account&quot;: &quot;AR&quot;,
+  &quot;allocated_minor&quot;: null,
+  &quot;applied_fx_date&quot;: &quot;2026-11-05&quot;,
+  &quot;applied_fx_rate&quot;: &quot;1&quot;,
+  &quot;credit_minor&quot;: 0,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 5000000,
+  &quot;entity_id&quot;: &quot;opaque_f0cc5bcb92f94759418a3c5708b61cd9&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_ac4d042278308b5d3869a1859c9d2994&quot;,
+  &quot;journal_id&quot;: &quot;opaque_d935e400f69d0a074fbbd283ce68bff3&quot;,
+  &quot;payment_id&quot;: null,
+  &quot;row_id&quot;: &quot;opaque_6f7240ebbf336a9d381bfb2b29166911&quot;,
+  &quot;source_amount_minor&quot;: 5000000,
+  &quot;source_currency&quot;: &quot;KZT&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-05T12:00:00+05:00&quot;
+}</pre></details><details class="source-card" id="document-1-1"><summary><span>Счёт · 50 000,00 ₸</span><code>opaque_dd4daa96938e44e390e87c6f0ed1f341</code></summary><pre>{
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;doc_id&quot;: &quot;opaque_dd4daa96938e44e390e87c6f0ed1f341&quot;,
+  &quot;due_at&quot;: &quot;2026-11-30T12:00:00+05:00&quot;,
+  &quot;entity_id&quot;: &quot;opaque_f0cc5bcb92f94759418a3c5708b61cd9&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_ac4d042278308b5d3869a1859c9d2994&quot;,
+  &quot;issued_at&quot;: &quot;2026-11-05T12:00:00+05:00&quot;,
+  &quot;line_items&quot;: [
+    {
+      &quot;description&quot;: &quot;Документированная поставка&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;total_minor&quot;: 5000000,
+      &quot;unit_price_minor&quot;: 5000000
+    }
+  ],
+  &quot;total_minor&quot;: 5000000
+}</pre></details><details class="source-card" id="document-1-2"><summary><span>Проводка AR · +50 000,00 ₸</span><code>opaque_ed7e77dc72701d79248d180c05b05e1c</code></summary><pre>{
+  &quot;account&quot;: &quot;AR&quot;,
+  &quot;allocated_minor&quot;: null,
+  &quot;applied_fx_date&quot;: &quot;2026-11-05&quot;,
+  &quot;applied_fx_rate&quot;: &quot;1&quot;,
+  &quot;credit_minor&quot;: 0,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 5000000,
+  &quot;entity_id&quot;: &quot;opaque_f0cc5bcb92f94759418a3c5708b61cd9&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_ac4d042278308b5d3869a1859c9d2994&quot;,
+  &quot;journal_id&quot;: &quot;opaque_6323891a73c52191d9cbb257dbd99a29&quot;,
+  &quot;payment_id&quot;: null,
+  &quot;row_id&quot;: &quot;opaque_ed7e77dc72701d79248d180c05b05e1c&quot;,
+  &quot;source_amount_minor&quot;: 5000000,
+  &quot;source_currency&quot;: &quot;KZT&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-05T12:00:00+05:00&quot;
+}</pre></details><details class="source-card" id="document-1-3"><summary><span>Правила учёта компании</span><code>policy</code></summary><pre>{
+  &quot;accounting_model&quot;: &quot;receivables_multi_v2&quot;,
+  &quot;accounts&quot;: {
+    &quot;cash&quot;: &quot;CASH&quot;,
+    &quot;fx_gain&quot;: &quot;FX_GAIN&quot;,
+    &quot;fx_loss&quot;: &quot;FX_LOSS&quot;,
+    &quot;receivable&quot;: &quot;AR&quot;,
+    &quot;revenue&quot;: &quot;REVENUE&quot;,
+    &quot;unallocated&quot;: &quot;UNALLOCATED&quot;
+  },
+  &quot;allocation_rule&quot;: &quot;atomic_full_designation&quot;,
+  &quot;amount_currency&quot;: &quot;base_currency&quot;,
+  &quot;amount_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;excess_gross_recognition_in_base_minor_units&quot;,
+    &quot;fx_conversion&quot;: &quot;absolute_primary_valuation_difference_in_base_minor_units&quot;,
+    &quot;payment_allocation&quot;: &quot;excess_unallocated_receipt_credit_in_observed_valuation&quot;,
+    &quot;period_cutoff&quot;: &quot;absolute_primary_amount_in_base_minor_units&quot;
+  },
+  &quot;amount_tolerance_minor&quot;: 0,
+  &quot;canonical_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;all_receivable_debit_recognition_row_ids_including_original&quot;,
+    &quot;fx_conversion&quot;: &quot;primary_ledger_row_id&quot;,
+    &quot;payment_allocation&quot;: &quot;payment_id_and_invoice_id&quot;,
+    &quot;period_cutoff&quot;: &quot;primary_ledger_row_id&quot;
+  },
+  &quot;carrying_rule&quot;: &quot;correct_invoice_source_date_rate&quot;,
+  &quot;fx_balance_rule&quot;: &quot;cash_minus_carrying_minus_unallocated&quot;,
+  &quot;fx_date_rule&quot;: &quot;source_document_date_in_company_timezone&quot;,
+  &quot;fx_rate_convention&quot;: &quot;target_major_per_source_major&quot;,
+  &quot;invoice_recognition&quot;: &quot;issued_at&quot;,
+  &quot;payment_recognition&quot;: &quot;timestamp&quot;,
+  &quot;period_bounds&quot;: &quot;[start,end)&quot;,
+  &quot;receipt_lifecycle&quot;: &quot;one_atomic_journal_no_later_clearing&quot;,
+  &quot;refund_rule&quot;: &quot;native_credit_note_full_designation&quot;,
+  &quot;rounding&quot;: &quot;ROUND_HALF_EVEN&quot;,
+  &quot;schema_version&quot;: &quot;0.2.0&quot;,
+  &quot;source_amount_rule&quot;: &quot;whole_document_amount_per_journal&quot;,
+  &quot;unknown_payment_designation&quot;: &quot;do_not_infer_an_invoice_from_entity_date_or_amount&quot;
+}</pre></details></div></section><section class="case-card" id="case-fx_only" data-case="fx_only"><header class="case-heading"><div><p class="eyebrow">Проверенный вариант</p><h2>Применён курс другой даты</h2></div><span class="status bad">Расхождений: 1</span></header><p class="case-total">Сумма признания счетов в учёте <strong>500 000,00 ₸</strong></p><div class="issues"><article class="issue" id="issue-fx_only-0"><h3>Неверный валютный пересчёт</h3><p>Для <strong>1 000,00 USD</strong> положен курс <strong>500</strong>; применён <strong>450</strong>. Получилось 450 000,00 ₸ вместо 500 000,00 ₸.</p><div class="calculation-result"><span>Доказанное расхождение</span><strong>50 000,00 ₸</strong></div><details class="formula"><summary>Правило расчёта</summary><code>|observed_base − convert(source, policy FX)|</code></details><div class="evidence"><span>Документы и записи</span><a href="#document-2-0" class="evidence-link">opaque_46901d4db13fa99744c98650840ca2cb</a><a href="#document-2-1" class="evidence-link">opaque_87dd43e3723d6f4a59645f319e29b466</a><a href="#document-2-2" class="evidence-link">opaque_edc47ac78b93405e965adda44caf0e56</a><a href="#document-2-3" class="evidence-link">policy</a></div></article></div><div class="table-scroll"><table class="policy-results" data-testid="policy-results"><caption>Результаты завершённых запусков</caption><thead><tr><th>Политика</th><th><abbr title="Верные находки">TP</abbr></th><th><abbr title="Ложные обвинения">FP</abbr></th><th><abbr title="Пропущенные ошибки">FN</abbr></th><th>F1</th><th>Награда</th><th>Шаги</th></tr></thead><tbody><tr class="policy-simple"><th scope="row">Алгоритм сверки</th><td>1</td><td>0</td><td>0</td><td>1,00</td><td>+0,992</td><td>5</td></tr><tr class="policy-silent"><th scope="row">Молчание · контроль</th><td>0</td><td>0</td><td>1</td><td>0,00</td><td>−1,000</td><td>1</td></tr><tr class="policy-oracle"><th scope="row">Oracle · готовые ответы</th><td>1</td><td>0</td><td>0</td><td>1,00</td><td>+1,000</td><td>1</td></tr></tbody></table></div><p class="fineprint">Oracle получает готовый правильный ответ. Его результат проверяет оценщик; он не показывает способность ИИ расследовать документы.</p><div class="source-heading"><h3>Открыть источники</h3><p>Карточки содержат исходные поля документов. Нажмите на строку, чтобы развернуть её.</p></div><div class="sources"><details class="source-card" id="document-2-0"><summary><span>Счёт · 1 000,00 USD</span><code>opaque_46901d4db13fa99744c98650840ca2cb</code></summary><pre>{
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;opaque_46901d4db13fa99744c98650840ca2cb&quot;,
+  &quot;due_at&quot;: &quot;2026-11-30T12:00:00+05:00&quot;,
+  &quot;entity_id&quot;: &quot;opaque_8994ba992416d9324f8e27b2b232fd81&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_c9c57569b156816c64ffcbb679789ba4&quot;,
+  &quot;issued_at&quot;: &quot;2026-11-05T12:00:00+05:00&quot;,
+  &quot;line_items&quot;: [
+    {
+      &quot;description&quot;: &quot;Документированная поставка&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;total_minor&quot;: 100000,
+      &quot;unit_price_minor&quot;: 100000
+    }
+  ],
+  &quot;total_minor&quot;: 100000
+}</pre></details><details class="source-card" id="document-2-1"><summary><span>Курс USD → KZT · 500</span><code>opaque_87dd43e3723d6f4a59645f319e29b466</code></summary><pre>{
+  &quot;date&quot;: &quot;2026-11-05&quot;,
+  &quot;rate&quot;: &quot;500&quot;,
+  &quot;record_id&quot;: &quot;opaque_87dd43e3723d6f4a59645f319e29b466&quot;,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;target_currency&quot;: &quot;KZT&quot;
+}</pre></details><details class="source-card" id="document-2-2"><summary><span>Проводка AR · +450 000,00 ₸</span><code>opaque_edc47ac78b93405e965adda44caf0e56</code></summary><pre>{
+  &quot;account&quot;: &quot;AR&quot;,
+  &quot;allocated_minor&quot;: null,
+  &quot;applied_fx_date&quot;: &quot;2026-11-04&quot;,
+  &quot;applied_fx_rate&quot;: &quot;450&quot;,
+  &quot;credit_minor&quot;: 0,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 45000000,
+  &quot;entity_id&quot;: &quot;opaque_8994ba992416d9324f8e27b2b232fd81&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_c9c57569b156816c64ffcbb679789ba4&quot;,
+  &quot;journal_id&quot;: &quot;opaque_f4ddbdee348d160fde22f0efa688c9ea&quot;,
+  &quot;payment_id&quot;: null,
+  &quot;row_id&quot;: &quot;opaque_edc47ac78b93405e965adda44caf0e56&quot;,
+  &quot;source_amount_minor&quot;: 100000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-05T12:00:00+05:00&quot;
+}</pre></details><details class="source-card" id="document-2-3"><summary><span>Правила учёта компании</span><code>policy</code></summary><pre>{
+  &quot;accounting_model&quot;: &quot;receivables_multi_v2&quot;,
+  &quot;accounts&quot;: {
+    &quot;cash&quot;: &quot;CASH&quot;,
+    &quot;fx_gain&quot;: &quot;FX_GAIN&quot;,
+    &quot;fx_loss&quot;: &quot;FX_LOSS&quot;,
+    &quot;receivable&quot;: &quot;AR&quot;,
+    &quot;revenue&quot;: &quot;REVENUE&quot;,
+    &quot;unallocated&quot;: &quot;UNALLOCATED&quot;
+  },
+  &quot;allocation_rule&quot;: &quot;atomic_full_designation&quot;,
+  &quot;amount_currency&quot;: &quot;base_currency&quot;,
+  &quot;amount_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;excess_gross_recognition_in_base_minor_units&quot;,
+    &quot;fx_conversion&quot;: &quot;absolute_primary_valuation_difference_in_base_minor_units&quot;,
+    &quot;payment_allocation&quot;: &quot;excess_unallocated_receipt_credit_in_observed_valuation&quot;,
+    &quot;period_cutoff&quot;: &quot;absolute_primary_amount_in_base_minor_units&quot;
+  },
+  &quot;amount_tolerance_minor&quot;: 0,
+  &quot;canonical_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;all_receivable_debit_recognition_row_ids_including_original&quot;,
+    &quot;fx_conversion&quot;: &quot;primary_ledger_row_id&quot;,
+    &quot;payment_allocation&quot;: &quot;payment_id_and_invoice_id&quot;,
+    &quot;period_cutoff&quot;: &quot;primary_ledger_row_id&quot;
+  },
+  &quot;carrying_rule&quot;: &quot;correct_invoice_source_date_rate&quot;,
+  &quot;fx_balance_rule&quot;: &quot;cash_minus_carrying_minus_unallocated&quot;,
+  &quot;fx_date_rule&quot;: &quot;source_document_date_in_company_timezone&quot;,
+  &quot;fx_rate_convention&quot;: &quot;target_major_per_source_major&quot;,
+  &quot;invoice_recognition&quot;: &quot;issued_at&quot;,
+  &quot;payment_recognition&quot;: &quot;timestamp&quot;,
+  &quot;period_bounds&quot;: &quot;[start,end)&quot;,
+  &quot;receipt_lifecycle&quot;: &quot;one_atomic_journal_no_later_clearing&quot;,
+  &quot;refund_rule&quot;: &quot;native_credit_note_full_designation&quot;,
+  &quot;rounding&quot;: &quot;ROUND_HALF_EVEN&quot;,
+  &quot;schema_version&quot;: &quot;0.2.0&quot;,
+  &quot;source_amount_rule&quot;: &quot;whole_document_amount_per_journal&quot;,
+  &quot;unknown_payment_designation&quot;: &quot;do_not_infer_an_invoice_from_entity_date_or_amount&quot;
+}</pre></details></div></section><section class="case-card" id="case-masked_both" data-case="masked_both"><header class="case-heading"><div><p class="eyebrow">Проверенный вариант</p><h2>Две ошибки скрылись в общем итоге</h2></div><span class="status bad">Расхождений: 2</span></header><p class="case-total">Сумма признания счетов в учёте <strong>550 000,00 ₸</strong></p><div class="issues"><article class="issue" id="issue-masked_both-0"><h3>Повторное отражение счёта</h3><p>Счёт на <strong>50 000,00 ₸</strong> отражён <strong>2 раза</strong>. В учёте 100 000,00 ₸ вместо 50 000,00 ₸.</p><div class="calculation-result"><span>Доказанное расхождение</span><strong>50 000,00 ₸</strong></div><details class="formula"><summary>Правило расчёта</summary><code>Σ recognition − one documented recognition</code></details><div class="evidence"><span>Документы и записи</span><a href="#document-3-0" class="evidence-link">opaque_6f7240ebbf336a9d381bfb2b29166911</a><a href="#document-3-1" class="evidence-link">opaque_dd4daa96938e44e390e87c6f0ed1f341</a><a href="#document-3-2" class="evidence-link">opaque_ed7e77dc72701d79248d180c05b05e1c</a><a href="#document-3-3" class="evidence-link">policy</a></div></article><article class="issue" id="issue-masked_both-1"><h3>Неверный валютный пересчёт</h3><p>Для <strong>1 000,00 USD</strong> положен курс <strong>500</strong>; применён <strong>450</strong>. Получилось 450 000,00 ₸ вместо 500 000,00 ₸.</p><div class="calculation-result"><span>Доказанное расхождение</span><strong>50 000,00 ₸</strong></div><details class="formula"><summary>Правило расчёта</summary><code>|observed_base − convert(source, policy FX)|</code></details><div class="evidence"><span>Документы и записи</span><a href="#document-3-4" class="evidence-link">opaque_46901d4db13fa99744c98650840ca2cb</a><a href="#document-3-5" class="evidence-link">opaque_87dd43e3723d6f4a59645f319e29b466</a><a href="#document-3-6" class="evidence-link">opaque_edc47ac78b93405e965adda44caf0e56</a><a href="#document-3-3" class="evidence-link">policy</a></div></article></div><div class="table-scroll"><table class="policy-results" data-testid="policy-results"><caption>Результаты завершённых запусков</caption><thead><tr><th>Политика</th><th><abbr title="Верные находки">TP</abbr></th><th><abbr title="Ложные обвинения">FP</abbr></th><th><abbr title="Пропущенные ошибки">FN</abbr></th><th>F1</th><th>Награда</th><th>Шаги</th></tr></thead><tbody><tr class="policy-simple"><th scope="row">Алгоритм сверки</th><td>2</td><td>0</td><td>0</td><td>1,00</td><td>+0,992</td><td>5</td></tr><tr class="policy-silent"><th scope="row">Молчание · контроль</th><td>0</td><td>0</td><td>2</td><td>0,00</td><td>−1,000</td><td>1</td></tr><tr class="policy-oracle"><th scope="row">Oracle · готовые ответы</th><td>2</td><td>0</td><td>0</td><td>1,00</td><td>+1,000</td><td>1</td></tr></tbody></table></div><p class="fineprint">Oracle получает готовый правильный ответ. Его результат проверяет оценщик; он не показывает способность ИИ расследовать документы.</p><div class="source-heading"><h3>Открыть источники</h3><p>Карточки содержат исходные поля документов. Нажмите на строку, чтобы развернуть её.</p></div><div class="sources"><details class="source-card" id="document-3-0"><summary><span>Проводка AR · +50 000,00 ₸</span><code>opaque_6f7240ebbf336a9d381bfb2b29166911</code></summary><pre>{
+  &quot;account&quot;: &quot;AR&quot;,
+  &quot;allocated_minor&quot;: null,
+  &quot;applied_fx_date&quot;: &quot;2026-11-05&quot;,
+  &quot;applied_fx_rate&quot;: &quot;1&quot;,
+  &quot;credit_minor&quot;: 0,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 5000000,
+  &quot;entity_id&quot;: &quot;opaque_f0cc5bcb92f94759418a3c5708b61cd9&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_ac4d042278308b5d3869a1859c9d2994&quot;,
+  &quot;journal_id&quot;: &quot;opaque_d935e400f69d0a074fbbd283ce68bff3&quot;,
+  &quot;payment_id&quot;: null,
+  &quot;row_id&quot;: &quot;opaque_6f7240ebbf336a9d381bfb2b29166911&quot;,
+  &quot;source_amount_minor&quot;: 5000000,
+  &quot;source_currency&quot;: &quot;KZT&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-05T12:00:00+05:00&quot;
+}</pre></details><details class="source-card" id="document-3-1"><summary><span>Счёт · 50 000,00 ₸</span><code>opaque_dd4daa96938e44e390e87c6f0ed1f341</code></summary><pre>{
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;doc_id&quot;: &quot;opaque_dd4daa96938e44e390e87c6f0ed1f341&quot;,
+  &quot;due_at&quot;: &quot;2026-11-30T12:00:00+05:00&quot;,
+  &quot;entity_id&quot;: &quot;opaque_f0cc5bcb92f94759418a3c5708b61cd9&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_ac4d042278308b5d3869a1859c9d2994&quot;,
+  &quot;issued_at&quot;: &quot;2026-11-05T12:00:00+05:00&quot;,
+  &quot;line_items&quot;: [
+    {
+      &quot;description&quot;: &quot;Документированная поставка&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;total_minor&quot;: 5000000,
+      &quot;unit_price_minor&quot;: 5000000
+    }
+  ],
+  &quot;total_minor&quot;: 5000000
+}</pre></details><details class="source-card" id="document-3-2"><summary><span>Проводка AR · +50 000,00 ₸</span><code>opaque_ed7e77dc72701d79248d180c05b05e1c</code></summary><pre>{
+  &quot;account&quot;: &quot;AR&quot;,
+  &quot;allocated_minor&quot;: null,
+  &quot;applied_fx_date&quot;: &quot;2026-11-05&quot;,
+  &quot;applied_fx_rate&quot;: &quot;1&quot;,
+  &quot;credit_minor&quot;: 0,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 5000000,
+  &quot;entity_id&quot;: &quot;opaque_f0cc5bcb92f94759418a3c5708b61cd9&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_ac4d042278308b5d3869a1859c9d2994&quot;,
+  &quot;journal_id&quot;: &quot;opaque_6323891a73c52191d9cbb257dbd99a29&quot;,
+  &quot;payment_id&quot;: null,
+  &quot;row_id&quot;: &quot;opaque_ed7e77dc72701d79248d180c05b05e1c&quot;,
+  &quot;source_amount_minor&quot;: 5000000,
+  &quot;source_currency&quot;: &quot;KZT&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-05T12:00:00+05:00&quot;
+}</pre></details><details class="source-card" id="document-3-3"><summary><span>Правила учёта компании</span><code>policy</code></summary><pre>{
+  &quot;accounting_model&quot;: &quot;receivables_multi_v2&quot;,
+  &quot;accounts&quot;: {
+    &quot;cash&quot;: &quot;CASH&quot;,
+    &quot;fx_gain&quot;: &quot;FX_GAIN&quot;,
+    &quot;fx_loss&quot;: &quot;FX_LOSS&quot;,
+    &quot;receivable&quot;: &quot;AR&quot;,
+    &quot;revenue&quot;: &quot;REVENUE&quot;,
+    &quot;unallocated&quot;: &quot;UNALLOCATED&quot;
+  },
+  &quot;allocation_rule&quot;: &quot;atomic_full_designation&quot;,
+  &quot;amount_currency&quot;: &quot;base_currency&quot;,
+  &quot;amount_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;excess_gross_recognition_in_base_minor_units&quot;,
+    &quot;fx_conversion&quot;: &quot;absolute_primary_valuation_difference_in_base_minor_units&quot;,
+    &quot;payment_allocation&quot;: &quot;excess_unallocated_receipt_credit_in_observed_valuation&quot;,
+    &quot;period_cutoff&quot;: &quot;absolute_primary_amount_in_base_minor_units&quot;
+  },
+  &quot;amount_tolerance_minor&quot;: 0,
+  &quot;canonical_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;all_receivable_debit_recognition_row_ids_including_original&quot;,
+    &quot;fx_conversion&quot;: &quot;primary_ledger_row_id&quot;,
+    &quot;payment_allocation&quot;: &quot;payment_id_and_invoice_id&quot;,
+    &quot;period_cutoff&quot;: &quot;primary_ledger_row_id&quot;
+  },
+  &quot;carrying_rule&quot;: &quot;correct_invoice_source_date_rate&quot;,
+  &quot;fx_balance_rule&quot;: &quot;cash_minus_carrying_minus_unallocated&quot;,
+  &quot;fx_date_rule&quot;: &quot;source_document_date_in_company_timezone&quot;,
+  &quot;fx_rate_convention&quot;: &quot;target_major_per_source_major&quot;,
+  &quot;invoice_recognition&quot;: &quot;issued_at&quot;,
+  &quot;payment_recognition&quot;: &quot;timestamp&quot;,
+  &quot;period_bounds&quot;: &quot;[start,end)&quot;,
+  &quot;receipt_lifecycle&quot;: &quot;one_atomic_journal_no_later_clearing&quot;,
+  &quot;refund_rule&quot;: &quot;native_credit_note_full_designation&quot;,
+  &quot;rounding&quot;: &quot;ROUND_HALF_EVEN&quot;,
+  &quot;schema_version&quot;: &quot;0.2.0&quot;,
+  &quot;source_amount_rule&quot;: &quot;whole_document_amount_per_journal&quot;,
+  &quot;unknown_payment_designation&quot;: &quot;do_not_infer_an_invoice_from_entity_date_or_amount&quot;
+}</pre></details><details class="source-card" id="document-3-4"><summary><span>Счёт · 1 000,00 USD</span><code>opaque_46901d4db13fa99744c98650840ca2cb</code></summary><pre>{
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;opaque_46901d4db13fa99744c98650840ca2cb&quot;,
+  &quot;due_at&quot;: &quot;2026-11-30T12:00:00+05:00&quot;,
+  &quot;entity_id&quot;: &quot;opaque_8994ba992416d9324f8e27b2b232fd81&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_c9c57569b156816c64ffcbb679789ba4&quot;,
+  &quot;issued_at&quot;: &quot;2026-11-05T12:00:00+05:00&quot;,
+  &quot;line_items&quot;: [
+    {
+      &quot;description&quot;: &quot;Документированная поставка&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;total_minor&quot;: 100000,
+      &quot;unit_price_minor&quot;: 100000
+    }
+  ],
+  &quot;total_minor&quot;: 100000
+}</pre></details><details class="source-card" id="document-3-5"><summary><span>Курс USD → KZT · 500</span><code>opaque_87dd43e3723d6f4a59645f319e29b466</code></summary><pre>{
+  &quot;date&quot;: &quot;2026-11-05&quot;,
+  &quot;rate&quot;: &quot;500&quot;,
+  &quot;record_id&quot;: &quot;opaque_87dd43e3723d6f4a59645f319e29b466&quot;,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;target_currency&quot;: &quot;KZT&quot;
+}</pre></details><details class="source-card" id="document-3-6"><summary><span>Проводка AR · +450 000,00 ₸</span><code>opaque_edc47ac78b93405e965adda44caf0e56</code></summary><pre>{
+  &quot;account&quot;: &quot;AR&quot;,
+  &quot;allocated_minor&quot;: null,
+  &quot;applied_fx_date&quot;: &quot;2026-11-04&quot;,
+  &quot;applied_fx_rate&quot;: &quot;450&quot;,
+  &quot;credit_minor&quot;: 0,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 45000000,
+  &quot;entity_id&quot;: &quot;opaque_8994ba992416d9324f8e27b2b232fd81&quot;,
+  &quot;invoice_id&quot;: &quot;opaque_c9c57569b156816c64ffcbb679789ba4&quot;,
+  &quot;journal_id&quot;: &quot;opaque_f4ddbdee348d160fde22f0efa688c9ea&quot;,
+  &quot;payment_id&quot;: null,
+  &quot;row_id&quot;: &quot;opaque_edc47ac78b93405e965adda44caf0e56&quot;,
+  &quot;source_amount_minor&quot;: 100000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-05T12:00:00+05:00&quot;
+}</pre></details></div></section><section class="case-card" id="case-allocation_fx" data-case="allocation_fx"><header class="case-heading"><div><p class="eyebrow">Проверенный вариант</p><h2>Распределение платежа и неправильный курс</h2></div><span class="status bad">Расхождений: 2</span></header><p class="case-total">Сумма признания счетов в учёте <strong>2 552 880,61 ₸</strong></p><div class="issues"><article class="issue" id="issue-allocation_fx-0"><h3>Неверный валютный пересчёт</h3><p>Для <strong>600,00 USD</strong> положен курс <strong>500.00</strong>; применён <strong>499.25</strong>. Получилось 299 550,00 ₸ вместо 300 000,00 ₸.</p><div class="calculation-result"><span>Доказанное расхождение</span><strong>450,00 ₸</strong></div><details class="formula"><summary>Правило расчёта</summary><code>|observed_base − convert(source, policy FX)|</code></details><div class="evidence"><span>Документы и записи</span><a href="#document-4-0" class="evidence-link">doc_e7c2bf20ae7553da73aa134357345be3</a><a href="#document-4-1" class="evidence-link">fx_8f5e9edd9d071ce16e8165a8dc0b5f8f</a><a href="#document-4-2" class="evidence-link">policy</a><a href="#document-4-3" class="evidence-link">row_f7438f788718f25d5cdf7462c52dbad4</a></div></article><article class="issue" id="issue-allocation_fx-1"><h3>Потерянное распределение платежа</h3><p>Из платежа <strong>600,00 USD</strong> распределено 500,00 USD. Осталось <strong>100,00 USD</strong>; по применённому курсу это 49 925,00 ₸. По документу весь платёж предназначен этому счёту.</p><div class="calculation-result"><span>Доказанное расхождение</span><strong>49 925,00 ₸</strong></div><details class="formula"><summary>Правило расчёта</summary><code>convert(source_amount − allocated_source, observed FX)</code></details><div class="evidence"><span>Документы и записи</span><a href="#document-4-4" class="evidence-link">doc_8d28d689579f971b47ca30d16facbafe</a><a href="#document-4-0" class="evidence-link">doc_e7c2bf20ae7553da73aa134357345be3</a><a href="#document-4-2" class="evidence-link">policy</a><a href="#document-4-5" class="evidence-link">row_28a2b6520322f4fb76e9e26eb5ac5dd4</a><a href="#document-4-6" class="evidence-link">row_cbae884c0a9e43e5e698b75328d9ce16</a><a href="#document-4-3" class="evidence-link">row_f7438f788718f25d5cdf7462c52dbad4</a></div></article></div><div class="table-scroll"><table class="policy-results" data-testid="policy-results"><caption>Результаты завершённых запусков</caption><thead><tr><th>Политика</th><th><abbr title="Верные находки">TP</abbr></th><th><abbr title="Ложные обвинения">FP</abbr></th><th><abbr title="Пропущенные ошибки">FN</abbr></th><th>F1</th><th>Награда</th><th>Шаги</th></tr></thead><tbody><tr class="policy-simple"><th scope="row">Алгоритм сверки</th><td>2</td><td>0</td><td>0</td><td>1,00</td><td>+0,992</td><td>5</td></tr><tr class="policy-silent"><th scope="row">Молчание · контроль</th><td>0</td><td>0</td><td>2</td><td>0,00</td><td>−1,000</td><td>1</td></tr><tr class="policy-oracle"><th scope="row">Oracle · готовые ответы</th><td>2</td><td>0</td><td>0</td><td>1,00</td><td>+1,000</td><td>1</td></tr></tbody></table></div><p class="fineprint">Oracle получает готовый правильный ответ. Его результат проверяет оценщик; он не показывает способность ИИ расследовать документы.</p><div class="source-heading"><h3>Открыть источники</h3><p>Карточки содержат исходные поля документов. Нажмите на строку, чтобы развернуть её.</p></div><div class="sources"><details class="source-card" id="document-4-0"><summary><span>Платёж · 600,00 USD</span><code>doc_e7c2bf20ae7553da73aa134357345be3</code></summary><pre>{
+  &quot;amount_minor&quot;: 60000,
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;doc_e7c2bf20ae7553da73aa134357345be3&quot;,
+  &quot;invoice_refs&quot;: [
+    &quot;invoice_263f58dd1f151ae9b915bcff697396ae&quot;
+  ],
+  &quot;payment_id&quot;: &quot;payment_175cae94a3d6c4baaeda93f647c7b3dc&quot;,
+  &quot;timestamp&quot;: &quot;2026-10-31T19:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-4-1"><summary><span>Курс USD → KZT · 500.00</span><code>fx_8f5e9edd9d071ce16e8165a8dc0b5f8f</code></summary><pre>{
+  &quot;date&quot;: &quot;2026-11-01&quot;,
+  &quot;rate&quot;: &quot;500.00&quot;,
+  &quot;record_id&quot;: &quot;fx_8f5e9edd9d071ce16e8165a8dc0b5f8f&quot;,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;target_currency&quot;: &quot;KZT&quot;
+}</pre></details><details class="source-card" id="document-4-2"><summary><span>Правила учёта компании</span><code>policy</code></summary><pre>{
+  &quot;accounting_model&quot;: &quot;receivables_multi_v2&quot;,
+  &quot;accounts&quot;: {
+    &quot;cash&quot;: &quot;CASH&quot;,
+    &quot;fx_gain&quot;: &quot;FX_GAIN&quot;,
+    &quot;fx_loss&quot;: &quot;FX_LOSS&quot;,
+    &quot;receivable&quot;: &quot;AR&quot;,
+    &quot;revenue&quot;: &quot;REVENUE&quot;,
+    &quot;unallocated&quot;: &quot;UNALLOCATED&quot;
+  },
+  &quot;allocation_rule&quot;: &quot;atomic_full_designation&quot;,
+  &quot;amount_currency&quot;: &quot;base_currency&quot;,
+  &quot;amount_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;excess_gross_recognition_in_base_minor_units&quot;,
+    &quot;fx_conversion&quot;: &quot;absolute_primary_valuation_difference_in_base_minor_units&quot;,
+    &quot;payment_allocation&quot;: &quot;excess_unallocated_receipt_credit_in_observed_valuation&quot;,
+    &quot;period_cutoff&quot;: &quot;absolute_primary_amount_in_base_minor_units&quot;
+  },
+  &quot;amount_tolerance_minor&quot;: 0,
+  &quot;canonical_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;all_receivable_debit_recognition_row_ids_including_original&quot;,
+    &quot;fx_conversion&quot;: &quot;primary_ledger_row_id&quot;,
+    &quot;payment_allocation&quot;: &quot;payment_id_and_invoice_id&quot;,
+    &quot;period_cutoff&quot;: &quot;primary_ledger_row_id&quot;
+  },
+  &quot;carrying_rule&quot;: &quot;correct_invoice_source_date_rate&quot;,
+  &quot;fx_balance_rule&quot;: &quot;cash_minus_carrying_minus_unallocated&quot;,
+  &quot;fx_date_rule&quot;: &quot;source_document_date_in_company_timezone&quot;,
+  &quot;fx_rate_convention&quot;: &quot;target_major_per_source_major&quot;,
+  &quot;invoice_recognition&quot;: &quot;issued_at&quot;,
+  &quot;payment_recognition&quot;: &quot;timestamp&quot;,
+  &quot;period_bounds&quot;: &quot;[start,end)&quot;,
+  &quot;receipt_lifecycle&quot;: &quot;one_atomic_journal_no_later_clearing&quot;,
+  &quot;refund_rule&quot;: &quot;native_credit_note_full_designation&quot;,
+  &quot;rounding&quot;: &quot;ROUND_HALF_EVEN&quot;,
+  &quot;schema_version&quot;: &quot;0.2.0&quot;,
+  &quot;source_amount_rule&quot;: &quot;whole_document_amount_per_journal&quot;,
+  &quot;unknown_payment_designation&quot;: &quot;do_not_infer_an_invoice_from_entity_date_or_amount&quot;
+}</pre></details><details class="source-card" id="document-4-3"><summary><span>Проводка CASH · +299 550,00 ₸</span><code>row_f7438f788718f25d5cdf7462c52dbad4</code></summary><pre>{
+  &quot;account&quot;: &quot;CASH&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-10-31&quot;,
+  &quot;applied_fx_rate&quot;: &quot;499.25&quot;,
+  &quot;credit_minor&quot;: 0,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 29955000,
+  &quot;entity_id&quot;: &quot;entity_bdbbeaf5ddb78c7977dde1e6086d2da5&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_263f58dd1f151ae9b915bcff697396ae&quot;,
+  &quot;journal_id&quot;: &quot;journal_7e379a931eb3f782fb6667c81495e166&quot;,
+  &quot;payment_id&quot;: &quot;payment_175cae94a3d6c4baaeda93f647c7b3dc&quot;,
+  &quot;row_id&quot;: &quot;row_f7438f788718f25d5cdf7462c52dbad4&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-10-31T19:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-4-4"><summary><span>Счёт · 1 000,00 USD</span><code>doc_8d28d689579f971b47ca30d16facbafe</code></summary><pre>{
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;doc_8d28d689579f971b47ca30d16facbafe&quot;,
+  &quot;due_at&quot;: &quot;2026-11-30T12:00:00+05:00&quot;,
+  &quot;entity_id&quot;: &quot;entity_bdbbeaf5ddb78c7977dde1e6086d2da5&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_263f58dd1f151ae9b915bcff697396ae&quot;,
+  &quot;issued_at&quot;: &quot;2026-10-31T12:00:00+05:00&quot;,
+  &quot;line_items&quot;: [
+    {
+      &quot;description&quot;: &quot;Поставка&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;total_minor&quot;: 100000,
+      &quot;unit_price_minor&quot;: 100000
+    }
+  ],
+  &quot;total_minor&quot;: 100000
+}</pre></details><details class="source-card" id="document-4-5"><summary><span>Проводка AR · −249 625,00 ₸</span><code>row_28a2b6520322f4fb76e9e26eb5ac5dd4</code></summary><pre>{
+  &quot;account&quot;: &quot;AR&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-10-31&quot;,
+  &quot;applied_fx_rate&quot;: &quot;499.25&quot;,
+  &quot;credit_minor&quot;: 24962500,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_bdbbeaf5ddb78c7977dde1e6086d2da5&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_263f58dd1f151ae9b915bcff697396ae&quot;,
+  &quot;journal_id&quot;: &quot;journal_7e379a931eb3f782fb6667c81495e166&quot;,
+  &quot;payment_id&quot;: &quot;payment_175cae94a3d6c4baaeda93f647c7b3dc&quot;,
+  &quot;row_id&quot;: &quot;row_28a2b6520322f4fb76e9e26eb5ac5dd4&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-10-31T19:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-4-6"><summary><span>Проводка UNALLOCATED · −49 925,00 ₸</span><code>row_cbae884c0a9e43e5e698b75328d9ce16</code></summary><pre>{
+  &quot;account&quot;: &quot;UNALLOCATED&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-10-31&quot;,
+  &quot;applied_fx_rate&quot;: &quot;499.25&quot;,
+  &quot;credit_minor&quot;: 4992500,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_bdbbeaf5ddb78c7977dde1e6086d2da5&quot;,
+  &quot;invoice_id&quot;: null,
+  &quot;journal_id&quot;: &quot;journal_7e379a931eb3f782fb6667c81495e166&quot;,
+  &quot;payment_id&quot;: &quot;payment_175cae94a3d6c4baaeda93f647c7b3dc&quot;,
+  &quot;row_id&quot;: &quot;row_cbae884c0a9e43e5e698b75328d9ce16&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-10-31T19:30:00+00:00&quot;
+}</pre></details></div></section><section class="case-card" id="case-allocation_fx_repaired" data-case="allocation_fx_repaired"><header class="case-heading"><div><p class="eyebrow">Проверенный вариант</p><h2>Курс исправлен; распределение ещё неверно</h2></div><span class="status bad">Расхождений: 1</span></header><p class="case-total">Сумма признания счетов в учёте <strong>2 552 880,61 ₸</strong></p><div class="issues"><article class="issue" id="issue-allocation_fx_repaired-0"><h3>Потерянное распределение платежа</h3><p>Из платежа <strong>600,00 USD</strong> распределено 500,00 USD. Осталось <strong>100,00 USD</strong>; по применённому курсу это 50 000,00 ₸. По документу весь платёж предназначен этому счёту.</p><div class="calculation-result"><span>Доказанное расхождение</span><strong>50 000,00 ₸</strong></div><details class="formula"><summary>Правило расчёта</summary><code>convert(source_amount − allocated_source, observed FX)</code></details><div class="evidence"><span>Документы и записи</span><a href="#document-5-0" class="evidence-link">doc_8d28d689579f971b47ca30d16facbafe</a><a href="#document-5-1" class="evidence-link">doc_e7c2bf20ae7553da73aa134357345be3</a><a href="#document-5-2" class="evidence-link">opaque_dd9e3a38a8d50ad8e1a7260f0fed4198</a><a href="#document-5-3" class="evidence-link">policy</a><a href="#document-5-4" class="evidence-link">row_28a2b6520322f4fb76e9e26eb5ac5dd4</a><a href="#document-5-5" class="evidence-link">row_cbae884c0a9e43e5e698b75328d9ce16</a><a href="#document-5-6" class="evidence-link">row_f7438f788718f25d5cdf7462c52dbad4</a></div></article></div><div class="table-scroll"><table class="policy-results" data-testid="policy-results"><caption>Результаты завершённых запусков</caption><thead><tr><th>Политика</th><th><abbr title="Верные находки">TP</abbr></th><th><abbr title="Ложные обвинения">FP</abbr></th><th><abbr title="Пропущенные ошибки">FN</abbr></th><th>F1</th><th>Награда</th><th>Шаги</th></tr></thead><tbody><tr class="policy-simple"><th scope="row">Алгоритм сверки</th><td>1</td><td>0</td><td>0</td><td>1,00</td><td>+0,992</td><td>5</td></tr><tr class="policy-silent"><th scope="row">Молчание · контроль</th><td>0</td><td>0</td><td>1</td><td>0,00</td><td>−1,000</td><td>1</td></tr><tr class="policy-oracle"><th scope="row">Oracle · готовые ответы</th><td>1</td><td>0</td><td>0</td><td>1,00</td><td>+1,000</td><td>1</td></tr></tbody></table></div><p class="fineprint">Oracle получает готовый правильный ответ. Его результат проверяет оценщик; он не показывает способность ИИ расследовать документы.</p><div class="source-heading"><h3>Открыть источники</h3><p>Карточки содержат исходные поля документов. Нажмите на строку, чтобы развернуть её.</p></div><div class="sources"><details class="source-card" id="document-5-0"><summary><span>Счёт · 1 000,00 USD</span><code>doc_8d28d689579f971b47ca30d16facbafe</code></summary><pre>{
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;doc_8d28d689579f971b47ca30d16facbafe&quot;,
+  &quot;due_at&quot;: &quot;2026-11-30T12:00:00+05:00&quot;,
+  &quot;entity_id&quot;: &quot;entity_bdbbeaf5ddb78c7977dde1e6086d2da5&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_263f58dd1f151ae9b915bcff697396ae&quot;,
+  &quot;issued_at&quot;: &quot;2026-10-31T12:00:00+05:00&quot;,
+  &quot;line_items&quot;: [
+    {
+      &quot;description&quot;: &quot;Поставка&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;total_minor&quot;: 100000,
+      &quot;unit_price_minor&quot;: 100000
+    }
+  ],
+  &quot;total_minor&quot;: 100000
+}</pre></details><details class="source-card" id="document-5-1"><summary><span>Платёж · 600,00 USD</span><code>doc_e7c2bf20ae7553da73aa134357345be3</code></summary><pre>{
+  &quot;amount_minor&quot;: 60000,
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;doc_e7c2bf20ae7553da73aa134357345be3&quot;,
+  &quot;invoice_refs&quot;: [
+    &quot;invoice_263f58dd1f151ae9b915bcff697396ae&quot;
+  ],
+  &quot;payment_id&quot;: &quot;payment_175cae94a3d6c4baaeda93f647c7b3dc&quot;,
+  &quot;timestamp&quot;: &quot;2026-10-31T19:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-5-2"><summary><span>Проводка FX_GAIN · −375,00 ₸</span><code>opaque_dd9e3a38a8d50ad8e1a7260f0fed4198</code></summary><pre>{
+  &quot;account&quot;: &quot;FX_GAIN&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-01&quot;,
+  &quot;applied_fx_rate&quot;: &quot;500.00&quot;,
+  &quot;credit_minor&quot;: 37500,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_bdbbeaf5ddb78c7977dde1e6086d2da5&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_263f58dd1f151ae9b915bcff697396ae&quot;,
+  &quot;journal_id&quot;: &quot;journal_7e379a931eb3f782fb6667c81495e166&quot;,
+  &quot;payment_id&quot;: &quot;payment_175cae94a3d6c4baaeda93f647c7b3dc&quot;,
+  &quot;row_id&quot;: &quot;opaque_dd9e3a38a8d50ad8e1a7260f0fed4198&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-10-31T19:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-5-3"><summary><span>Правила учёта компании</span><code>policy</code></summary><pre>{
+  &quot;accounting_model&quot;: &quot;receivables_multi_v2&quot;,
+  &quot;accounts&quot;: {
+    &quot;cash&quot;: &quot;CASH&quot;,
+    &quot;fx_gain&quot;: &quot;FX_GAIN&quot;,
+    &quot;fx_loss&quot;: &quot;FX_LOSS&quot;,
+    &quot;receivable&quot;: &quot;AR&quot;,
+    &quot;revenue&quot;: &quot;REVENUE&quot;,
+    &quot;unallocated&quot;: &quot;UNALLOCATED&quot;
+  },
+  &quot;allocation_rule&quot;: &quot;atomic_full_designation&quot;,
+  &quot;amount_currency&quot;: &quot;base_currency&quot;,
+  &quot;amount_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;excess_gross_recognition_in_base_minor_units&quot;,
+    &quot;fx_conversion&quot;: &quot;absolute_primary_valuation_difference_in_base_minor_units&quot;,
+    &quot;payment_allocation&quot;: &quot;excess_unallocated_receipt_credit_in_observed_valuation&quot;,
+    &quot;period_cutoff&quot;: &quot;absolute_primary_amount_in_base_minor_units&quot;
+  },
+  &quot;amount_tolerance_minor&quot;: 0,
+  &quot;canonical_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;all_receivable_debit_recognition_row_ids_including_original&quot;,
+    &quot;fx_conversion&quot;: &quot;primary_ledger_row_id&quot;,
+    &quot;payment_allocation&quot;: &quot;payment_id_and_invoice_id&quot;,
+    &quot;period_cutoff&quot;: &quot;primary_ledger_row_id&quot;
+  },
+  &quot;carrying_rule&quot;: &quot;correct_invoice_source_date_rate&quot;,
+  &quot;fx_balance_rule&quot;: &quot;cash_minus_carrying_minus_unallocated&quot;,
+  &quot;fx_date_rule&quot;: &quot;source_document_date_in_company_timezone&quot;,
+  &quot;fx_rate_convention&quot;: &quot;target_major_per_source_major&quot;,
+  &quot;invoice_recognition&quot;: &quot;issued_at&quot;,
+  &quot;payment_recognition&quot;: &quot;timestamp&quot;,
+  &quot;period_bounds&quot;: &quot;[start,end)&quot;,
+  &quot;receipt_lifecycle&quot;: &quot;one_atomic_journal_no_later_clearing&quot;,
+  &quot;refund_rule&quot;: &quot;native_credit_note_full_designation&quot;,
+  &quot;rounding&quot;: &quot;ROUND_HALF_EVEN&quot;,
+  &quot;schema_version&quot;: &quot;0.2.0&quot;,
+  &quot;source_amount_rule&quot;: &quot;whole_document_amount_per_journal&quot;,
+  &quot;unknown_payment_designation&quot;: &quot;do_not_infer_an_invoice_from_entity_date_or_amount&quot;
+}</pre></details><details class="source-card" id="document-5-4"><summary><span>Проводка AR · −249 625,00 ₸</span><code>row_28a2b6520322f4fb76e9e26eb5ac5dd4</code></summary><pre>{
+  &quot;account&quot;: &quot;AR&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-01&quot;,
+  &quot;applied_fx_rate&quot;: &quot;500.00&quot;,
+  &quot;credit_minor&quot;: 24962500,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_bdbbeaf5ddb78c7977dde1e6086d2da5&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_263f58dd1f151ae9b915bcff697396ae&quot;,
+  &quot;journal_id&quot;: &quot;journal_7e379a931eb3f782fb6667c81495e166&quot;,
+  &quot;payment_id&quot;: &quot;payment_175cae94a3d6c4baaeda93f647c7b3dc&quot;,
+  &quot;row_id&quot;: &quot;row_28a2b6520322f4fb76e9e26eb5ac5dd4&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-10-31T19:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-5-5"><summary><span>Проводка UNALLOCATED · −50 000,00 ₸</span><code>row_cbae884c0a9e43e5e698b75328d9ce16</code></summary><pre>{
+  &quot;account&quot;: &quot;UNALLOCATED&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-01&quot;,
+  &quot;applied_fx_rate&quot;: &quot;500.00&quot;,
+  &quot;credit_minor&quot;: 5000000,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_bdbbeaf5ddb78c7977dde1e6086d2da5&quot;,
+  &quot;invoice_id&quot;: null,
+  &quot;journal_id&quot;: &quot;journal_7e379a931eb3f782fb6667c81495e166&quot;,
+  &quot;payment_id&quot;: &quot;payment_175cae94a3d6c4baaeda93f647c7b3dc&quot;,
+  &quot;row_id&quot;: &quot;row_cbae884c0a9e43e5e698b75328d9ce16&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-10-31T19:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-5-6"><summary><span>Проводка CASH · +300 000,00 ₸</span><code>row_f7438f788718f25d5cdf7462c52dbad4</code></summary><pre>{
+  &quot;account&quot;: &quot;CASH&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-01&quot;,
+  &quot;applied_fx_rate&quot;: &quot;500.00&quot;,
+  &quot;credit_minor&quot;: 0,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 30000000,
+  &quot;entity_id&quot;: &quot;entity_bdbbeaf5ddb78c7977dde1e6086d2da5&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_263f58dd1f151ae9b915bcff697396ae&quot;,
+  &quot;journal_id&quot;: &quot;journal_7e379a931eb3f782fb6667c81495e166&quot;,
+  &quot;payment_id&quot;: &quot;payment_175cae94a3d6c4baaeda93f647c7b3dc&quot;,
+  &quot;row_id&quot;: &quot;row_f7438f788718f25d5cdf7462c52dbad4&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-10-31T19:30:00+00:00&quot;
+}</pre></details></div></section><section class="case-card" id="case-allocation_cutoff" data-case="allocation_cutoff"><header class="case-heading"><div><p class="eyebrow">Проверенный вариант</p><h2>Распределение и неправильный отчётный период</h2></div><span class="status bad">Расхождений: 2</span></header><p class="case-total">Сумма признания счетов в учёте <strong>2 552 880,61 ₸</strong></p><div class="issues"><article class="issue" id="issue-allocation_cutoff-0"><h3>Потерянное распределение платежа</h3><p>Из платежа <strong>600,00 USD</strong> распределено 500,00 USD. Осталось <strong>100,00 USD</strong>; по применённому курсу это 52 175,00 ₸. По документу весь платёж предназначен этому счёту.</p><div class="calculation-result"><span>Доказанное расхождение</span><strong>52 175,00 ₸</strong></div><details class="formula"><summary>Правило расчёта</summary><code>convert(source_amount − allocated_source, observed FX)</code></details><div class="evidence"><span>Документы и записи</span><a href="#document-6-0" class="evidence-link">doc_a163918fc800287451a5b62dd1fde6a2</a><a href="#document-6-1" class="evidence-link">doc_fe1994377606a086a93d265a92c42850</a><a href="#document-6-2" class="evidence-link">policy</a><a href="#document-6-3" class="evidence-link">row_974abfc8dab9451d222b4704808cfa7e</a><a href="#document-6-4" class="evidence-link">row_b5e6d1ea3f5f6068942140970bdbcf97</a><a href="#document-6-5" class="evidence-link">row_dc383d6671eae3c7f49603e185ebf8ee</a><a href="#document-6-6" class="evidence-link">row_e3a025991d06a91dda94b68d1bee8304</a></div></article><article class="issue" id="issue-allocation_cutoff-1"><h3>Неверный отчётный период</h3><p>Документ датирован <strong>30.11.2026 · 23:30:00 (UTC+05:00)</strong>, запись — <strong>02.12.2026 · 00:00:00 (UTC+05:00)</strong>. Они попали в разные отчётные периоды. Сумма записи: 313 050,00 ₸.</p><div class="calculation-result"><span>Доказанное расхождение</span><strong>313 050,00 ₸</strong></div><details class="formula"><summary>Правило расчёта</summary><code>period(source time) ≠ period(posted time)</code></details><div class="evidence"><span>Документы и записи</span><a href="#document-6-1" class="evidence-link">doc_fe1994377606a086a93d265a92c42850</a><a href="#document-6-2" class="evidence-link">policy</a><a href="#document-6-3" class="evidence-link">row_974abfc8dab9451d222b4704808cfa7e</a></div></article></div><div class="table-scroll"><table class="policy-results" data-testid="policy-results"><caption>Результаты завершённых запусков</caption><thead><tr><th>Политика</th><th><abbr title="Верные находки">TP</abbr></th><th><abbr title="Ложные обвинения">FP</abbr></th><th><abbr title="Пропущенные ошибки">FN</abbr></th><th>F1</th><th>Награда</th><th>Шаги</th></tr></thead><tbody><tr class="policy-simple"><th scope="row">Алгоритм сверки</th><td>2</td><td>0</td><td>0</td><td>1,00</td><td>+0,992</td><td>5</td></tr><tr class="policy-silent"><th scope="row">Молчание · контроль</th><td>0</td><td>0</td><td>2</td><td>0,00</td><td>−1,000</td><td>1</td></tr><tr class="policy-oracle"><th scope="row">Oracle · готовые ответы</th><td>2</td><td>0</td><td>0</td><td>1,00</td><td>+1,000</td><td>1</td></tr></tbody></table></div><p class="fineprint">Oracle получает готовый правильный ответ. Его результат проверяет оценщик; он не показывает способность ИИ расследовать документы.</p><div class="source-heading"><h3>Открыть источники</h3><p>Карточки содержат исходные поля документов. Нажмите на строку, чтобы развернуть её.</p></div><div class="sources"><details class="source-card" id="document-6-0"><summary><span>Счёт · 1 000,00 USD</span><code>doc_a163918fc800287451a5b62dd1fde6a2</code></summary><pre>{
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;doc_a163918fc800287451a5b62dd1fde6a2&quot;,
+  &quot;due_at&quot;: &quot;2026-12-04T05:08:34.285714+05:00&quot;,
+  &quot;entity_id&quot;: &quot;entity_34845467701e4880665faaeb3f9e25e0&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_66ed5ff83c8bf5e5cd445ec87476d883&quot;,
+  &quot;issued_at&quot;: &quot;2026-11-04T05:08:34.285714+05:00&quot;,
+  &quot;line_items&quot;: [
+    {
+      &quot;description&quot;: &quot;Поставка&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;total_minor&quot;: 100000,
+      &quot;unit_price_minor&quot;: 100000
+    }
+  ],
+  &quot;total_minor&quot;: 100000
+}</pre></details><details class="source-card" id="document-6-1"><summary><span>Платёж · 600,00 USD</span><code>doc_fe1994377606a086a93d265a92c42850</code></summary><pre>{
+  &quot;amount_minor&quot;: 60000,
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;doc_fe1994377606a086a93d265a92c42850&quot;,
+  &quot;invoice_refs&quot;: [
+    &quot;invoice_66ed5ff83c8bf5e5cd445ec87476d883&quot;
+  ],
+  &quot;payment_id&quot;: &quot;payment_6a0e1d762ba84b8bbbdf88b32b586dbf&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-30T18:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-6-2"><summary><span>Правила учёта компании</span><code>policy</code></summary><pre>{
+  &quot;accounting_model&quot;: &quot;receivables_multi_v2&quot;,
+  &quot;accounts&quot;: {
+    &quot;cash&quot;: &quot;CASH&quot;,
+    &quot;fx_gain&quot;: &quot;FX_GAIN&quot;,
+    &quot;fx_loss&quot;: &quot;FX_LOSS&quot;,
+    &quot;receivable&quot;: &quot;AR&quot;,
+    &quot;revenue&quot;: &quot;REVENUE&quot;,
+    &quot;unallocated&quot;: &quot;UNALLOCATED&quot;
+  },
+  &quot;allocation_rule&quot;: &quot;atomic_full_designation&quot;,
+  &quot;amount_currency&quot;: &quot;base_currency&quot;,
+  &quot;amount_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;excess_gross_recognition_in_base_minor_units&quot;,
+    &quot;fx_conversion&quot;: &quot;absolute_primary_valuation_difference_in_base_minor_units&quot;,
+    &quot;payment_allocation&quot;: &quot;excess_unallocated_receipt_credit_in_observed_valuation&quot;,
+    &quot;period_cutoff&quot;: &quot;absolute_primary_amount_in_base_minor_units&quot;
+  },
+  &quot;amount_tolerance_minor&quot;: 0,
+  &quot;canonical_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;all_receivable_debit_recognition_row_ids_including_original&quot;,
+    &quot;fx_conversion&quot;: &quot;primary_ledger_row_id&quot;,
+    &quot;payment_allocation&quot;: &quot;payment_id_and_invoice_id&quot;,
+    &quot;period_cutoff&quot;: &quot;primary_ledger_row_id&quot;
+  },
+  &quot;carrying_rule&quot;: &quot;correct_invoice_source_date_rate&quot;,
+  &quot;fx_balance_rule&quot;: &quot;cash_minus_carrying_minus_unallocated&quot;,
+  &quot;fx_date_rule&quot;: &quot;source_document_date_in_company_timezone&quot;,
+  &quot;fx_rate_convention&quot;: &quot;target_major_per_source_major&quot;,
+  &quot;invoice_recognition&quot;: &quot;issued_at&quot;,
+  &quot;payment_recognition&quot;: &quot;timestamp&quot;,
+  &quot;period_bounds&quot;: &quot;[start,end)&quot;,
+  &quot;receipt_lifecycle&quot;: &quot;one_atomic_journal_no_later_clearing&quot;,
+  &quot;refund_rule&quot;: &quot;native_credit_note_full_designation&quot;,
+  &quot;rounding&quot;: &quot;ROUND_HALF_EVEN&quot;,
+  &quot;schema_version&quot;: &quot;0.2.0&quot;,
+  &quot;source_amount_rule&quot;: &quot;whole_document_amount_per_journal&quot;,
+  &quot;unknown_payment_designation&quot;: &quot;do_not_infer_an_invoice_from_entity_date_or_amount&quot;
+}</pre></details><details class="source-card" id="document-6-3"><summary><span>Проводка CASH · +313 050,00 ₸</span><code>row_974abfc8dab9451d222b4704808cfa7e</code></summary><pre>{
+  &quot;account&quot;: &quot;CASH&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-30&quot;,
+  &quot;applied_fx_rate&quot;: &quot;521.75&quot;,
+  &quot;credit_minor&quot;: 0,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 31305000,
+  &quot;entity_id&quot;: &quot;entity_34845467701e4880665faaeb3f9e25e0&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_66ed5ff83c8bf5e5cd445ec87476d883&quot;,
+  &quot;journal_id&quot;: &quot;journal_1ce1f3adbfa6ad85c2806d2661461403&quot;,
+  &quot;payment_id&quot;: &quot;payment_6a0e1d762ba84b8bbbdf88b32b586dbf&quot;,
+  &quot;row_id&quot;: &quot;row_974abfc8dab9451d222b4704808cfa7e&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-12-02T00:00:00+05:00&quot;
+}</pre></details><details class="source-card" id="document-6-4"><summary><span>Проводка FX_GAIN · −9 750,00 ₸</span><code>row_b5e6d1ea3f5f6068942140970bdbcf97</code></summary><pre>{
+  &quot;account&quot;: &quot;FX_GAIN&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-30&quot;,
+  &quot;applied_fx_rate&quot;: &quot;521.75&quot;,
+  &quot;credit_minor&quot;: 975000,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_34845467701e4880665faaeb3f9e25e0&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_66ed5ff83c8bf5e5cd445ec87476d883&quot;,
+  &quot;journal_id&quot;: &quot;journal_1ce1f3adbfa6ad85c2806d2661461403&quot;,
+  &quot;payment_id&quot;: &quot;payment_6a0e1d762ba84b8bbbdf88b32b586dbf&quot;,
+  &quot;row_id&quot;: &quot;row_b5e6d1ea3f5f6068942140970bdbcf97&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-12-02T00:00:00+05:00&quot;
+}</pre></details><details class="source-card" id="document-6-5"><summary><span>Проводка UNALLOCATED · −52 175,00 ₸</span><code>row_dc383d6671eae3c7f49603e185ebf8ee</code></summary><pre>{
+  &quot;account&quot;: &quot;UNALLOCATED&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-30&quot;,
+  &quot;applied_fx_rate&quot;: &quot;521.75&quot;,
+  &quot;credit_minor&quot;: 5217500,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_34845467701e4880665faaeb3f9e25e0&quot;,
+  &quot;invoice_id&quot;: null,
+  &quot;journal_id&quot;: &quot;journal_1ce1f3adbfa6ad85c2806d2661461403&quot;,
+  &quot;payment_id&quot;: &quot;payment_6a0e1d762ba84b8bbbdf88b32b586dbf&quot;,
+  &quot;row_id&quot;: &quot;row_dc383d6671eae3c7f49603e185ebf8ee&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-12-02T00:00:00+05:00&quot;
+}</pre></details><details class="source-card" id="document-6-6"><summary><span>Проводка AR · −251 125,00 ₸</span><code>row_e3a025991d06a91dda94b68d1bee8304</code></summary><pre>{
+  &quot;account&quot;: &quot;AR&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-30&quot;,
+  &quot;applied_fx_rate&quot;: &quot;521.75&quot;,
+  &quot;credit_minor&quot;: 25112500,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_34845467701e4880665faaeb3f9e25e0&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_66ed5ff83c8bf5e5cd445ec87476d883&quot;,
+  &quot;journal_id&quot;: &quot;journal_1ce1f3adbfa6ad85c2806d2661461403&quot;,
+  &quot;payment_id&quot;: &quot;payment_6a0e1d762ba84b8bbbdf88b32b586dbf&quot;,
+  &quot;row_id&quot;: &quot;row_e3a025991d06a91dda94b68d1bee8304&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-12-02T00:00:00+05:00&quot;
+}</pre></details></div></section><section class="case-card" id="case-allocation_cutoff_repaired" data-case="allocation_cutoff_repaired"><header class="case-heading"><div><p class="eyebrow">Проверенный вариант</p><h2>Период исправлен; распределение ещё неверно</h2></div><span class="status bad">Расхождений: 1</span></header><p class="case-total">Сумма признания счетов в учёте <strong>2 552 880,61 ₸</strong></p><div class="issues"><article class="issue" id="issue-allocation_cutoff_repaired-0"><h3>Потерянное распределение платежа</h3><p>Из платежа <strong>600,00 USD</strong> распределено 500,00 USD. Осталось <strong>100,00 USD</strong>; по применённому курсу это 52 175,00 ₸. По документу весь платёж предназначен этому счёту.</p><div class="calculation-result"><span>Доказанное расхождение</span><strong>52 175,00 ₸</strong></div><details class="formula"><summary>Правило расчёта</summary><code>convert(source_amount − allocated_source, observed FX)</code></details><div class="evidence"><span>Документы и записи</span><a href="#document-7-0" class="evidence-link">doc_a163918fc800287451a5b62dd1fde6a2</a><a href="#document-7-1" class="evidence-link">doc_fe1994377606a086a93d265a92c42850</a><a href="#document-7-2" class="evidence-link">policy</a><a href="#document-7-3" class="evidence-link">row_974abfc8dab9451d222b4704808cfa7e</a><a href="#document-7-4" class="evidence-link">row_b5e6d1ea3f5f6068942140970bdbcf97</a><a href="#document-7-5" class="evidence-link">row_dc383d6671eae3c7f49603e185ebf8ee</a><a href="#document-7-6" class="evidence-link">row_e3a025991d06a91dda94b68d1bee8304</a></div></article></div><div class="table-scroll"><table class="policy-results" data-testid="policy-results"><caption>Результаты завершённых запусков</caption><thead><tr><th>Политика</th><th><abbr title="Верные находки">TP</abbr></th><th><abbr title="Ложные обвинения">FP</abbr></th><th><abbr title="Пропущенные ошибки">FN</abbr></th><th>F1</th><th>Награда</th><th>Шаги</th></tr></thead><tbody><tr class="policy-simple"><th scope="row">Алгоритм сверки</th><td>1</td><td>0</td><td>0</td><td>1,00</td><td>+0,992</td><td>5</td></tr><tr class="policy-silent"><th scope="row">Молчание · контроль</th><td>0</td><td>0</td><td>1</td><td>0,00</td><td>−1,000</td><td>1</td></tr><tr class="policy-oracle"><th scope="row">Oracle · готовые ответы</th><td>1</td><td>0</td><td>0</td><td>1,00</td><td>+1,000</td><td>1</td></tr></tbody></table></div><p class="fineprint">Oracle получает готовый правильный ответ. Его результат проверяет оценщик; он не показывает способность ИИ расследовать документы.</p><div class="source-heading"><h3>Открыть источники</h3><p>Карточки содержат исходные поля документов. Нажмите на строку, чтобы развернуть её.</p></div><div class="sources"><details class="source-card" id="document-7-0"><summary><span>Счёт · 1 000,00 USD</span><code>doc_a163918fc800287451a5b62dd1fde6a2</code></summary><pre>{
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;doc_a163918fc800287451a5b62dd1fde6a2&quot;,
+  &quot;due_at&quot;: &quot;2026-12-04T05:08:34.285714+05:00&quot;,
+  &quot;entity_id&quot;: &quot;entity_34845467701e4880665faaeb3f9e25e0&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_66ed5ff83c8bf5e5cd445ec87476d883&quot;,
+  &quot;issued_at&quot;: &quot;2026-11-04T05:08:34.285714+05:00&quot;,
+  &quot;line_items&quot;: [
+    {
+      &quot;description&quot;: &quot;Поставка&quot;,
+      &quot;quantity&quot;: 1,
+      &quot;total_minor&quot;: 100000,
+      &quot;unit_price_minor&quot;: 100000
+    }
+  ],
+  &quot;total_minor&quot;: 100000
+}</pre></details><details class="source-card" id="document-7-1"><summary><span>Платёж · 600,00 USD</span><code>doc_fe1994377606a086a93d265a92c42850</code></summary><pre>{
+  &quot;amount_minor&quot;: 60000,
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;doc_id&quot;: &quot;doc_fe1994377606a086a93d265a92c42850&quot;,
+  &quot;invoice_refs&quot;: [
+    &quot;invoice_66ed5ff83c8bf5e5cd445ec87476d883&quot;
+  ],
+  &quot;payment_id&quot;: &quot;payment_6a0e1d762ba84b8bbbdf88b32b586dbf&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-30T18:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-7-2"><summary><span>Правила учёта компании</span><code>policy</code></summary><pre>{
+  &quot;accounting_model&quot;: &quot;receivables_multi_v2&quot;,
+  &quot;accounts&quot;: {
+    &quot;cash&quot;: &quot;CASH&quot;,
+    &quot;fx_gain&quot;: &quot;FX_GAIN&quot;,
+    &quot;fx_loss&quot;: &quot;FX_LOSS&quot;,
+    &quot;receivable&quot;: &quot;AR&quot;,
+    &quot;revenue&quot;: &quot;REVENUE&quot;,
+    &quot;unallocated&quot;: &quot;UNALLOCATED&quot;
+  },
+  &quot;allocation_rule&quot;: &quot;atomic_full_designation&quot;,
+  &quot;amount_currency&quot;: &quot;base_currency&quot;,
+  &quot;amount_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;excess_gross_recognition_in_base_minor_units&quot;,
+    &quot;fx_conversion&quot;: &quot;absolute_primary_valuation_difference_in_base_minor_units&quot;,
+    &quot;payment_allocation&quot;: &quot;excess_unallocated_receipt_credit_in_observed_valuation&quot;,
+    &quot;period_cutoff&quot;: &quot;absolute_primary_amount_in_base_minor_units&quot;
+  },
+  &quot;amount_tolerance_minor&quot;: 0,
+  &quot;canonical_rules&quot;: {
+    &quot;duplicate_invoice&quot;: &quot;all_receivable_debit_recognition_row_ids_including_original&quot;,
+    &quot;fx_conversion&quot;: &quot;primary_ledger_row_id&quot;,
+    &quot;payment_allocation&quot;: &quot;payment_id_and_invoice_id&quot;,
+    &quot;period_cutoff&quot;: &quot;primary_ledger_row_id&quot;
+  },
+  &quot;carrying_rule&quot;: &quot;correct_invoice_source_date_rate&quot;,
+  &quot;fx_balance_rule&quot;: &quot;cash_minus_carrying_minus_unallocated&quot;,
+  &quot;fx_date_rule&quot;: &quot;source_document_date_in_company_timezone&quot;,
+  &quot;fx_rate_convention&quot;: &quot;target_major_per_source_major&quot;,
+  &quot;invoice_recognition&quot;: &quot;issued_at&quot;,
+  &quot;payment_recognition&quot;: &quot;timestamp&quot;,
+  &quot;period_bounds&quot;: &quot;[start,end)&quot;,
+  &quot;receipt_lifecycle&quot;: &quot;one_atomic_journal_no_later_clearing&quot;,
+  &quot;refund_rule&quot;: &quot;native_credit_note_full_designation&quot;,
+  &quot;rounding&quot;: &quot;ROUND_HALF_EVEN&quot;,
+  &quot;schema_version&quot;: &quot;0.2.0&quot;,
+  &quot;source_amount_rule&quot;: &quot;whole_document_amount_per_journal&quot;,
+  &quot;unknown_payment_designation&quot;: &quot;do_not_infer_an_invoice_from_entity_date_or_amount&quot;
+}</pre></details><details class="source-card" id="document-7-3"><summary><span>Проводка CASH · +313 050,00 ₸</span><code>row_974abfc8dab9451d222b4704808cfa7e</code></summary><pre>{
+  &quot;account&quot;: &quot;CASH&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-30&quot;,
+  &quot;applied_fx_rate&quot;: &quot;521.75&quot;,
+  &quot;credit_minor&quot;: 0,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 31305000,
+  &quot;entity_id&quot;: &quot;entity_34845467701e4880665faaeb3f9e25e0&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_66ed5ff83c8bf5e5cd445ec87476d883&quot;,
+  &quot;journal_id&quot;: &quot;journal_1ce1f3adbfa6ad85c2806d2661461403&quot;,
+  &quot;payment_id&quot;: &quot;payment_6a0e1d762ba84b8bbbdf88b32b586dbf&quot;,
+  &quot;row_id&quot;: &quot;row_974abfc8dab9451d222b4704808cfa7e&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-30T18:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-7-4"><summary><span>Проводка FX_GAIN · −9 750,00 ₸</span><code>row_b5e6d1ea3f5f6068942140970bdbcf97</code></summary><pre>{
+  &quot;account&quot;: &quot;FX_GAIN&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-30&quot;,
+  &quot;applied_fx_rate&quot;: &quot;521.75&quot;,
+  &quot;credit_minor&quot;: 975000,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_34845467701e4880665faaeb3f9e25e0&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_66ed5ff83c8bf5e5cd445ec87476d883&quot;,
+  &quot;journal_id&quot;: &quot;journal_1ce1f3adbfa6ad85c2806d2661461403&quot;,
+  &quot;payment_id&quot;: &quot;payment_6a0e1d762ba84b8bbbdf88b32b586dbf&quot;,
+  &quot;row_id&quot;: &quot;row_b5e6d1ea3f5f6068942140970bdbcf97&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-30T18:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-7-5"><summary><span>Проводка UNALLOCATED · −52 175,00 ₸</span><code>row_dc383d6671eae3c7f49603e185ebf8ee</code></summary><pre>{
+  &quot;account&quot;: &quot;UNALLOCATED&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-30&quot;,
+  &quot;applied_fx_rate&quot;: &quot;521.75&quot;,
+  &quot;credit_minor&quot;: 5217500,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_34845467701e4880665faaeb3f9e25e0&quot;,
+  &quot;invoice_id&quot;: null,
+  &quot;journal_id&quot;: &quot;journal_1ce1f3adbfa6ad85c2806d2661461403&quot;,
+  &quot;payment_id&quot;: &quot;payment_6a0e1d762ba84b8bbbdf88b32b586dbf&quot;,
+  &quot;row_id&quot;: &quot;row_dc383d6671eae3c7f49603e185ebf8ee&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-30T18:30:00+00:00&quot;
+}</pre></details><details class="source-card" id="document-7-6"><summary><span>Проводка AR · −251 125,00 ₸</span><code>row_e3a025991d06a91dda94b68d1bee8304</code></summary><pre>{
+  &quot;account&quot;: &quot;AR&quot;,
+  &quot;allocated_minor&quot;: 50000,
+  &quot;applied_fx_date&quot;: &quot;2026-11-30&quot;,
+  &quot;applied_fx_rate&quot;: &quot;521.75&quot;,
+  &quot;credit_minor&quot;: 25112500,
+  &quot;currency&quot;: &quot;KZT&quot;,
+  &quot;debit_minor&quot;: 0,
+  &quot;entity_id&quot;: &quot;entity_34845467701e4880665faaeb3f9e25e0&quot;,
+  &quot;invoice_id&quot;: &quot;invoice_66ed5ff83c8bf5e5cd445ec87476d883&quot;,
+  &quot;journal_id&quot;: &quot;journal_1ce1f3adbfa6ad85c2806d2661461403&quot;,
+  &quot;payment_id&quot;: &quot;payment_6a0e1d762ba84b8bbbdf88b32b586dbf&quot;,
+  &quot;row_id&quot;: &quot;row_e3a025991d06a91dda94b68d1bee8304&quot;,
+  &quot;source_amount_minor&quot;: 60000,
+  &quot;source_currency&quot;: &quot;USD&quot;,
+  &quot;timestamp&quot;: &quot;2026-11-30T18:30:00+00:00&quot;
+}</pre></details></div></section>
+<section class="renaming"><h2>Проверка после смены идентификаторов</h2><p>Тот же случай с двумя ошибками выполнен с новыми ID и другим порядком записей. Ниже приведены реальные результаты алгоритма и контрольных политик.</p><div class="table-scroll"><table class="policy-results" data-testid="policy-results"><caption>Результаты завершённых запусков</caption><thead><tr><th>Политика</th><th><abbr title="Верные находки">TP</abbr></th><th><abbr title="Ложные обвинения">FP</abbr></th><th><abbr title="Пропущенные ошибки">FN</abbr></th><th>F1</th><th>Награда</th><th>Шаги</th></tr></thead><tbody><tr class="policy-simple"><th scope="row">Алгоритм сверки</th><td>2</td><td>0</td><td>0</td><td>1,00</td><td>+0,992</td><td>5</td></tr><tr class="policy-silent"><th scope="row">Молчание · контроль</th><td>0</td><td>0</td><td>2</td><td>0,00</td><td>−1,000</td><td>1</td></tr><tr class="policy-oracle"><th scope="row">Oracle · готовые ответы</th><td>2</td><td>0</td><td>0</td><td>1,00</td><td>+1,000</td><td>1</td></tr></tbody></table></div><p class="fineprint">Oracle получает готовый правильный ответ. Его результат проверяет оценщик; он не показывает способность ИИ расследовать документы.</p><p class="fineprint">Совпадение результата этого прогона не означает, что любой агент выберет одинаковый порядок действий после перемешивания документов.</p></section>
+<footer><strong>Самодостаточный отчёт</strong><p>Файлы квитанции, документы эпизодов и журналы действий проверены по контрольным суммам. Записанные действия воспроизведены без новых запусков агентов.</p><p>Oracle — привилегированный контроль оценщика. Алгоритм сверки — скриптовая политика. Демо не заявляет обучение модели или пригодность для настоящего аудита.</p></footer></main></body></html>

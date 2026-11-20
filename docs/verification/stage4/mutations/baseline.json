@@ -1,0 +1,1689 @@
+{
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-izhen5tr/detect.py",
+    "/tmp/fin-audit-mutation-izhen5tr/src",
+    "/tmp/fin-audit-mutation-izhen5tr/events.json",
+    "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "detected": false,
+  "elapsed_seconds": 2.4884473530000832,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-izhen5tr/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-izhen5tr/src/fin_audit/evaluation.py",
+        "sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69"
+      }
+    },
+    "pytest_exitcode": 0,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[0-1.0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[0-1.0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[0-1.0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[30-0.94]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[30-0.94]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[30-0.94]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[80-0.84]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[80-0.84]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[80-0.84]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[99-0.802]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[99-0.802]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_correct_proven_answer_receives_published_reward[99-0.802]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_false_accusation_is_worse_than_silence_on_clean_company",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_false_accusation_is_worse_than_silence_on_clean_company",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_false_accusation_is_worse_than_silence_on_clean_company",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_missing_all_errors_has_zero_f1_and_clipped_reward",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_missing_all_errors_has_zero_f1_and_clipped_reward",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_missing_all_errors_has_zero_f1_and_clipped_reward",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_two_real_findings_use_business_ids_separately_from_evidence_ids",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_two_real_findings_use_business_ids_separately_from_evidence_ids",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_two_real_findings_use_business_ids_separately_from_evidence_ids",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_valid_shotgun_is_bad_even_if_one_claim_is_correct",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_valid_shotgun_is_bad_even_if_one_claim_is_correct",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_valid_shotgun_is_bad_even_if_one_claim_is_correct",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes2]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes2]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes2]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes3]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes3]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes3]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes4]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes4]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes4]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes5]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes5]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes5]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes6]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes6]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes6]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes7]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes7]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes7]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes8]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes8]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes8]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes9]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes9]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes9]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes10]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes10]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes10]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes11]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes11]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes11]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes12]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes12]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes12]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes13]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes13]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_semantically_wrong_claim_is_fp_and_missed_truth[changes13]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_extra_existing_evidence_and_guessed_but_complete_ids_are_allowed",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_extra_existing_evidence_and_guessed_but_complete_ids_are_allowed",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_extra_existing_evidence_and_guessed_but_complete_ids_are_allowed",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_set_normalization_does_not_change_opaque_ids_or_duplicate_findings",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_set_normalization_does_not_change_opaque_ids_or_duplicate_findings",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_set_normalization_does_not_change_opaque_ids_or_duplicate_findings",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-1-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-1-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-1-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[0-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[0-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[0-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[1-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[1-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[1-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_large_minor_units_are_compared_exactly_beyond_float_precision",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_large_minor_units_are_compared_exactly_beyond_float_precision",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_large_minor_units_are_compared_exactly_beyond_float_precision",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_explanation_wording_never_changes_a_score",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_explanation_wording_never_changes_a_score",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_explanation_wording_never_changes_a_score",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_extra_finding_fields_and_missing_required_fields_are_invalid",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_extra_finding_fields_and_missing_required_fields_are_invalid",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_extra_finding_fields_and_missing_required_fields_are_invalid",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_raw_limits_are_checked_before_deduplicating_ids_or_findings",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_raw_limits_are_checked_before_deduplicating_ids_or_findings",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_raw_limits_are_checked_before_deduplicating_ids_or_findings",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_explanation_limit_counts_characters_instead_of_utf8_bytes",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_explanation_limit_counts_characters_instead_of_utf8_bytes",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_explanation_limit_counts_characters_instead_of_utf8_bytes",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_clean_truncation_empty_answer_keeps_common_formula",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_clean_truncation_empty_answer_keeps_common_formula",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_clean_truncation_empty_answer_keeps_common_formula",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[101]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[101]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[101]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[True]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[True]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[True]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[1.0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[1.0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_counter_is_not_blame_assigned_to_agent[1.0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances2]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances2]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances2]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances3]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances3]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_invalid_trusted_tolerance_configuration_raises[tolerances3]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[None-invalid_truth_array]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[None-invalid_truth_array]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[None-invalid_truth_array]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth1-invalid_truth_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth1-invalid_truth_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth1-invalid_truth_fields]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth2-invalid_truth_issue_id]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth2-invalid_truth_issue_id]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth2-invalid_truth_issue_id]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth3-invalid_truth_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth3-invalid_truth_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth3-invalid_truth_type]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth4-invalid_truth_amount]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth4-invalid_truth_amount]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth4-invalid_truth_amount]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth5-invalid_truth_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth5-invalid_truth_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth5-invalid_truth_affected_ids]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth6-invalid_truth_evidence_sets]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth6-invalid_truth_evidence_sets]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth6-invalid_truth_evidence_sets]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth7-invalid_truth_evidence_set]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth7-invalid_truth_evidence_set]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth7-invalid_truth_evidence_set]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth8-invalid_truth_evidence_set]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth8-invalid_truth_evidence_set]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_broken_trusted_truth_is_not_scored_as_an_agent_mistake[truth8-invalid_truth_evidence_set]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_matching_agrees_with_independent_exhaustive_search_on_small_graphs",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_matching_agrees_with_independent_exhaustive_search_on_small_graphs",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_matching_agrees_with_independent_exhaustive_search_on_small_graphs",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_permutations_and_consistent_id_renaming_preserve_score",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_permutations_and_consistent_id_renaming_preserve_score",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_permutations_and_consistent_id_renaming_preserve_score",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_evaluation_does_not_mutate_inputs_or_expose_mutable_result_state",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_evaluation_does_not_mutate_inputs_or_expose_mutable_result_state",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_evaluation_does_not_mutate_inputs_or_expose_mutable_result_state",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 0,
+  "killed_by": [],
+  "output_limit": false,
+  "passed": true,
+  "read_stream_sha256": "ca644d4db5f261aa4dedf002c0891097d885146988cefccef15c50c70a0b81a2",
+  "reason": null,
+  "source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "status": "passed",
+  "stdout": "........................................................................ [ 92%]\n......                                                                   [100%]\n78 passed in 0.52s\n",
+  "stdout_bytes_read": 179,
+  "stdout_truncated": false,
+  "test_counts": {
+    "passed": 78
+  },
+  "tests": [
+    "tests/test_evaluation.py"
+  ],
+  "timed_out": false
+}

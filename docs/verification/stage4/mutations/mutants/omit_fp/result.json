@@ -1,0 +1,94 @@
+{
+  "artifacts": {
+    "patch": "mutants/omit_fp/patch.diff",
+    "result": "mutants/omit_fp/result.json",
+    "source": "mutants/omit_fp/evaluation.py"
+  },
+  "ast_after_sha256": "18a88216aa959d0e328d48f7a4bd0ecde804e5533938720e56359006ed1721ed",
+  "ast_before_sha256": "99ba8a68f53d18781f53185d3a9e19bac4f74ee1cc560dd2be9399698d272ca1",
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-l06aza6j/detect.py",
+    "/tmp/fin-audit-mutation-l06aza6j/src",
+    "/tmp/fin-audit-mutation-l06aza6j/events.json",
+    "3d4e22a6912a7a360028d79e8289d9a9b60a3ef2a18a35a7aca54bf0c388e303",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "description": "Remove FP from the F1 denominator.",
+  "detected": true,
+  "detection_tests": [
+    "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth"
+  ],
+  "elapsed_seconds": 0.8063723180002853,
+  "equivalent": false,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-l06aza6j/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-l06aza6j/src/fin_audit/evaluation.py",
+        "sha256": "3d4e22a6912a7a360028d79e8289d9a9b60a3ef2a18a35a7aca54bf0c388e303"
+      }
+    },
+    "pytest_exitcode": 1,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 1,
+  "id": "omit_fp",
+  "killed_by": [
+    "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth"
+  ],
+  "mutated_source_sha256": "3d4e22a6912a7a360028d79e8289d9a9b60a3ef2a18a35a7aca54bf0c388e303",
+  "operator": "omit_fp",
+  "original_source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "output_limit": false,
+  "passed": false,
+  "patch_sha256": "2d488d3ab0702072c3bf9b84f552e30cbf451eefa92f83a16df7f3f76ca3a520",
+  "read_stream_sha256": "003fa01ef34357c33906f8ef3b67bcc359d03544c4853d36db3acc04858c5379",
+  "reason": "assertion_failure",
+  "source_sha256": "3d4e22a6912a7a360028d79e8289d9a9b60a3ef2a18a35a7aca54bf0c388e303",
+  "status": "killed",
+  "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n________ test_repeating_a_correct_finding_adds_fp_without_reusing_truth ________\ntests/test_evaluation.py:122: in test_repeating_a_correct_finding_adds_fp_without_reusing_truth\n    assert result.f1 == 0.8\nE   AssertionError: assert 1.0 == 0.8\nE    +  where 1.0 = EvaluationResult(tp=2, fp=1, fn=0, precision=0.6666666666666666, recall=1.0, f1=1.0, reward=0.94, status='scored', matched_pairs=((0, 'private-issue-a'), (1, 'private-issue-b')), error=None).f1\n=========================== short test summary info ============================\nFAILED tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth\n1 failed in 0.09s\n",
+  "stdout_bytes_read": 813,
+  "stdout_truncated": false,
+  "target_end_line": 332,
+  "target_line": 332,
+  "target_matches": 1,
+  "test_counts": {
+    "failed": 1
+  },
+  "tests": [
+    "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth"
+  ],
+  "timed_out": false
+}

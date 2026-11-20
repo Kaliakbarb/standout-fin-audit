@@ -1,0 +1,11 @@
+--- original/evaluation.py
++++ mutants/affected_superset/evaluation.py
+@@ -312,7 +312,7 @@
+             for index, issue in enumerate(issues):
+                 if (
+                     finding["type"] == issue.type
+-                    and affected == issue.affected_ids
++                    and issue.affected_ids.issubset(affected)
+                     and finding["currency"] == issue.currency
+                     and abs(
+                         finding["claimed_amount_minor"] - issue.expected_amount_minor

@@ -1,0 +1,94 @@
+{
+  "artifacts": {
+    "patch": "mutants/wrong_clean_f1/patch.diff",
+    "result": "mutants/wrong_clean_f1/result.json",
+    "source": "mutants/wrong_clean_f1/evaluation.py"
+  },
+  "ast_after_sha256": "78489c7a3a6fd1eea6d2c1ae7e7b1e5160345346cbfb4ad081de15ffe4e47072",
+  "ast_before_sha256": "99ba8a68f53d18781f53185d3a9e19bac4f74ee1cc560dd2be9399698d272ca1",
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-xo3srpdw/detect.py",
+    "/tmp/fin-audit-mutation-xo3srpdw/src",
+    "/tmp/fin-audit-mutation-xo3srpdw/events.json",
+    "67ad262f33642ca06f9d5f529fd2f7269dccc7e6889b8498f28536bba2d5d160",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "description": "Assign F1=0 to a clean episode with an empty answer.",
+  "detected": true,
+  "detection_tests": [
+    "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall"
+  ],
+  "elapsed_seconds": 0.8045183499998529,
+  "equivalent": false,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-xo3srpdw/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-xo3srpdw/src/fin_audit/evaluation.py",
+        "sha256": "67ad262f33642ca06f9d5f529fd2f7269dccc7e6889b8498f28536bba2d5d160"
+      }
+    },
+    "pytest_exitcode": 1,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 1,
+  "id": "wrong_clean_f1",
+  "killed_by": [
+    "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall"
+  ],
+  "mutated_source_sha256": "67ad262f33642ca06f9d5f529fd2f7269dccc7e6889b8498f28536bba2d5d160",
+  "operator": "wrong_clean_f1",
+  "original_source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "output_limit": false,
+  "passed": false,
+  "patch_sha256": "9f551ddbe989857d00b5d587ecc5d4cf17b58079cc6df259400757c054499128",
+  "read_stream_sha256": "cb6f6cddbae28de33a44039bcc5d8362986a05ef435a64fcdadd084e4caf2638",
+  "reason": "assertion_failure",
+  "source_sha256": "67ad262f33642ca06f9d5f529fd2f7269dccc7e6889b8498f28536bba2d5d160",
+  "status": "killed",
+  "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n_______ test_clean_silence_is_correct_despite_zero_precision_and_recall ________\ntests/test_evaluation.py:86: in test_clean_silence_is_correct_despite_zero_precision_and_recall\n    assert (result.precision, result.recall, result.f1) == (0.0, 0.0, 1.0)\nE   assert (0.0, 0.0, 0.0) == (0.0, 0.0, 1.0)\nE     \nE     At index 2 diff: 0.0 != 1.0\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall\n1 failed in 0.08s\n",
+  "stdout_bytes_read": 726,
+  "stdout_truncated": false,
+  "target_end_line": 332,
+  "target_line": 332,
+  "target_matches": 1,
+  "test_counts": {
+    "failed": 1
+  },
+  "tests": [
+    "tests/test_evaluation.py::test_clean_silence_is_correct_despite_zero_precision_and_recall"
+  ],
+  "timed_out": false
+}

@@ -1,0 +1,11 @@
+--- original/evaluation.py
++++ mutants/positive_invalid_reward/evaluation.py
+@@ -297,7 +297,7 @@
+             precision=None,
+             recall=None,
+             f1=None,
+-            reward=-1.0,
++            reward=1.0,
+             status="invalid_submit",
+             matched_pairs=(),
+             error=exc.code,

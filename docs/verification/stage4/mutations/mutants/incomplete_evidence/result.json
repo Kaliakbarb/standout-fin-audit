@@ -1,0 +1,94 @@
+{
+  "artifacts": {
+    "patch": "mutants/incomplete_evidence/patch.diff",
+    "result": "mutants/incomplete_evidence/result.json",
+    "source": "mutants/incomplete_evidence/evaluation.py"
+  },
+  "ast_after_sha256": "e9319e95edc6b8a1f50cf253f246c3606b78da31b0e3b4422a32f6b1821009b3",
+  "ast_before_sha256": "99ba8a68f53d18781f53185d3a9e19bac4f74ee1cc560dd2be9399698d272ca1",
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-udl3mhjn/detect.py",
+    "/tmp/fin-audit-mutation-udl3mhjn/src",
+    "/tmp/fin-audit-mutation-udl3mhjn/events.json",
+    "26b6439b667572971a4d2753e0db9106a2f63f94b2e758569b58ac6da39f0a3d",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "description": "Accept any evidence overlap instead of one complete proof set.",
+  "detected": true,
+  "detection_tests": [
+    "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection"
+  ],
+  "elapsed_seconds": 0.9000222030008445,
+  "equivalent": false,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-udl3mhjn/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-udl3mhjn/src/fin_audit/evaluation.py",
+        "sha256": "26b6439b667572971a4d2753e0db9106a2f63f94b2e758569b58ac6da39f0a3d"
+      }
+    },
+    "pytest_exitcode": 1,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 1,
+  "id": "incomplete_evidence",
+  "killed_by": [
+    "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection"
+  ],
+  "mutated_source_sha256": "26b6439b667572971a4d2753e0db9106a2f63f94b2e758569b58ac6da39f0a3d",
+  "operator": "evidence_overlap",
+  "original_source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "output_limit": false,
+  "passed": false,
+  "patch_sha256": "58065a3e9315b1507cfa330dbb517954f9b431c441c41bca94c7584a7dc474de",
+  "read_stream_sha256": "feaa7b0af5823e4b8d174583827a4d774cefa2446a0def44f1e0ec6868ab103f",
+  "reason": "assertion_failure",
+  "source_sha256": "26b6439b667572971a4d2753e0db9106a2f63f94b2e758569b58ac6da39f0a3d",
+  "status": "killed",
+  "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n_____ test_one_complete_alternative_proof_is_required_not_any_intersection _____\ntests/test_evaluation.py:178: in test_one_complete_alternative_proof_is_required_not_any_intersection\n    assert partial.tp == 0\nE   AssertionError: assert 1 == 0\nE    +  where 1 = EvaluationResult(tp=1, fp=0, fn=0, precision=1.0, recall=1.0, f1=1.0, reward=1.0, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).tp\n=========================== short test summary info ============================\nFAILED tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection\n1 failed in 0.10s\n",
+  "stdout_bytes_read": 779,
+  "stdout_truncated": false,
+  "target_end_line": 321,
+  "target_line": 321,
+  "target_matches": 1,
+  "test_counts": {
+    "failed": 1
+  },
+  "tests": [
+    "tests/test_evaluation.py::test_one_complete_alternative_proof_is_required_not_any_intersection"
+  ],
+  "timed_out": false
+}

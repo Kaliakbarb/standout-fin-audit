@@ -1,0 +1,11 @@
+--- original/evaluation.py
++++ mutants/ignore_currency/evaluation.py
+@@ -313,7 +313,7 @@
+                 if (
+                     finding["type"] == issue.type
+                     and affected == issue.affected_ids
+-                    and finding["currency"] == issue.currency
++                    and True
+                     and abs(
+                         finding["claimed_amount_minor"] - issue.expected_amount_minor
+                     )

@@ -1,0 +1,180 @@
+{
+  "artifacts": {
+    "patch": "mutants/exclusive_tolerance/patch.diff",
+    "result": "mutants/exclusive_tolerance/result.json",
+    "source": "mutants/exclusive_tolerance/evaluation.py"
+  },
+  "ast_after_sha256": "56b5c8709aedcec57e6d30d627c9616ec39453baf9c58ccc3c5ff46b939d13a9",
+  "ast_before_sha256": "99ba8a68f53d18781f53185d3a9e19bac4f74ee1cc560dd2be9399698d272ca1",
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-hcjmmpfc/detect.py",
+    "/tmp/fin-audit-mutation-hcjmmpfc/src",
+    "/tmp/fin-audit-mutation-hcjmmpfc/events.json",
+    "7289f42013c0418ceefe703f2e339677b04eb31017cce65652f8ec0b2a8e4ac6",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "description": "Reject a difference exactly at the declared tolerance boundary.",
+  "detected": true,
+  "detection_tests": [
+    "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries"
+  ],
+  "elapsed_seconds": 0.6436911020009575,
+  "equivalent": false,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-hcjmmpfc/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-hcjmmpfc/src/fin_audit/evaluation.py",
+        "sha256": "7289f42013c0418ceefe703f2e339677b04eb31017cce65652f8ec0b2a8e4ac6"
+      }
+    },
+    "pytest_exitcode": 1,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-1-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-1-1]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-1-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[0-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[0-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[0-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[1-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[1-1]",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[1-1]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[2-0]",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 1,
+  "id": "exclusive_tolerance",
+  "killed_by": [
+    "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-1-1]",
+    "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[1-1]"
+  ],
+  "mutated_source_sha256": "7289f42013c0418ceefe703f2e339677b04eb31017cce65652f8ec0b2a8e4ac6",
+  "operator": "exclusive_tolerance",
+  "original_source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "output_limit": false,
+  "passed": false,
+  "patch_sha256": "55b2d80aab3421dd40c9ea4c5a22363d44ff219a17fd4aa1ec270a74bd2770fe",
+  "read_stream_sha256": "f4c25cc4b342dc436d6fd16bb1b39680bbf5e681e94bfd48be6749a8fb7d724c",
+  "reason": "assertion_failure",
+  "source_sha256": "7289f42013c0418ceefe703f2e339677b04eb31017cce65652f8ec0b2a8e4ac6",
+  "status": "killed",
+  "stdout": ".F.F.                                                                    [100%]\n=================================== FAILURES ===================================\n_______ test_published_absolute_tolerance_has_inclusive_boundaries[-1-1] _______\ntests/test_evaluation.py:208: in test_published_absolute_tolerance_has_inclusive_boundaries\n    assert result.tp == expected_tp\nE   AssertionError: assert 0 == 1\nE    +  where 0 = EvaluationResult(tp=0, fp=1, fn=1, precision=0.0, recall=0.0, f1=0.0, reward=-1.0, status='scored', matched_pairs=(), error=None).tp\n_______ test_published_absolute_tolerance_has_inclusive_boundaries[1-1] ________\ntests/test_evaluation.py:208: in test_published_absolute_tolerance_has_inclusive_boundaries\n    assert result.tp == expected_tp\nE   AssertionError: assert 0 == 1\nE    +  where 0 = EvaluationResult(tp=0, fp=1, fn=1, precision=0.0, recall=0.0, f1=0.0, reward=-1.0, status='scored', matched_pairs=(), error=None).tp\n=========================== short test summary info ============================\nFAILED tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[-1-1]\nFAILED tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries[1-1]\n2 failed, 3 passed in 0.08s\n",
+  "stdout_bytes_read": 1253,
+  "stdout_truncated": false,
+  "target_end_line": 320,
+  "target_line": 317,
+  "target_matches": 1,
+  "test_counts": {
+    "failed": 2,
+    "passed": 3
+  },
+  "tests": [
+    "tests/test_evaluation.py::test_published_absolute_tolerance_has_inclusive_boundaries"
+  ],
+  "timed_out": false
+}

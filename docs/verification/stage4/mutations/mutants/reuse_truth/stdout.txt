@@ -1,0 +1,12 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+________ test_repeating_a_correct_finding_adds_fp_without_reusing_truth ________
+tests/test_evaluation.py:119: in test_repeating_a_correct_finding_adds_fp_without_reusing_truth
+    assert (result.tp, result.fp, result.fn) == (2, 1, 0)
+E   assert (3, 0, -1) == (2, 1, 0)
+E     
+E     At index 0 diff: 3 != 2
+E     Use -v to get more diff
+=========================== short test summary info ============================
+FAILED tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth
+1 failed in 0.10s

@@ -1,0 +1,12 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______ test_exact_fraction_reward_is_not_computed_from_rounded_display_f1 ______
+tests/test_evaluation.py:434: in test_exact_fraction_reward_is_not_computed_from_rounded_display_f1
+    assert result.f1 == float(Fraction(2, 3))
+E   AssertionError: assert 1.0 == 0.6666666666666666
+E    +  where 1.0 = EvaluationResult(tp=1, fp=0, fn=1, precision=1.0, recall=0.5, f1=1.0, reward=0.998, status='scored', matched_pairs=((0, 'private-issue-a'),), error=None).f1
+E    +  and   0.6666666666666666 = float(Fraction(2, 3))
+E    +    where Fraction(2, 3) = Fraction(2, 3)
+=========================== short test summary info ============================
+FAILED tests/test_evaluation.py::test_exact_fraction_reward_is_not_computed_from_rounded_display_f1
+1 failed in 0.07s

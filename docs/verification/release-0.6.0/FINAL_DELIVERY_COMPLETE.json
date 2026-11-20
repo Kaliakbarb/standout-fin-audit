@@ -1,0 +1,36 @@
+{
+  "completed": true,
+  "passed": true,
+  "software_version": "0.6.0",
+  "zip": "dist/submission-0.6.0/genesis-fin-audit-0.6.0-submission.zip",
+  "zip_sha256": "a2ec5f1302751d182c636482999950547162108a031b5151c0c825cfc22a435d",
+  "zip_bytes": 73854478,
+  "tests": {
+    "passed": 994,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "application_checks": 48,
+  "isolation_probes": 19,
+  "mutations_killed": 12,
+  "mutation_invalid": 0,
+  "mutation_timeouts": 0,
+  "mutation_survived": 0,
+  "packaged_demo_checks": 13,
+  "packaged_demo_secure_workers": 6,
+  "peak_cgroup_memory_bytes": 288063488,
+  "target_platform": "linux/amd64",
+  "execution_scope": "Full-system QEMU Linux x86_64 guest on ARM64 macOS; not bare-metal timing evidence",
+  "source_files_unchanged": 259,
+  "final_audit": {
+    "path": "artifacts/release-host-0.6.0/final-submission-audit-final8.json",
+    "sha256": "a5d555fca78a61ba51a6e2c6c49446061cb2f702b0a2ceb377bb52c610f24bf1",
+    "passed_groups": 18
+  },
+  "environment_restored": true,
+  "environment_restore_proof": "artifacts/amd64-preparation/ENVIRONMENT_RESTORE_PROOF.json",
+  "environment_restore_proof_sha256": "52a66fa756d2ddeb9e0e1413a9bdb9d033b962091aea001937ede86ca1ba0fe1",
+  "old_0_5_zip_preserved": true,
+  "no_official_submission_performed": true
+}

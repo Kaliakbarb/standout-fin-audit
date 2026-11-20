@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: lesson proves the two separate 50,000 KZT differences using public records
+ok 1 - lesson proves the two separate 50,000 KZT differences using public records
+  ---
+  duration_ms: 52.482625
+  type: 'test'
+  ...
+# Subtest: source date uses the company timezone, including a UTC day boundary
+ok 2 - source date uses the company timezone, including a UTC day boundary
+  ---
+  duration_ms: 0.144417
+  type: 'test'
+  ...
+# Subtest: a clean or unsupported book does not get a fabricated duplicate lesson
+ok 3 - a clean or unsupported book does not get a fabricated duplicate lesson
+  ---
+  duration_ms: 0.216792
+  type: 'test'
+  ...
+# Subtest: the lesson does not silently round unsupported fractional valuations
+ok 4 - the lesson does not silently round unsupported fractional valuations
+  ---
+  duration_ms: 0.123417
+  type: 'test'
+  ...
+# Subtest: source choices exclude balancing revenue rows for currency and period claims
+ok 5 - source choices exclude balancing revenue rows for currency and period claims
+  ---
+  duration_ms: 0.096041
+  type: 'test'
+  ...
+# Subtest: allocation evidence follows the designated invoice and every payment posting
+ok 6 - allocation evidence follows the designated invoice and every payment posting
+  ---
+  duration_ms: 0.1045
+  type: 'test'
+  ...
+# Subtest: an unknown payment designation never fabricates an invoice link
+ok 7 - an unknown payment designation never fabricates an invoice link
+  ---
+  duration_ms: 0.094417
+  type: 'test'
+  ...
+# Subtest: missing sources remain empty rather than borrowing unrelated documents
+ok 8 - missing sources remain empty rather than borrowing unrelated documents
+  ---
+  duration_ms: 0.162875
+  type: 'test'
+  ...
+# Subtest: replay describes only the actions actually present in the trajectory
+ok 9 - replay describes only the actions actually present in the trajectory
+  ---
+  duration_ms: 0.642625
+  type: 'test'
+  ...
+# Subtest: no completed trajectory means no invented actions
+ok 10 - no completed trajectory means no invented actions
+  ---
+  duration_ms: 0.651291
+  type: 'test'
+  ...
+# Subtest: visible revenue is a projection of revenue postings, not all debit balances
+ok 11 - visible revenue is a projection of revenue postings, not all debit balances
+  ---
+  duration_ms: 0.08525
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 139.913458

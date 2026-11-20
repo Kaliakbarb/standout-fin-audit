@@ -1,0 +1,94 @@
+{
+  "artifacts": {
+    "patch": "mutants/greedy_matching/patch.diff",
+    "result": "mutants/greedy_matching/result.json",
+    "source": "mutants/greedy_matching/evaluation.py"
+  },
+  "ast_after_sha256": "eea4a6d433207bc3b7c3c824fd4588353d373a6ef9b6b8c210b166c66cd06a10",
+  "ast_before_sha256": "99ba8a68f53d18781f53185d3a9e19bac4f74ee1cc560dd2be9399698d272ca1",
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-34elig6l/detect.py",
+    "/tmp/fin-audit-mutation-34elig6l/src",
+    "/tmp/fin-audit-mutation-34elig6l/events.json",
+    "c6cdfc990956b3adc4fb8f29afb236cbf2e2e65b959a30185b4d3ded70758469",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "description": "Replace maximum matching with first-fit matching; generic ambiguity fixture.",
+  "detected": true,
+  "detection_tests": [
+    "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss"
+  ],
+  "elapsed_seconds": 0.6759206669994455,
+  "equivalent": false,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-34elig6l/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-34elig6l/src/fin_audit/evaluation.py",
+        "sha256": "c6cdfc990956b3adc4fb8f29afb236cbf2e2e65b959a30185b4d3ded70758469"
+      }
+    },
+    "pytest_exitcode": 1,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 1,
+  "id": "greedy_matching",
+  "killed_by": [
+    "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss"
+  ],
+  "mutated_source_sha256": "c6cdfc990956b3adc4fb8f29afb236cbf2e2e65b959a30185b4d3ded70758469",
+  "operator": "greedy_matching",
+  "original_source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "output_limit": false,
+  "passed": false,
+  "patch_sha256": "d32e4984d3a53a110d32380e58ef844568ce7048c2094f243093fdc8d6836509",
+  "read_stream_sha256": "b58892809c35821df4726087fd6ca5cd6aed6bffa7f10d4b851e430153a06560",
+  "reason": "assertion_failure",
+  "source_sha256": "c6cdfc990956b3adc4fb8f29afb236cbf2e2e65b959a30185b4d3ded70758469",
+  "status": "killed",
+  "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n______________ test_augmenting_path_avoids_greedy_first_fit_loss _______________\ntests/test_evaluation.py:351: in test_augmenting_path_avoids_greedy_first_fit_loss\n    assert result.tp == 2\nE   AssertionError: assert 1 == 2\nE    +  where 1 = EvaluationResult(tp=1, fp=1, fn=1, precision=0.5, recall=0.5, f1=0.5, reward=0.0, status='scored', matched_pairs=((0, 'issue-0'),), error=None).tp\n=========================== short test summary info ============================\nFAILED tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss\n1 failed in 0.07s\n",
+  "stdout_bytes_read": 732,
+  "stdout_truncated": false,
+  "target_end_line": 245,
+  "target_line": 213,
+  "target_matches": 1,
+  "test_counts": {
+    "failed": 1
+  },
+  "tests": [
+    "tests/test_evaluation.py::test_augmenting_path_avoids_greedy_first_fit_loss"
+  ],
+  "timed_out": false
+}

@@ -1,0 +1,9 @@
+{
+  "archive": "genesis-fin-audit-0.6.0-linux-amd64.tar.gz",
+  "archive_bytes": 73722947,
+  "archive_sha256": "76a1f02d12331da6e6b6b6b0b6d46f56db5e7c2f05fed9cd043d42fbdc0325e1",
+  "image_id": "sha256:ad7b8f69f7e2d272d5ae1e2b2ed21f4f715a4f920934761876cc57df55c700e0",
+  "manifest_sha256": "f799a5e1d3eb108352dd0308168b996c2424d85bb372fd250353612ec55c31fa",
+  "passed": true,
+  "payload_bytes": 83737545
+}

@@ -1,0 +1,34 @@
+{
+  "declared_ids": [
+    "ignore_currency",
+    "incomplete_evidence",
+    "reuse_truth",
+    "omit_fp",
+    "omit_fn",
+    "wrong_clean_f1",
+    "wrong_step_cost",
+    "greedy_matching",
+    "ignore_amount",
+    "exclusive_tolerance",
+    "affected_superset",
+    "positive_invalid_reward"
+  ],
+  "isolation": "Fresh subprocess and temporary package tree; module path+SHA verified. Not an OS security sandbox claim.",
+  "plan_version": "0.4.0",
+  "python": "3.11.15 (main, Aug  5 2026, 01:17:38) [GCC 12.2.0]",
+  "software_version": "0.4.0",
+  "source_sha256": {
+    "configs/scorer-mutations.json": "bf0ef2e403052799e85838d7c86b59c64c6482929a0c2638f896b3c74cb87d94",
+    "scripts/mutation_check.py": "06d8aea8ad1c44637dc1c70c2d09f4337c08eb3e00150ce565a2830a7ff482b6",
+    "src/fin_audit/__init__.py": "bd41635f8c0a6fa3185b7a4fb97092116e4132af93bc57039ee5eeaa4734386c",
+    "src/fin_audit/contracts.py": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "src/fin_audit/evaluation.py": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+    "tests/mutation_support.py": "f9fff210312879f8ef94fecd8f551ce563aa3e1993b8478880df9324a7eb0f97",
+    "tests/test_evaluation.py": "b1aba21d72f392c49122a3d97823e5da3b35f4d01274b55525d2675626b45cc9"
+  },
+  "summary_sha256": "fcdcb83d6ae9ac904a11492aaa4707499545c9817e1c85a9766f5ba1a9b0de0c",
+  "timeouts_seconds": {
+    "baseline": 30,
+    "mutant": 10
+  }
+}

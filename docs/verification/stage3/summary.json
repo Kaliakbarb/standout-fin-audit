@@ -1,0 +1,4536 @@
+{
+  "aggregates": {
+    "by_cohort": {
+      "clean": {
+        "mark_all": {
+          "clean_false_accusation_rate": 1,
+          "elapsed_seconds": 0.18414405939984135,
+          "episodes": 5,
+          "f1": 0.0,
+          "fn": 0,
+          "fp": 150,
+          "inspection_steps": 19.2,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 5,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 20.2,
+          "total_elapsed_seconds": 0.9207202969992068,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "oracle": {
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.019638614400355435,
+          "episodes": 5,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 0,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 5,
+          "micro": {
+            "f1": 1.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": 1.0,
+          "steps": 1,
+          "total_elapsed_seconds": 0.09819307200177718,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "random": {
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.19145202840009007,
+          "episodes": 5,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 12,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 5,
+          "micro": {
+            "f1": 1.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": 0.976,
+          "steps": 13,
+          "total_elapsed_seconds": 0.9572601420004503,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "simple": {
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.18551466120006807,
+          "episodes": 5,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 19.2,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 5,
+          "micro": {
+            "f1": 1.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": 0.9616,
+          "steps": 20.2,
+          "total_elapsed_seconds": 0.9275733060003404,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        }
+      },
+      "interacting": {
+        "mark_all": {
+          "clean_false_accusation_rate": null,
+          "elapsed_seconds": 0.22121192580034404,
+          "episodes": 5,
+          "f1": 0.0,
+          "fn": 16,
+          "fp": 150,
+          "inspection_steps": 17.2,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 5,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 18.2,
+          "total_elapsed_seconds": 1.1060596290017202,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "oracle": {
+          "clean_false_accusation_rate": null,
+          "elapsed_seconds": 0.019620680400112177,
+          "episodes": 5,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 0,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 5,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 1.0,
+          "steps": 1,
+          "total_elapsed_seconds": 0.09810340200056089,
+          "tp": 16,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "random": {
+          "clean_false_accusation_rate": null,
+          "elapsed_seconds": 0.20825463380006112,
+          "episodes": 5,
+          "f1": 0.0,
+          "fn": 16,
+          "fp": 0,
+          "inspection_steps": 12,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 5,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 13,
+          "total_elapsed_seconds": 1.0412731690003056,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "simple": {
+          "clean_false_accusation_rate": null,
+          "elapsed_seconds": 0.22958195860010164,
+          "episodes": 5,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 17.2,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 5,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 0.9656,
+          "steps": 18.2,
+          "total_elapsed_seconds": 1.1479097930005082,
+          "tp": 16,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        }
+      },
+      "other": {
+        "mark_all": {
+          "clean_false_accusation_rate": null,
+          "elapsed_seconds": 0.24440311160014971,
+          "episodes": 10,
+          "f1": 0.0,
+          "fn": 40,
+          "fp": 300,
+          "inspection_steps": 24.6,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 10,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 25.6,
+          "total_elapsed_seconds": 2.444031116001497,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "oracle": {
+          "clean_false_accusation_rate": null,
+          "elapsed_seconds": 0.03054391449995819,
+          "episodes": 10,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 0,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 10,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 1.0,
+          "steps": 1,
+          "total_elapsed_seconds": 0.3054391449995819,
+          "tp": 40,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "random": {
+          "clean_false_accusation_rate": null,
+          "elapsed_seconds": 0.22008605069986514,
+          "episodes": 10,
+          "f1": 0.0,
+          "fn": 40,
+          "fp": 0,
+          "inspection_steps": 12,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 10,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 13,
+          "total_elapsed_seconds": 2.2008605069986515,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "simple": {
+          "clean_false_accusation_rate": null,
+          "elapsed_seconds": 0.22896456260004924,
+          "episodes": 10,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 24.6,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 10,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 0.9508,
+          "steps": 25.6,
+          "total_elapsed_seconds": 2.2896456260004925,
+          "tp": 40,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        }
+      }
+    },
+    "by_policy": {
+      "mark_all": {
+        "clean_false_accusation_rate": 1,
+        "elapsed_seconds": 0.2235405521001212,
+        "episodes": 20,
+        "f1": 0.0,
+        "fn": 56,
+        "fp": 600,
+        "inspection_steps": 21.4,
+        "invalid_submit_rate": 0,
+        "metric_eligible_episodes": 20,
+        "micro": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "precision": 0.0,
+        "recall": 0.0,
+        "return": -1.0,
+        "steps": 22.4,
+        "total_elapsed_seconds": 4.470811042002424,
+        "tp": 0,
+        "truncated_rate": 0,
+        "valid_submit_rate": 1
+      },
+      "oracle": {
+        "clean_false_accusation_rate": 0,
+        "elapsed_seconds": 0.025086780950095998,
+        "episodes": 20,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "invalid_submit_rate": 0,
+        "metric_eligible_episodes": 20,
+        "micro": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "precision": 0.75,
+        "recall": 0.75,
+        "return": 1.0,
+        "steps": 1,
+        "total_elapsed_seconds": 0.50173561900192,
+        "tp": 56,
+        "truncated_rate": 0,
+        "valid_submit_rate": 1
+      },
+      "random": {
+        "clean_false_accusation_rate": 0,
+        "elapsed_seconds": 0.20996969089997036,
+        "episodes": 20,
+        "f1": 0.25,
+        "fn": 56,
+        "fp": 0,
+        "inspection_steps": 12,
+        "invalid_submit_rate": 0,
+        "metric_eligible_episodes": 20,
+        "micro": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "precision": 0.0,
+        "recall": 0.0,
+        "return": -0.506,
+        "steps": 13,
+        "total_elapsed_seconds": 4.1993938179994075,
+        "tp": 0,
+        "truncated_rate": 0,
+        "valid_submit_rate": 1
+      },
+      "simple": {
+        "clean_false_accusation_rate": 0,
+        "elapsed_seconds": 0.21825643625006705,
+        "episodes": 20,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 21.4,
+        "invalid_submit_rate": 0,
+        "metric_eligible_episodes": 20,
+        "micro": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "precision": 0.75,
+        "recall": 0.75,
+        "return": 0.9571999999999999,
+        "steps": 22.4,
+        "total_elapsed_seconds": 4.365128725001341,
+        "tp": 56,
+        "truncated_rate": 0,
+        "valid_submit_rate": 1
+      }
+    },
+    "by_type": {
+      "duplicate_invoice": {
+        "mark_all": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 1,
+          "elapsed_seconds": 0.2235405521001212,
+          "episodes": 20,
+          "f1": 0.0,
+          "fn": 12,
+          "fp": 600,
+          "inspection_steps": 21.4,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 20,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 22.4,
+          "total_elapsed_seconds": 4.470811042002424,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "oracle": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.026876779000000777,
+          "episodes": 6,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 0,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 6,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 1.0,
+          "steps": 1,
+          "total_elapsed_seconds": 0.16126067400000466,
+          "tp": 12,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "random": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.21853488649988626,
+          "episodes": 6,
+          "f1": 0.0,
+          "fn": 12,
+          "fp": 0,
+          "inspection_steps": 12,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 6,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 13,
+          "total_elapsed_seconds": 1.3112093189993175,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "simple": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.23954086333348337,
+          "episodes": 6,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 22.5,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 6,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 0.955,
+          "steps": 23.5,
+          "total_elapsed_seconds": 1.4372451800009003,
+          "tp": 12,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        }
+      },
+      "fx_conversion": {
+        "mark_all": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.221432077555821,
+          "episodes": 9,
+          "f1": 0.0,
+          "fn": 15,
+          "fp": 0,
+          "inspection_steps": 21.666666666666668,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 9,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 22.666666666666668,
+          "total_elapsed_seconds": 1.992888698002389,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "oracle": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.025222535555662437,
+          "episodes": 9,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 0,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 9,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 1.0,
+          "steps": 1,
+          "total_elapsed_seconds": 0.22700282000096195,
+          "tp": 15,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "random": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.21133506399989224,
+          "episodes": 9,
+          "f1": 0.0,
+          "fn": 15,
+          "fp": 0,
+          "inspection_steps": 12,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 9,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 13,
+          "total_elapsed_seconds": 1.9020155759990303,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "simple": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.23636435000015707,
+          "episodes": 9,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 21.666666666666668,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 9,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 0.9566666666666667,
+          "steps": 22.666666666666668,
+          "total_elapsed_seconds": 2.1272791500014137,
+          "tp": 15,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        }
+      },
+      "payment_allocation": {
+        "mark_all": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.22759324830021796,
+          "episodes": 10,
+          "f1": 0.0,
+          "fn": 17,
+          "fp": 0,
+          "inspection_steps": 21.9,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 10,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 22.9,
+          "total_elapsed_seconds": 2.2759324830021797,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "oracle": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.025465722400076628,
+          "episodes": 10,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 0,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 10,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 1.0,
+          "steps": 1,
+          "total_elapsed_seconds": 0.2546572240007663,
+          "tp": 17,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "random": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.22077266469996176,
+          "episodes": 10,
+          "f1": 0.0,
+          "fn": 17,
+          "fp": 0,
+          "inspection_steps": 12,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 10,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 13,
+          "total_elapsed_seconds": 2.2077266469996175,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "simple": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.23847515700017538,
+          "episodes": 10,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 21.9,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 10,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 0.9561999999999999,
+          "steps": 22.9,
+          "total_elapsed_seconds": 2.384751570001754,
+          "tp": 17,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        }
+      },
+      "period_cutoff": {
+        "mark_all": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.24279893414300854,
+          "episodes": 7,
+          "f1": 0.0,
+          "fn": 12,
+          "fp": 0,
+          "inspection_steps": 21.857142857142858,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 7,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 22.857142857142858,
+          "total_elapsed_seconds": 1.6995925390010598,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "oracle": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.02720341057140883,
+          "episodes": 7,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 0,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 7,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 1.0,
+          "steps": 1,
+          "total_elapsed_seconds": 0.19042387399986183,
+          "tp": 12,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "random": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.2148140975714341,
+          "episodes": 7,
+          "f1": 0.0,
+          "fn": 12,
+          "fp": 0,
+          "inspection_steps": 12,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 7,
+          "micro": {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "precision": 0.0,
+          "recall": 0.0,
+          "return": -1.0,
+          "steps": 13,
+          "total_elapsed_seconds": 1.5036986830000387,
+          "tp": 0,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        },
+        "simple": {
+          "clean_episodes": 5,
+          "clean_false_accusation_rate": 0,
+          "elapsed_seconds": 0.22284696300019796,
+          "episodes": 7,
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "inspection_steps": 21.857142857142858,
+          "invalid_submit_rate": 0,
+          "metric_eligible_episodes": 7,
+          "micro": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "return": 0.9562857142857143,
+          "steps": 22.857142857142858,
+          "total_elapsed_seconds": 1.5599287410013858,
+          "tp": 12,
+          "truncated_rate": 0,
+          "valid_submit_rate": 1
+        }
+      }
+    },
+    "metric_scope": "Macro P/R/F1 over eligible episodes; micro counts also shown. Per-type groups include truth or predictions of that type.",
+    "return_scope": "Always the original whole-episode common return; no additional per-type reward is defined."
+  },
+  "checks": {
+    "closed_wire_masked": true,
+    "cohort_twenty_with_five_clean_five_interacting": true,
+    "eighty_fixed_action_replays": true,
+    "eighty_required_policy_runs": true,
+    "elapsed_measurements_finite": true,
+    "exported_train_dev_verified": true,
+    "fresh_policy_repeat_exact": true,
+    "independent_preflight_roundtrips_and_proofs": true,
+    "known_families_covered": true,
+    "mark_all_has_bad_return": true,
+    "observations_public_only": true,
+    "oracle_upper_bound": true,
+    "packaged_exported_plans_identical": true,
+    "packaged_train_dev_verified": true,
+    "probe_worker_submitted": true,
+    "reference_workers_exit_cleanly": true,
+    "required_adapters_submit_validly": true,
+    "secure_isolation_probes": true,
+    "source_snapshot_unchanged": true,
+    "source_unchanged_during_verification": true,
+    "split_seeds_and_configs_disjoint": true,
+    "terminal_outcomes_recorded": true,
+    "trusted_scores_reproduced": true,
+    "twenty_pair_checks": true
+  },
+  "elapsed_scope": "Preflight, all runs/pairs/replays, and main artifact serialization; final manifest and atomic publication excluded.",
+  "elapsed_seconds": 32.0308127090002,
+  "execution_counts": {
+    "cohort_policy_runs": 80,
+    "direct_equivalence_cases": 80,
+    "direct_evaluations": 160,
+    "fixed_action_replays": 80,
+    "ordinary_worker_processes": 61,
+    "paired_checks": 20,
+    "paired_oracle_runs": 40,
+    "policy_repeat_runs": 1,
+    "total_run_episode_calls": 121,
+    "trusted_oracle_executions": 60,
+    "world_regenerations": 20
+  },
+  "isolation_probes": {
+    "capabilities_empty": true,
+    "network_socket_denied": true,
+    "no_new_privileges": true,
+    "no_supplementary_groups": true,
+    "only_stdio_descriptors": true,
+    "parent_fd_unavailable": true,
+    "private_environment_absent": true,
+    "private_file_unreadable": true,
+    "private_write_denied": true,
+    "proc_unavailable": true,
+    "process_creation_denied": true,
+    "root_cwd": true,
+    "root_directory_readonly": true,
+    "shell_unavailable": true,
+    "supervisor_source_unreadable": true,
+    "uid_escalation_denied": true,
+    "unprivileged_gid": true,
+    "unprivileged_uid": true,
+    "worker_code_readonly": true
+  },
+  "open_corpus": {
+    "checks": {
+      "disjoint_seeds_and_configs": true,
+      "exact_regeneration": true,
+      "four_families_and_diverse_controls": true,
+      "frozen_index_and_hashes": true,
+      "protected_copy_without_source_changes": true,
+      "strict_storage_roundtrip": true,
+      "ten_train_ten_dev": true,
+      "truth_blind_full_reconciliation": true
+    },
+    "corpus_version": "0.3.0",
+    "coverage": {
+      "allocation_modes": [
+        "missing",
+        "partial"
+      ],
+      "clean_dirty_ledger_size_overlap": [
+        250,
+        252
+      ],
+      "clean_episode_count": 4,
+      "clean_ledger_sizes": [
+        200,
+        250,
+        252,
+        1400
+      ],
+      "foreign_exponents": [
+        0,
+        2,
+        3
+      ],
+      "fx_modes": [
+        "date",
+        "rate"
+      ],
+      "interaction_allocation_cutoff_count": 3,
+      "interaction_allocation_fx_count": 3,
+      "issue_types": [
+        "duplicate_invoice",
+        "fx_conversion",
+        "payment_allocation",
+        "period_cutoff"
+      ],
+      "ledger_size_range": [
+        200,
+        1400
+      ],
+      "refund_episode_count": 19
+    },
+    "episode_count": 20,
+    "index_schema_sha256": "e07fb2da7ba88fec928525e487cf46ad6e7a979d196e6f753819349b23602b93",
+    "passed": true,
+    "plan_sha256": "5e947f81dfa5afd0b51eb791965feeb38983e093509f69afa642dd7f6984fca3",
+    "split_counts": {
+      "dev": 10,
+      "train": 10
+    }
+  },
+  "pair_checks": [
+    {
+      "case": "h00",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h01",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h02",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h03",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h04",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h05",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h06",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h07",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h08",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h09",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h10",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h11",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h12",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h13",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h14",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h15",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h16",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h17",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h18",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    },
+    {
+      "case": "h19",
+      "equivalent_answers_equal": true,
+      "equivalent_cases": 4,
+      "oracle_equal": true,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "policy_repeat_exact": true,
+  "profile": "secure",
+  "rehearsal_version": "local-20-plus-20-v1",
+  "remaining_competition_work": [
+    "test-only scorer mutation report",
+    "showcase and design note",
+    "final offline release transfer rehearsal"
+  ],
+  "replay_checks": [
+    {
+      "case": "h00",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h00",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 15,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h00",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 15,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h00",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h01",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h01",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 22,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h01",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 22,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h01",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h02",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h02",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 25,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h02",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 25,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h02",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h03",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h03",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 16,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h03",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 16,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h03",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h04",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h04",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 23,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h04",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 23,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h04",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h05",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h05",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 17,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h05",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 17,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h05",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h06",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h06",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 16,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h06",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 16,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h06",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h07",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h07",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 15,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h07",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 15,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h07",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h08",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h08",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 27,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h08",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 27,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h08",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h09",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h09",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 16,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h09",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 16,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h09",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h10",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h10",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 16,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h10",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 16,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h10",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h11",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h11",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 30,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h11",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 30,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h11",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h12",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h12",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 16,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h12",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 16,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h12",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h13",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h13",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 30,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h13",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 30,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h13",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h14",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h14",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 30,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h14",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 30,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h14",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h15",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h15",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 26,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h15",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 26,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h15",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h16",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h16",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 25,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h16",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 25,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h16",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h17",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h17",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 36,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h17",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 36,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h17",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h18",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h18",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 30,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h18",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 30,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h18",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h19",
+      "passed": true,
+      "policy": "random",
+      "private_score_equal": true,
+      "replayed_actions": 13,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h19",
+      "passed": true,
+      "policy": "simple",
+      "private_score_equal": true,
+      "replayed_actions": 17,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h19",
+      "passed": true,
+      "policy": "mark_all",
+      "private_score_equal": true,
+      "replayed_actions": 17,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    },
+    {
+      "case": "h19",
+      "passed": true,
+      "policy": "oracle",
+      "private_score_equal": true,
+      "replayed_actions": 1,
+      "status": "fixed_actions_replayed",
+      "trajectory_equal": true,
+      "world_equal": true
+    }
+  ],
+  "rss": {
+    "children_peak_rss_bytes": 114688000,
+    "scope": "Process-lifetime high-water RSS; children is the largest reaped child, not a sum or whole-tree/container peak.",
+    "self_peak_rss_bytes": 114688000
+  },
+  "runs": [
+    {
+      "agent_exitcode": 0,
+      "case": "h00",
+      "cohort": "clean",
+      "elapsed_seconds": 0.24570658399989043,
+      "episode_id": "episode_6e726b79a9249b2c8787dbf1e51f4bdc",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.976,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h00",
+      "cohort": "clean",
+      "elapsed_seconds": 0.1740757859997757,
+      "episode_id": "episode_6e726b79a9249b2c8787dbf1e51f4bdc",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 14,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.972,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 15,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h00",
+      "cohort": "clean",
+      "elapsed_seconds": 0.17065411699968536,
+      "episode_id": "episode_6e726b79a9249b2c8787dbf1e51f4bdc",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 0,
+        "fp": 30,
+        "inspection_steps": 14,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 15,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h00",
+      "cohort": "clean",
+      "elapsed_seconds": 0.012370682000437228,
+      "episode_id": "episode_6e726b79a9249b2c8787dbf1e51f4bdc",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h01",
+      "cohort": "clean",
+      "elapsed_seconds": 0.17505227500078036,
+      "episode_id": "episode_d526dec5d99b1bca9aa3a0998ca31ac6",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.976,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h01",
+      "cohort": "clean",
+      "elapsed_seconds": 0.1930607330004932,
+      "episode_id": "episode_d526dec5d99b1bca9aa3a0998ca31ac6",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 21,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.958,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 22,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h01",
+      "cohort": "clean",
+      "elapsed_seconds": 0.18782515800012334,
+      "episode_id": "episode_d526dec5d99b1bca9aa3a0998ca31ac6",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 0,
+        "fp": 30,
+        "inspection_steps": 21,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 22,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h01",
+      "cohort": "clean",
+      "elapsed_seconds": 0.022504205000586808,
+      "episode_id": "episode_d526dec5d99b1bca9aa3a0998ca31ac6",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h02",
+      "cohort": "clean",
+      "elapsed_seconds": 0.17572085800020432,
+      "episode_id": "episode_6041a4545600cb380cf9d74c9e8ccafc",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.976,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h02",
+      "cohort": "clean",
+      "elapsed_seconds": 0.19752000300013606,
+      "episode_id": "episode_6041a4545600cb380cf9d74c9e8ccafc",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 24,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.952,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 25,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h02",
+      "cohort": "clean",
+      "elapsed_seconds": 0.1952986839996811,
+      "episode_id": "episode_6041a4545600cb380cf9d74c9e8ccafc",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 0,
+        "fp": 30,
+        "inspection_steps": 24,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 25,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h02",
+      "cohort": "clean",
+      "elapsed_seconds": 0.024128308000399556,
+      "episode_id": "episode_6041a4545600cb380cf9d74c9e8ccafc",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h03",
+      "cohort": "clean",
+      "elapsed_seconds": 0.16625454399945738,
+      "episode_id": "episode_9aed1c58d3d727e4ba3596c7e0b268a8",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.976,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h03",
+      "cohort": "clean",
+      "elapsed_seconds": 0.1740381420004269,
+      "episode_id": "episode_9aed1c58d3d727e4ba3596c7e0b268a8",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 15,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.97,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 16,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h03",
+      "cohort": "clean",
+      "elapsed_seconds": 0.1783804369997597,
+      "episode_id": "episode_9aed1c58d3d727e4ba3596c7e0b268a8",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 0,
+        "fp": 30,
+        "inspection_steps": 15,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 16,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h03",
+      "cohort": "clean",
+      "elapsed_seconds": 0.015901155000392464,
+      "episode_id": "episode_9aed1c58d3d727e4ba3596c7e0b268a8",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h04",
+      "cohort": "clean",
+      "elapsed_seconds": 0.1945258810001178,
+      "episode_id": "episode_62eaba254679cd83df1fd000be006e6b",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.976,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h04",
+      "cohort": "clean",
+      "elapsed_seconds": 0.18887864199950855,
+      "episode_id": "episode_62eaba254679cd83df1fd000be006e6b",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 22,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 0.956,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 23,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h04",
+      "cohort": "clean",
+      "elapsed_seconds": 0.1885619009999573,
+      "episode_id": "episode_62eaba254679cd83df1fd000be006e6b",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 0,
+        "fp": 30,
+        "inspection_steps": 22,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 23,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h04",
+      "cohort": "clean",
+      "elapsed_seconds": 0.023288721999961126,
+      "episode_id": "episode_62eaba254679cd83df1fd000be006e6b",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h05",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.2045493069999793,
+      "episode_id": "episode_59c9e8c1cc7b28f09af1619dad09925a",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h05",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.2565593409999565,
+      "episode_id": "episode_59c9e8c1cc7b28f09af1619dad09925a",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 16,
+        "matched_pairs": [
+          [
+            0,
+            "issue_34bb4e6a48abf541612d29bf"
+          ],
+          [
+            1,
+            "issue_2d2ad92a8c1f3b6c808838fb"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.968,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 17,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h05",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.2244728470004702,
+      "episode_id": "episode_59c9e8c1cc7b28f09af1619dad09925a",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 30,
+        "inspection_steps": 16,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 17,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h05",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.01685429799999838,
+      "episode_id": "episode_59c9e8c1cc7b28f09af1619dad09925a",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_34bb4e6a48abf541612d29bf"
+          ],
+          [
+            1,
+            "issue_2d2ad92a8c1f3b6c808838fb"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h06",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.19279739299963694,
+      "episode_id": "episode_27ba5c30a830d176e646d6f9eb6a226d",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h06",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.22496942799989483,
+      "episode_id": "episode_27ba5c30a830d176e646d6f9eb6a226d",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 15,
+        "matched_pairs": [
+          [
+            0,
+            "issue_4455b7345c6c639e6edd84dc"
+          ],
+          [
+            1,
+            "issue_d690b330a1a5dcf1652607ee"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.97,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 16,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h06",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.22140248000050633,
+      "episode_id": "episode_27ba5c30a830d176e646d6f9eb6a226d",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 30,
+        "inspection_steps": 15,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 16,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h06",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.01986125900020852,
+      "episode_id": "episode_27ba5c30a830d176e646d6f9eb6a226d",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_4455b7345c6c639e6edd84dc"
+          ],
+          [
+            1,
+            "issue_d690b330a1a5dcf1652607ee"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h07",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.19425007600057143,
+      "episode_id": "episode_8f325c5c07d79b058d383f643da5e4c3",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h07",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.20754772200052685,
+      "episode_id": "episode_8f325c5c07d79b058d383f643da5e4c3",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 14,
+        "matched_pairs": [
+          [
+            0,
+            "issue_3493356f162a1c54cae341a3"
+          ],
+          [
+            1,
+            "issue_cfaa31c5ed7e1f49c31d8d4f"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.972,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 15,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h07",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.20909186900007626,
+      "episode_id": "episode_8f325c5c07d79b058d383f643da5e4c3",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 30,
+        "inspection_steps": 14,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 15,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h07",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.015895359999376524,
+      "episode_id": "episode_8f325c5c07d79b058d383f643da5e4c3",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_3493356f162a1c54cae341a3"
+          ],
+          [
+            1,
+            "issue_cfaa31c5ed7e1f49c31d8d4f"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h08",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.2535226150002927,
+      "episode_id": "episode_52ebd5a0bcafffd24c0be9a2efffcc9e",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h08",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.23255421900012152,
+      "episode_id": "episode_52ebd5a0bcafffd24c0be9a2efffcc9e",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 26,
+        "matched_pairs": [
+          [
+            0,
+            "issue_47ae7210041b08872183ad4c"
+          ],
+          [
+            1,
+            "issue_50689536bc3ff8339270a739"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.948,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 27,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h08",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.2521164950003367,
+      "episode_id": "episode_52ebd5a0bcafffd24c0be9a2efffcc9e",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 30,
+        "inspection_steps": 26,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 27,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h08",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.03200732900040748,
+      "episode_id": "episode_52ebd5a0bcafffd24c0be9a2efffcc9e",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_47ae7210041b08872183ad4c"
+          ],
+          [
+            1,
+            "issue_50689536bc3ff8339270a739"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h09",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.19615377799982525,
+      "episode_id": "episode_559c6f7237dfb98638c20207062ed019",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 8,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h09",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.22627908300000854,
+      "episode_id": "episode_559c6f7237dfb98638c20207062ed019",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 15,
+        "matched_pairs": [
+          [
+            0,
+            "issue_2c87cea1ebe6223c5ddd8e64"
+          ],
+          [
+            1,
+            "issue_a389092640f106a088a1b6fa"
+          ],
+          [
+            2,
+            "issue_c6c71d05a212de2054b5af80"
+          ],
+          [
+            3,
+            "issue_1aa6f8d91f77606128895b7a"
+          ],
+          [
+            4,
+            "issue_e714e7ac0790006a0802fb30"
+          ],
+          [
+            5,
+            "issue_a91a77390d384b2d37dd9444"
+          ],
+          [
+            6,
+            "issue_7fb53eb0dd34054cb08e28df"
+          ],
+          [
+            7,
+            "issue_9eeb6c4de5e71b0a19636b51"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.97,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 16,
+        "tp": 8,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h09",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.19897593800033064,
+      "episode_id": "episode_559c6f7237dfb98638c20207062ed019",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 8,
+        "fp": 30,
+        "inspection_steps": 15,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 16,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h09",
+      "cohort": "interacting",
+      "elapsed_seconds": 0.013485156000569987,
+      "episode_id": "episode_559c6f7237dfb98638c20207062ed019",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_2c87cea1ebe6223c5ddd8e64"
+          ],
+          [
+            1,
+            "issue_a389092640f106a088a1b6fa"
+          ],
+          [
+            2,
+            "issue_c6c71d05a212de2054b5af80"
+          ],
+          [
+            3,
+            "issue_1aa6f8d91f77606128895b7a"
+          ],
+          [
+            4,
+            "issue_e714e7ac0790006a0802fb30"
+          ],
+          [
+            5,
+            "issue_a91a77390d384b2d37dd9444"
+          ],
+          [
+            6,
+            "issue_7fb53eb0dd34054cb08e28df"
+          ],
+          [
+            7,
+            "issue_9eeb6c4de5e71b0a19636b51"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 8,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h10",
+      "cohort": "other",
+      "elapsed_seconds": 0.1664374689999022,
+      "episode_id": "episode_136d3390c70953ca89968783305acf7e",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h10",
+      "cohort": "other",
+      "elapsed_seconds": 0.17863360599949374,
+      "episode_id": "episode_136d3390c70953ca89968783305acf7e",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 15,
+        "matched_pairs": [
+          [
+            0,
+            "issue_786b048c05398d8b8db0e103"
+          ],
+          [
+            1,
+            "issue_f87edb80220be17c6cd737d1"
+          ],
+          [
+            2,
+            "issue_9e8d9f77680d74561cc0d3c8"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.97,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 16,
+        "tp": 3,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h10",
+      "cohort": "other",
+      "elapsed_seconds": 0.20273148200067226,
+      "episode_id": "episode_136d3390c70953ca89968783305acf7e",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 30,
+        "inspection_steps": 15,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 16,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h10",
+      "cohort": "other",
+      "elapsed_seconds": 0.016124349999699916,
+      "episode_id": "episode_136d3390c70953ca89968783305acf7e",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_786b048c05398d8b8db0e103"
+          ],
+          [
+            1,
+            "issue_f87edb80220be17c6cd737d1"
+          ],
+          [
+            2,
+            "issue_9e8d9f77680d74561cc0d3c8"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 3,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h11",
+      "cohort": "other",
+      "elapsed_seconds": 0.2640339509998739,
+      "episode_id": "episode_0f8c40574c277ddb9b9c58008c0228f7",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h11",
+      "cohort": "other",
+      "elapsed_seconds": 0.2491904489997978,
+      "episode_id": "episode_0f8c40574c277ddb9b9c58008c0228f7",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 29,
+        "matched_pairs": [
+          [
+            0,
+            "issue_57ffee1d59af8c461f599903"
+          ],
+          [
+            1,
+            "issue_e1c3f65d26c69870adc5cef7"
+          ],
+          [
+            2,
+            "issue_fee8f2c521207670fd3a0d2f"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.942,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 30,
+        "tp": 3,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h11",
+      "cohort": "other",
+      "elapsed_seconds": 0.2518427340000926,
+      "episode_id": "episode_0f8c40574c277ddb9b9c58008c0228f7",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 30,
+        "inspection_steps": 29,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 30,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h11",
+      "cohort": "other",
+      "elapsed_seconds": 0.03081869400011783,
+      "episode_id": "episode_0f8c40574c277ddb9b9c58008c0228f7",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_57ffee1d59af8c461f599903"
+          ],
+          [
+            1,
+            "issue_e1c3f65d26c69870adc5cef7"
+          ],
+          [
+            2,
+            "issue_fee8f2c521207670fd3a0d2f"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 3,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h12",
+      "cohort": "other",
+      "elapsed_seconds": 0.17015357599939307,
+      "episode_id": "episode_ee96af4e2ee0c4451551595e71111868",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h12",
+      "cohort": "other",
+      "elapsed_seconds": 0.17728026300028432,
+      "episode_id": "episode_ee96af4e2ee0c4451551595e71111868",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 15,
+        "matched_pairs": [
+          [
+            0,
+            "issue_9b8a142241ca47d7f6b350c8"
+          ],
+          [
+            1,
+            "issue_01fd5714d0b605a2b93d013d"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.97,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 16,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h12",
+      "cohort": "other",
+      "elapsed_seconds": 0.17594580400054838,
+      "episode_id": "episode_ee96af4e2ee0c4451551595e71111868",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 30,
+        "inspection_steps": 15,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 16,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h12",
+      "cohort": "other",
+      "elapsed_seconds": 0.013863512000170886,
+      "episode_id": "episode_ee96af4e2ee0c4451551595e71111868",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_9b8a142241ca47d7f6b350c8"
+          ],
+          [
+            1,
+            "issue_01fd5714d0b605a2b93d013d"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h13",
+      "cohort": "other",
+      "elapsed_seconds": 0.18974345000060566,
+      "episode_id": "episode_872b2522d6f995c510430755a622debb",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h13",
+      "cohort": "other",
+      "elapsed_seconds": 0.20985854399987147,
+      "episode_id": "episode_872b2522d6f995c510430755a622debb",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 29,
+        "matched_pairs": [
+          [
+            0,
+            "issue_8746c8e6f9d5b5f855eeb2e6"
+          ],
+          [
+            1,
+            "issue_89418579814fca536f6bd880"
+          ],
+          [
+            2,
+            "issue_229384652c9cfa1a9ba5f8ce"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.942,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 30,
+        "tp": 3,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h13",
+      "cohort": "other",
+      "elapsed_seconds": 0.2122073000000455,
+      "episode_id": "episode_872b2522d6f995c510430755a622debb",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 30,
+        "inspection_steps": 29,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 30,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h13",
+      "cohort": "other",
+      "elapsed_seconds": 0.03128742700027942,
+      "episode_id": "episode_872b2522d6f995c510430755a622debb",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_8746c8e6f9d5b5f855eeb2e6"
+          ],
+          [
+            1,
+            "issue_89418579814fca536f6bd880"
+          ],
+          [
+            2,
+            "issue_229384652c9cfa1a9ba5f8ce"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 3,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h14",
+      "cohort": "other",
+      "elapsed_seconds": 0.18590236299951357,
+      "episode_id": "episode_9843baa642409f4b6edfffbbdf7b658b",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h14",
+      "cohort": "other",
+      "elapsed_seconds": 0.21248356399974,
+      "episode_id": "episode_9843baa642409f4b6edfffbbdf7b658b",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 29,
+        "matched_pairs": [
+          [
+            0,
+            "issue_bace982f240cb8932c1f38bf"
+          ],
+          [
+            1,
+            "issue_5c7295ba94cfbff63edfefbc"
+          ],
+          [
+            2,
+            "issue_55aca8e246ebbc8f8e7bc714"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.942,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 30,
+        "tp": 3,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h14",
+      "cohort": "other",
+      "elapsed_seconds": 0.41245583399995667,
+      "episode_id": "episode_9843baa642409f4b6edfffbbdf7b658b",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 30,
+        "inspection_steps": 29,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 30,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h14",
+      "cohort": "other",
+      "elapsed_seconds": 0.05324602699965908,
+      "episode_id": "episode_9843baa642409f4b6edfffbbdf7b658b",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_bace982f240cb8932c1f38bf"
+          ],
+          [
+            1,
+            "issue_5c7295ba94cfbff63edfefbc"
+          ],
+          [
+            2,
+            "issue_55aca8e246ebbc8f8e7bc714"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 3,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h15",
+      "cohort": "other",
+      "elapsed_seconds": 0.3221701709999252,
+      "episode_id": "episode_9c748490e9e97e6e5e005f14025b2841",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h15",
+      "cohort": "other",
+      "elapsed_seconds": 0.2745478719998573,
+      "episode_id": "episode_9c748490e9e97e6e5e005f14025b2841",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 25,
+        "matched_pairs": [
+          [
+            0,
+            "issue_6cc63ddb51ad6e43d7053117"
+          ],
+          [
+            1,
+            "issue_e9573490e3411d3d7f20c7fb"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.95,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 26,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h15",
+      "cohort": "other",
+      "elapsed_seconds": 0.27081784199981485,
+      "episode_id": "episode_9c748490e9e97e6e5e005f14025b2841",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 2,
+        "fp": 30,
+        "inspection_steps": 25,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 26,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h15",
+      "cohort": "other",
+      "elapsed_seconds": 0.03436400699956721,
+      "episode_id": "episode_9c748490e9e97e6e5e005f14025b2841",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_6cc63ddb51ad6e43d7053117"
+          ],
+          [
+            1,
+            "issue_e9573490e3411d3d7f20c7fb"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 2,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h16",
+      "cohort": "other",
+      "elapsed_seconds": 0.2759716259997731,
+      "episode_id": "episode_cacb36461bab56a46786d2cccbf9132a",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h16",
+      "cohort": "other",
+      "elapsed_seconds": 0.22986670899990713,
+      "episode_id": "episode_cacb36461bab56a46786d2cccbf9132a",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 24,
+        "matched_pairs": [
+          [
+            0,
+            "issue_bc77e8f4b5c718a42f0d4655"
+          ],
+          [
+            1,
+            "issue_9254d02090a29f4c0f939222"
+          ],
+          [
+            2,
+            "issue_f67ca4d44611757546cc9eed"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.952,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 25,
+        "tp": 3,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h16",
+      "cohort": "other",
+      "elapsed_seconds": 0.2289636329996938,
+      "episode_id": "episode_cacb36461bab56a46786d2cccbf9132a",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 30,
+        "inspection_steps": 24,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 25,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h16",
+      "cohort": "other",
+      "elapsed_seconds": 0.028447966999920027,
+      "episode_id": "episode_cacb36461bab56a46786d2cccbf9132a",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_bc77e8f4b5c718a42f0d4655"
+          ],
+          [
+            1,
+            "issue_9254d02090a29f4c0f939222"
+          ],
+          [
+            2,
+            "issue_f67ca4d44611757546cc9eed"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 3,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h17",
+      "cohort": "other",
+      "elapsed_seconds": 0.2285496759996022,
+      "episode_id": "episode_90bc58b72947c96f9e850408a0c784d2",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 4,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h17",
+      "cohort": "other",
+      "elapsed_seconds": 0.30658717500045896,
+      "episode_id": "episode_90bc58b72947c96f9e850408a0c784d2",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 35,
+        "matched_pairs": [
+          [
+            0,
+            "issue_bf2d85492fb5a783ec88e442"
+          ],
+          [
+            1,
+            "issue_abd7fc2a09f37aacf3e4907d"
+          ],
+          [
+            2,
+            "issue_670d9b11a771d096b963c68b"
+          ],
+          [
+            3,
+            "issue_d910e90be6e28317fe414d50"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.93,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 36,
+        "tp": 4,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h17",
+      "cohort": "other",
+      "elapsed_seconds": 0.2910777170000074,
+      "episode_id": "episode_90bc58b72947c96f9e850408a0c784d2",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 4,
+        "fp": 30,
+        "inspection_steps": 35,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 36,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h17",
+      "cohort": "other",
+      "elapsed_seconds": 0.049945126000238815,
+      "episode_id": "episode_90bc58b72947c96f9e850408a0c784d2",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_bf2d85492fb5a783ec88e442"
+          ],
+          [
+            1,
+            "issue_abd7fc2a09f37aacf3e4907d"
+          ],
+          [
+            2,
+            "issue_670d9b11a771d096b963c68b"
+          ],
+          [
+            3,
+            "issue_d910e90be6e28317fe414d50"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 4,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h18",
+      "cohort": "other",
+      "elapsed_seconds": 0.23497397000028286,
+      "episode_id": "episode_398ee7c9338eee6a85979c4c8de0dd31",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 12,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h18",
+      "cohort": "other",
+      "elapsed_seconds": 0.27646458000072016,
+      "episode_id": "episode_398ee7c9338eee6a85979c4c8de0dd31",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 29,
+        "matched_pairs": [
+          [
+            0,
+            "issue_2639c1edc37c94a30a363b43"
+          ],
+          [
+            1,
+            "issue_0e5fdf9c5b789c3d66ff5fd7"
+          ],
+          [
+            2,
+            "issue_595819627de1b1f4eda92863"
+          ],
+          [
+            3,
+            "issue_d4c7c36387885517f10986d0"
+          ],
+          [
+            4,
+            "issue_3507304276aab8f1ae800ed9"
+          ],
+          [
+            5,
+            "issue_9953cbf478602c0af70352c4"
+          ],
+          [
+            6,
+            "issue_76eee7f5bf6d9e74ac5e21fb"
+          ],
+          [
+            7,
+            "issue_492b290579b672a543625dde"
+          ],
+          [
+            8,
+            "issue_ecaf675bcb5ca925b44865a0"
+          ],
+          [
+            9,
+            "issue_c25a028062aee95edcc9b987"
+          ],
+          [
+            10,
+            "issue_d2e1b598bd5ee75b31d09333"
+          ],
+          [
+            11,
+            "issue_779509720036dd53ad3be43c"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.942,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 30,
+        "tp": 12,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h18",
+      "cohort": "other",
+      "elapsed_seconds": 0.21184199300023465,
+      "episode_id": "episode_398ee7c9338eee6a85979c4c8de0dd31",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 12,
+        "fp": 30,
+        "inspection_steps": 29,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 30,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h18",
+      "cohort": "other",
+      "elapsed_seconds": 0.03008374300043215,
+      "episode_id": "episode_398ee7c9338eee6a85979c4c8de0dd31",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_2639c1edc37c94a30a363b43"
+          ],
+          [
+            1,
+            "issue_0e5fdf9c5b789c3d66ff5fd7"
+          ],
+          [
+            2,
+            "issue_595819627de1b1f4eda92863"
+          ],
+          [
+            3,
+            "issue_d4c7c36387885517f10986d0"
+          ],
+          [
+            4,
+            "issue_3507304276aab8f1ae800ed9"
+          ],
+          [
+            5,
+            "issue_9953cbf478602c0af70352c4"
+          ],
+          [
+            6,
+            "issue_76eee7f5bf6d9e74ac5e21fb"
+          ],
+          [
+            7,
+            "issue_492b290579b672a543625dde"
+          ],
+          [
+            8,
+            "issue_ecaf675bcb5ca925b44865a0"
+          ],
+          [
+            9,
+            "issue_c25a028062aee95edcc9b987"
+          ],
+          [
+            10,
+            "issue_d2e1b598bd5ee75b31d09333"
+          ],
+          [
+            11,
+            "issue_779509720036dd53ad3be43c"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 12,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h19",
+      "cohort": "other",
+      "elapsed_seconds": 0.1629242549997798,
+      "episode_id": "episode_e6fe56f324ce723e5a176ddfde85b8c9",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 5,
+        "fp": 0,
+        "inspection_steps": 12,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 13,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "random",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h19",
+      "cohort": "other",
+      "elapsed_seconds": 0.1747328640003616,
+      "episode_id": "episode_e6fe56f324ce723e5a176ddfde85b8c9",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 16,
+        "matched_pairs": [
+          [
+            0,
+            "issue_4c4d932269d6884dda420a8b"
+          ],
+          [
+            1,
+            "issue_0239689798e3eb1d7dc79f39"
+          ],
+          [
+            2,
+            "issue_09f6b213d72c93d300eb7a4f"
+          ],
+          [
+            3,
+            "issue_c76ced7d9bbbdc123a71a832"
+          ],
+          [
+            4,
+            "issue_3668ee14ab2426a75ed9cd4c"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 0.968,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 17,
+        "tp": 5,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "simple",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": 0,
+      "case": "h19",
+      "cohort": "other",
+      "elapsed_seconds": 0.18614677700043103,
+      "episode_id": "episode_e6fe56f324ce723e5a176ddfde85b8c9",
+      "evaluation": {
+        "error": null,
+        "f1": 0.0,
+        "fn": 5,
+        "fp": 30,
+        "inspection_steps": 16,
+        "matched_pairs": [],
+        "precision": 0.0,
+        "recall": 0.0,
+        "reward": -1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 17,
+        "tp": 0,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "mark_all",
+      "profile": "secure"
+    },
+    {
+      "agent_exitcode": null,
+      "case": "h19",
+      "cohort": "other",
+      "elapsed_seconds": 0.017258291999496578,
+      "episode_id": "episode_e6fe56f324ce723e5a176ddfde85b8c9",
+      "evaluation": {
+        "error": null,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "inspection_steps": 0,
+        "matched_pairs": [
+          [
+            0,
+            "issue_4c4d932269d6884dda420a8b"
+          ],
+          [
+            1,
+            "issue_0239689798e3eb1d7dc79f39"
+          ],
+          [
+            2,
+            "issue_09f6b213d72c93d300eb7a4f"
+          ],
+          [
+            3,
+            "issue_c76ced7d9bbbdc123a71a832"
+          ],
+          [
+            4,
+            "issue_3668ee14ab2426a75ed9cd4c"
+          ]
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "reward": 1.0,
+        "status": "scored",
+        "terminated": true,
+        "termination_reason": "submitted",
+        "total_steps": 1,
+        "tp": 5,
+        "truncated": false
+      },
+      "mode": "closed",
+      "policy": "oracle",
+      "profile": "trusted_oracle"
+    }
+  ],
+  "schema_version": "0.2.0",
+  "scope": "G3 local rehearsal; frozen 10 train + 10 dev, same 20 cases for four policies, 20 ID/order pairs and exact action replay",
+  "secure_isolation_verified": true,
+  "stage": 3,
+  "total_verification_seconds": 41.11335367300035,
+  "version": "0.3.0"
+}

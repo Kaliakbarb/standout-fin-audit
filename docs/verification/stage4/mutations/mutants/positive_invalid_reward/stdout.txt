@@ -1,0 +1,112 @@
+FFFFFFFFFFFFFFFFFF                                                       [100%]
+=================================== FAILURES ===================================
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_submission_fields').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_submission_fields').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_submission_fields').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_episode_id_type').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='episode_id_mismatch').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_findings_array').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_finding_fields').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_finding_fields').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_finding_type').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_affected_ids').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_affected_ids').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_claimed_amount_minor').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_claimed_amount_minor').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_claimed_amount_minor').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_currency').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_evidence_ids').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_evidence_ids').reward
+_ test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation] _
+tests/test_evaluation.py:255: in test_structural_errors_end_with_minus_one_even_on_clean_truth
+    assert result.reward == -1.0
+E   AssertionError: assert 1.0 == -1.0
+E    +  where 1.0 = EvaluationResult(tp=0, fp=0, fn=0, precision=None, recall=None, f1=None, reward=1.0, status='invalid_submit', matched_pairs=(), error='invalid_explanation').reward
+=========================== short test summary info ============================
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[None-invalid_submission_fields]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload1-invalid_submission_fields]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload2-invalid_submission_fields]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload3-invalid_episode_id_type]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload4-episode_id_mismatch]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload5-invalid_findings_array]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload6-invalid_finding_fields]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload7-invalid_finding_fields]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload8-invalid_finding_type]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload9-invalid_affected_ids]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload10-invalid_affected_ids]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload11-invalid_claimed_amount_minor]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload12-invalid_claimed_amount_minor]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload13-invalid_claimed_amount_minor]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload14-invalid_currency]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload15-invalid_evidence_ids]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload16-invalid_evidence_ids]
+FAILED tests/test_evaluation.py::test_structural_errors_end_with_minus_one_even_on_clean_truth[payload17-invalid_explanation]
+18 failed in 0.35s

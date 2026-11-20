@@ -1,0 +1,116 @@
+{
+  "candidate": "final8",
+  "checks": {
+    "12_genuine_call_phase_assertion_mutation_kills_zero_invalid_timeout_survivor": true,
+    "20_closed_worlds80_policy_runs20_pairs80_replays_exact_and_feedback_neutral": true,
+    "994_tests_zero_failures_errors_skips_and48_acceptance19_isolation_checks": true,
+    "actual_application_security_limits_anonymous_nocopy_volume_and_no_host_binds_verified": true,
+    "actual_cgroup2cpu4gib_no_swap64pids_peak_and_zero_oom_verified": true,
+    "actual_final8_packaged_proxy_demo13_checks6_secure_workers_and_ctrlc_cleanup_verified": true,
+    "actual_loaded_amd64_image_architectures261_source_bindings_and_emulation_scope_verified": true,
+    "all_raw_clean_files_and_nested_complete_hash_chains_verified": true,
+    "all_raw_public_receipts_byte_exact_and_complete_delivery_build_hash_chains_verified": true,
+    "completed_clean_and_static_audit_bind_exact_final8_archive": true,
+    "fresh_overlay2_private_daemon_containerd_network_and_volume_cleanup_verified": true,
+    "host_config_redaction_and_initial_cleanup_public_subsets_match_raw_sources": true,
+    "outer_zip_exact_sha_crc19_flat_entries_and18_sha256sums_verified": true,
+    "public_json_seed_key_guard_and_all_outer_text_payload_private_control_value_scans_zero": true,
+    "readiness_hash_chain_actual_http_assets_and_six_secure_workers_verified": true,
+    "submission_instructions_version_platform_offline_commands_and_honest_scope_verified": true,
+    "zip_inner_and_frozen_bundle_remained_unchanged_during_read_only_audit": true,
+    "zip_inner_tar_all631_files_plus_manifest_modes_and_private_control_text_scan_verified": true
+  },
+  "clean_evidence": {
+    "application_checks": 48,
+    "complete_sha256": "6585e82c7cf6c2d1ba630d1d1ae342b63c41152e915faf56a4b96f413ef0e680",
+    "elapsed_seconds": 2082.243871915998,
+    "isolation_probes": 19,
+    "junit": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 994
+    },
+    "memory_limit_bytes": 4294967296,
+    "memory_peak_bytes": 288063488,
+    "nested_complete_manifests": 5,
+    "oom": 0,
+    "path": "artifacts/release-clean-0.6.0",
+    "pids_peak": 12,
+    "raw_inventory_files": 659,
+    "storage_driver": "overlay2"
+  },
+  "closed_protocol": {
+    "episodes": 20,
+    "execution_counts": {
+      "cohort_policy_runs": 80,
+      "direct_equivalence_cases": 80,
+      "direct_evaluations": 160,
+      "fixed_action_replays": 80,
+      "ordinary_worker_processes": 61,
+      "paired_checks": 20,
+      "paired_oracle_runs": 40,
+      "policy_repeat_runs": 1,
+      "total_run_episode_calls": 121,
+      "trusted_oracle_executions": 60,
+      "world_regenerations": 20
+    },
+    "feedback_rows_checked": 1529,
+    "fixed_action_replays": 80,
+    "oracle_f1": 1,
+    "paired_cases": 20,
+    "policy_runs": 80,
+    "reference_f1": 1
+  },
+  "format_version": 1,
+  "inner_archive": {
+    "bytes": 73722947,
+    "filename": "genesis-fin-audit-0.6.0-linux-amd64.tar.gz",
+    "manifest_sha256": "f799a5e1d3eb108352dd0308168b996c2424d85bb372fd250353612ec55c31fa",
+    "sha256": "76a1f02d12331da6e6b6b6b0b6d46f56db5e7c2f05fed9cd043d42fbdc0325e1"
+  },
+  "mutations": {
+    "call_phase_assertion_failure_events": 33,
+    "declared": 12,
+    "genuine_kills": 12,
+    "invalid": 0,
+    "source_snapshot_unchanged": true,
+    "survivors": 0,
+    "timeouts": 0
+  },
+  "no_official_submission_performed": true,
+  "packaged_demo": {
+    "bundle_unchanged": true,
+    "checks": 13,
+    "cleanup_sha256": "d12f10b0e66c6d476ca3ea186746c1d53c864ed6808f4100bb5a99df00329575",
+    "exact_owned_container_removed": true,
+    "port8766_closed": true,
+    "secure_worker_executions": 6,
+    "smoke_sha256": "3f10a1d6182b270e0b048278c855fc0bdbcb0222988bb03680e1513d6c161199"
+  },
+  "passed": true,
+  "privacy": {
+    "minimum_token_digits": 12,
+    "private_numeric_tokens_scanned": 21,
+    "public_json_private_seed_keys_found": 0,
+    "public_sidecar_and_inner_text_value_matches": 0,
+    "raw_control_and_protocol_payloads_excluded": true,
+    "scope": "All outer public payloads and inner tar text files. Runtime image bytes are anchored to the pre-control sealed/static audit; open train/dev/showcase gold remains intentional."
+  },
+  "runtime": {
+    "architecture": "amd64",
+    "config_id": "sha256:474e5078958515b297791e60ab1c4f0e51768ed0da2575a7f89083602929564d",
+    "image_id": "sha256:ad7b8f69f7e2d272d5ae1e2b2ed21f4f715a4f920934761876cc57df55c700e0",
+    "os": "linux"
+  },
+  "scope": "Independent read-only final submission ZIP, raw clean-chain, mutation/protocol and exact packaged-demo audit; no Docker commands, application/worker launches, network, test reruns or source/bundle edits.",
+  "software_version": "0.6.0",
+  "static_audit_sha256": "c1bc5963e60960101c0ed08172fc9158988837a3cbbc3e5834cd3fd24b15b283",
+  "zip": {
+    "bytes": 73854478,
+    "members": 19,
+    "path": "dist/submission-0.6.0/genesis-fin-audit-0.6.0-submission.zip",
+    "sha256": "a2ec5f1302751d182c636482999950547162108a031b5151c0c825cfc22a435d",
+    "sha256sums_entries": 18
+  }
+}

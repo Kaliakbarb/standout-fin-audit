@@ -1,0 +1,94 @@
+{
+  "artifacts": {
+    "patch": "mutants/reuse_truth/patch.diff",
+    "result": "mutants/reuse_truth/result.json",
+    "source": "mutants/reuse_truth/evaluation.py"
+  },
+  "ast_after_sha256": "0c348bfecb3444770e2ca57c15f68e74778009e199d9af9415cc84e1e85607d1",
+  "ast_before_sha256": "99ba8a68f53d18781f53185d3a9e19bac4f74ee1cc560dd2be9399698d272ca1",
+  "command": [
+    "/usr/local/bin/python",
+    "-I",
+    "-B",
+    "/tmp/fin-audit-mutation-rm_nk2_f/detect.py",
+    "/tmp/fin-audit-mutation-rm_nk2_f/src",
+    "/tmp/fin-audit-mutation-rm_nk2_f/events.json",
+    "e464a84aa8cf21a8486742efee70a88c9784e9e293ff928a8d6399556f2cfa97",
+    "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+    "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth"
+  ],
+  "contracts_sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce",
+  "description": "Allow several predictions to reuse one truth issue as TP.",
+  "detected": true,
+  "detection_tests": [
+    "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth"
+  ],
+  "elapsed_seconds": 1.8739785220004705,
+  "equivalent": false,
+  "events": {
+    "collection_errors": [],
+    "origin_verified": true,
+    "origins": {
+      "contracts": {
+        "path": "/tmp/fin-audit-mutation-rm_nk2_f/src/fin_audit/contracts.py",
+        "sha256": "ea4a8f97f3cc6c8d3fce61f4b47e48cbd3d9ec220a97740f1152094c009709ce"
+      },
+      "evaluation": {
+        "path": "/tmp/fin-audit-mutation-rm_nk2_f/src/fin_audit/evaluation.py",
+        "sha256": "e464a84aa8cf21a8486742efee70a88c9784e9e293ff928a8d6399556f2cfa97"
+      }
+    },
+    "pytest_exitcode": 1,
+    "records": [
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "setup"
+      },
+      {
+        "exception_type": "builtins.AssertionError",
+        "nodeid": "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth",
+        "outcome": "failed",
+        "semantic_assertion": true,
+        "when": "call"
+      },
+      {
+        "exception_type": null,
+        "nodeid": "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth",
+        "outcome": "passed",
+        "semantic_assertion": false,
+        "when": "teardown"
+      }
+    ]
+  },
+  "exitcode": 1,
+  "id": "reuse_truth",
+  "killed_by": [
+    "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth"
+  ],
+  "mutated_source_sha256": "e464a84aa8cf21a8486742efee70a88c9784e9e293ff928a8d6399556f2cfa97",
+  "operator": "reuse_truth",
+  "original_source_sha256": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+  "output_limit": false,
+  "passed": false,
+  "patch_sha256": "29e4ffd1b25bcc6cd8cde62887436e340f931748428babe5721d9062e25106ec",
+  "read_stream_sha256": "4677a9d164863f93cb7d5408152a57de8e0a6f85af4cba5184c7e4f319fc9ee3",
+  "reason": "assertion_failure",
+  "source_sha256": "e464a84aa8cf21a8486742efee70a88c9784e9e293ff928a8d6399556f2cfa97",
+  "status": "killed",
+  "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n________ test_repeating_a_correct_finding_adds_fp_without_reusing_truth ________\ntests/test_evaluation.py:119: in test_repeating_a_correct_finding_adds_fp_without_reusing_truth\n    assert (result.tp, result.fp, result.fn) == (2, 1, 0)\nE   assert (3, 0, -1) == (2, 1, 0)\nE     \nE     At index 0 diff: 3 != 2\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth\n1 failed in 0.10s\n",
+  "stdout_bytes_read": 693,
+  "stdout_truncated": false,
+  "target_end_line": 245,
+  "target_line": 213,
+  "target_matches": 1,
+  "test_counts": {
+    "failed": 1
+  },
+  "tests": [
+    "tests/test_evaluation.py::test_repeating_a_correct_finding_adds_fp_without_reusing_truth"
+  ],
+  "timed_out": false
+}

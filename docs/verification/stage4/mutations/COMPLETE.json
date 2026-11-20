@@ -1,0 +1,10 @@
+{
+  "completed": true,
+  "passed": true,
+  "sha256": {
+    "frozen-plan.json": "bf0ef2e403052799e85838d7c86b59c64c6482929a0c2638f896b3c74cb87d94",
+    "manifest.json": "36174cc6f50fd5eefd414c0bc5f541df8c51e78b6c07fe77a9b61f280ecc20b6",
+    "original-evaluation.py": "38ab88da3e503073c342df5747447e9d5f1973563c2c88da5d79e4483589fa69",
+    "summary.json": "fcdcb83d6ae9ac904a11492aaa4707499545c9817e1c85a9766f5ba1a9b0de0c"
+  }
+}

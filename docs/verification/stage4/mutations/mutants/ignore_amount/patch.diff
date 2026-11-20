@@ -1,0 +1,14 @@
+--- original/evaluation.py
++++ mutants/ignore_amount/evaluation.py
+@@ -314,10 +314,7 @@
+                     finding["type"] == issue.type
+                     and affected == issue.affected_ids
+                     and finding["currency"] == issue.currency
+-                    and abs(
+-                        finding["claimed_amount_minor"] - issue.expected_amount_minor
+-                    )
+-                    <= configured_tolerances.get(issue.type, 0)
++                    and True
+                     and any(proof.issubset(evidence) for proof in issue.evidence_sets)
+                 ):
+                     candidates.append(index)
