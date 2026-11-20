@@ -1,0 +1,3 @@
+# Captured test output and patch fixtures retain their original bytes.
+# A blank context line in a unified diff intentionally contains one space.
+docs/verification/** -whitespace
