@@ -1,0 +1,36 @@
+{
+  "agent_exitcode": 0,
+  "case": "masked_both",
+  "elapsed_seconds": 2.5638679889998457,
+  "episode_id": "opaque_ad7c0b5996e883e421c98a27b143330c",
+  "evaluation": {
+    "error": null,
+    "f1": 1.0,
+    "fn": 0,
+    "fp": 0,
+    "inspection_steps": 4,
+    "matched_pairs": [
+      [
+        0,
+        "issue_7587483666ce94c33022d07a"
+      ],
+      [
+        1,
+        "issue_ea7939c4e0967f51126e9416"
+      ]
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "reward": 0.992,
+    "status": "scored",
+    "terminated": true,
+    "termination_reason": "submitted",
+    "total_steps": 5,
+    "tp": 2,
+    "truncated": false
+  },
+  "mode": "closed",
+  "policy": "simple",
+  "profile": "secure",
+  "trajectory_run_id": "showcase-009"
+}

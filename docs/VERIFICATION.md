@@ -83,6 +83,9 @@ SHA-256 76a1f02d12331da6e6b6b6b0b6d46f56db5e7c2f05fed9cd043d42fbdc0325e1
 - [FINAL_SUBMISSION_AUDIT](verification/release-0.6.0/FINAL_SUBMISSION_AUDIT.json): 18 групп проверки архива и цепочек доказательств.
 - [JUnit](verification/release-0.6.0/tests.xml), [cgroup metrics](verification/release-0.6.0/cgroup-metrics.json).
 - [READINESS_REPORT](verification/release-0.6.0/READINESS_REPORT.json), [web summary](verification/release-0.6.0/web-summary.json), [packaged demo](verification/release-0.6.0/PACKAGED_DEMO.json).
+- [Полная публичная summary.json](verification/release-0.6.0/summary.json): неизменённые bytes из ZIP; per-policy/per-cohort/per-type метрики, все80 cohort runs,20 pairs и80 replay.
+
+Для прямой проверки формата журнала добавлен [реальный открытый masking-пример](verification/release-0.6.0/masked-simple-trajectories.jsonl): шесть исходных JSONL-строк одного `simple` run, включая reset и пять действий. Он исполнялся в closed feedback mode, поэтому все wire rewards равны0, а info пуст. Его [истинная post-run оценка](verification/release-0.6.0/masked-simple-evaluation.json) отдельно показывает2 TP, F1=1 и reward0,992. Это опубликованный showcase, не закрытый контрольный мир организаторов. [EXAMPLE_MANIFEST](verification/release-0.6.0/EXAMPLE_MANIFEST.json) фиксирует исходный файл, run_id, отбор строк и hashes; строки траектории сохранены побайтово.
 
 Это отобранные документы, а не полный архив всех raw результатов. Исходный [SHA256SUMS](verification/release-0.6.0/SHA256SUMS) описывает комплект ZIP; часть перечисленных файлов намеренно не хранится в Git. [COPIED_SHA256SUMS](verification/release-0.6.0/COPIED_SHA256SUMS) проверяет файлы, скопированные в эту папку. Архив и образ остаются в локальном `dist/`.
 

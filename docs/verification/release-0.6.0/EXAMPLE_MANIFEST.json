@@ -1,0 +1,24 @@
+{
+  "format_version": 1,
+  "scope": "Six byte-preserved lines for one real simple-policy run on the OPEN masking showcase, executed in CLOSED feedback mode; not an organizer control episode or a new execution.",
+  "source_submission_zip_sha256": "a2ec5f1302751d182c636482999950547162108a031b5151c0c825cfc22a435d",
+  "source_bundle_path": "sample/trajectories.jsonl",
+  "source_file_sha256": "5fec4a5f32860f32062c538a3b78991e5823845f435f992459f9a239f31437c2",
+  "selection": {
+    "run_id": "showcase-009",
+    "policy": "simple",
+    "case": "masked_both"
+  },
+  "rows": 6,
+  "reset_rows": 1,
+  "actions": 5,
+  "inspection_steps": 4,
+  "all_wire_rewards_zero_and_info_empty": true,
+  "true_reward_after_completed_batch": 0.992,
+  "output_file": "masked-simple-trajectories.jsonl",
+  "output_sha256": "c9a7ccbc2fc2b145f177fe0c7b169ccbe1762ac27d8449e7272025cd57921783",
+  "evaluation_file": "masked-simple-evaluation.json",
+  "no_private_gold_or_seed_keys_in_observations": true,
+  "summary_file": "summary.json",
+  "summary_sha256": "1c3f089cc93f98d1f35067e95ae56fddbc7ad29172af80b2b6fd2bc390164913"
+}
